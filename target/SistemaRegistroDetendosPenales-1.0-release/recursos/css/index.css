@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 3 may. 2024, 20:56:32
+    Author     : jonii
+*/
+
+.gradiente-azul-oscuro {
+      background-color: #192a56; /* Color de fondo oscuro */
+      background-image: linear-gradient(to bottom right, #192a56, #273c75); /* Gradiente azul oscuro */
+      color: white; /* Color de texto blanco para contrastar */
+      /* Otros estilos según necesites */
+    }
+    .titulo-color{
+         color: #192a56
+    }
+      .bg-imagen{
+      background: url("../img/Imagen.jpg");
+    background-position: center;
+    background-size: contain;
+ 
+}

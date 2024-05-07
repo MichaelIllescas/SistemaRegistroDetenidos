@@ -1,0 +1,39 @@
+
+    body {
+        background-color: #f0f0f0; /* Cambiar color de fondo del body */
+    }
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        z-index: 9998; /* Colocar detrás del cuadro emergente */
+    }
+    #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff; /* Cambiar color de fondo del cuadro */
+        border: 2px solid #333; /* Cambiar color del borde */
+        padding: 20px;
+        max-width: 400px;
+        text-align: center;
+        z-index: 9999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    }
+    a {
+        color: white; /* Cambiar color del enlace */
+    }
+
+    a:hover{
+         color:#17a2b8   ;
+    }
+    .close:hover{
+        cursor: pointer;
+       
+    }

@@ -60,3 +60,10 @@
       color: white; /* Color de texto blanco para contrastar */
       /* Otros estilos según necesites */
     }
+.images-card{
+        width: 300px;
+        height: 300px;
+    }
+*{
+        box-sizing: border-box;
+ }

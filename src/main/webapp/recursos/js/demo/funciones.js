@@ -13,8 +13,7 @@ function cerrarPopup() {
     overlay.style.display = "none";
     popup.style.display = "none";
 }
-
-                                        
+                               
                                         
                                         
               

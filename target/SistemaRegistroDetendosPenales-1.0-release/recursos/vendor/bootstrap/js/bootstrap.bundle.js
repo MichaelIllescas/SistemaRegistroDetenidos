@@ -6827,7 +6827,7 @@
   var CLASS_NAME_FADE$5 = 'fade';
   var CLASS_NAME_HIDE = 'hide';
   var CLASS_NAME_SHOW$7 = 'show';
-  var CLASS_NAME_SHOWING = 'showing';
+  var CLASS_NAME_SHOWING = 'mostrando';
   var DefaultType$7 = {
     animation: 'boolean',
     autohide: 'boolean',

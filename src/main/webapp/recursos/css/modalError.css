@@ -27,9 +27,10 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra */
     }
     a {
-        color: white; /* Cambiar color del enlace */
+        color: white; 
     }
 
+    
     a:hover{
          color:#17a2b8   ;
     }
@@ -37,3 +38,4 @@
         cursor: pointer;
        
     }
+        

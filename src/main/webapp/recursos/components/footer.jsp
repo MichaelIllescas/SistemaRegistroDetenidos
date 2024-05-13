@@ -14,22 +14,9 @@
         </div>
     </div>
 </footer>
-<!-- End of Footer -->
 
 
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-    
-<script src="recursos/js/demo/funciones.js"></script>
-    
-    
-<script src="recursos/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-    
-    
 <!-- Bootstrap core JavaScript-->
 <script src="recursos/vendor/jquery/jquery.min.js"></script>
 <script src="recursos/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -90,14 +77,20 @@
 <!-- Incluye los scripts de Bootstrap Icons -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="recursos/vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="recursos/vendor/jquery/jquery.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="recursos/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="recursos/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Page level plugins -->
+<script src="recursos/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="recursos/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-         
-    
-    
+
+
+
+
+
+<!-- End of Footer -->
+
+
+
 </html>

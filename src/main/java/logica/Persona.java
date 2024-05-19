@@ -4,12 +4,14 @@ package logica;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -31,7 +33,9 @@ public class Persona implements Serializable {
     private Date fechaNacimiento;
     private String sexo;
     private String instuccion;
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private EstadoCivil estadoCivil;
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Nacionalidad nacionalidad;
 
     public Persona() {

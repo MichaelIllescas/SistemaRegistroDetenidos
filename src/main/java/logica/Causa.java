@@ -2,6 +2,7 @@ package logica;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,20 +22,21 @@ public class Causa implements Serializable {
     private int id;
     private String numeroCausa;
     private String descripcion;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Defensoria defensoria;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Fiscalia fiscalia;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Juzgado juzgado;
-            
-     @OneToMany
-     @JoinColumn(name="detenidos")
-    private List<Detenido> detenidos;
     
-     @OneToMany
-  @JoinColumn(name="denunciante")
-    private List<Denunciante>denunciantes;
+     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
+    private List<Detenido> detenidos;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
+    private List<Denunciante> denunciantes;
+
 
     public Causa() {
     }
@@ -87,13 +89,33 @@ public class Causa implements Serializable {
         this.juzgado = juzgado;
     }
 
-    public Causa(int id, String numeroCausa, String descripcion, Defensoria defensoria, Fiscalia fiscalia, Juzgado juzgado) {
+    public Causa(int id, String numeroCausa, String descripcion, Defensoria defensoria, Fiscalia fiscalia, Juzgado juzgado, Detenido detenido, Denunciante denunciante ) {
         this.id = id;
         this.numeroCausa = numeroCausa;
         this.descripcion = descripcion;
         this.defensoria = defensoria;
         this.fiscalia = fiscalia;
         this.juzgado = juzgado;
-
+     
     }
+
+    public List<Detenido> getDetenidos() {
+        return detenidos;
+    }
+
+    public void setDetenidos(List<Detenido> detenidos) {
+        this.detenidos = detenidos;
+    }
+
+    public List<Denunciante> getDenunciantes() {
+        return denunciantes;
+    }
+
+    public void setDenunciantes(List<Denunciante> denunciantes) {
+        this.denunciantes = denunciantes;
+    }
+    
+
+ 
+
 }

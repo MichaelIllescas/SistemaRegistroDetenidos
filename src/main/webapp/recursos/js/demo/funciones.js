@@ -1,4 +1,4 @@
-    
+
 
 function mostrarPopup() {
     var overlay = document.getElementById("overlay");
@@ -13,7 +13,9 @@ function cerrarPopup() {
     overlay.style.display = "none";
     popup.style.display = "none";
 }
-                               
-                                        
-                                        
+
+
+
+
+
               

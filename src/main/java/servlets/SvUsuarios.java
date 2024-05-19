@@ -43,7 +43,9 @@ public class SvUsuarios extends HttpServlet {
         
         HttpSession miSession= request.getSession();
         miSession.setAttribute("listaUsu", listaUsuarios);
-        
+        List <Policia> policias =controladora.getPolicias();
+        miSession.setAttribute("policias", policias);
+
       
         response.sendRedirect("verUsuarios.jsp");
         

@@ -4,6 +4,7 @@
  */
 package logica;
 
+import java.util.ArrayList;
 import java.util.List;
 import persistencia.ControladoraPersistencia;
 
@@ -45,6 +46,87 @@ public class Controladora {
     public Policia getPolicia(int policiaId) {
        
         return controlPersistencia.getPolicia(policiaId);
+    }
+
+    public Usuario traerUsuarioPorUserYPass(String usuario, String clave) {
+           List<Usuario> listaUsuarios= new ArrayList<>();
+        listaUsuarios= controlPersistencia.getUsuarios();
+        
+        Usuario user=null;
+        
+        for(Usuario usu: listaUsuarios){
+            if (usu.getNombreUsuario().equals(usuario))
+            {
+                if(usu.getClave().equals(clave))
+                {
+                     user=usu;
+                }
+            }
+ 
+        }
+
+         return user;
+    
+    }
+        
+        
+    
+        public boolean validarUsuario(String usuario, String clave) {
+        List<Usuario> listaUsuarios= new ArrayList<>();
+        listaUsuarios= controlPersistencia.getUsuarios();
+        
+        boolean ingreso=false;
+        
+        for(Usuario usu: listaUsuarios){
+            if (usu.getNombreUsuario().equals(usuario))
+            {
+                if(usu.getClave().equals(clave))
+                {
+                     ingreso=true;
+                }else 
+                {
+                    ingreso=false;
+                }
+            }
+ 
+        }
+
+         return ingreso;
+    }
+
+    public Usuario getUsuario(int id) {
+         return controlPersistencia.getUsuario(id);
+    }
+
+    public void eliminarUsuario(int id) {
+        try {
+            controlPersistencia.eliminarUsuario(id);
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+    }
+
+ 
+    public void editarUsuario(Usuario usu) {
+        controlPersistencia.editarUsuario(usu);
+    }
+
+    public Usuario eliminarPolicia(int id) {
+          
+        List<Usuario> listaUsuarios= controlPersistencia.getUsuarios();
+        for(Usuario usu:listaUsuarios){
+            if(usu.getPolicia().getId()==id){
+            return usu;
+            
+            }
+        }
+        
+       controlPersistencia.eliminarPolicia(id);
+       return null;
+    }
+
+    public void crearRegistro(Registro registro) {
+       controlPersistencia.crearRegistro(registro);
     }
    
 

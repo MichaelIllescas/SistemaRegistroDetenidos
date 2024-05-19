@@ -52,16 +52,16 @@
                                     <td style="display:flex; " class="justify-content-center">
 
 
-                                        <form class="mr-2" name="eliminar" action="SvUsuarios" method="GET">
+                                        <form class="mr-2" name="eliminar" action="SVEliminarUsuarios" method="POST">
 
                                             <button type="submit" class="btn btn-user btn-circle btn-danger"/>
                                             <i class="fas fa-trash-alt"></i> 
                                             </button>
-                                            <input type="hidden" name="id" value=" <%=usu.getId()%>"> 
+                                            <input type="hidden" name="id" value="<%=usu.getId()%>"> 
 
                                         </form>
 
-                                        <form class="mr-2" name="editar" action="SvUsuarios" method="GET">
+                                        <form class="mr-2" name="editar" action="SVEditarUsuarios" method="GET">
 
                                             <button type="submit" class="btn btn-primary  btn-user btn-circle " />
                                             <i class="fas fa-pencil-alt"></i>   

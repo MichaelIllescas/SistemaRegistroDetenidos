@@ -29,20 +29,20 @@
                                     <div class="user text-center contendor">
                                         <h1 class="h4 text-white mb-5">Ingreso a S.R.D.P.</h1>
                                     </div>
-                                    <form class="user text-center " action="SvLogin" method="POST">
+                                    <form class="user text-center " action="" method="POST">
 
                                         <div class="text-center">
                                         
                                             
 
-                                            <p class="text-white ">Usuario o contraseña incorrecto.</p>
+                                            <p class="text-white ">Usuario o Contraeña Incorrecto   .</p>
 
 
                                         </div>    
                                         
 
                                         <div>
-                                        <a href="login.jsp" class=" btn bg-gradient-info btn-user text-lg text-white  ">
+                                        <a href="login.jsp" class=" btn bg-gradient-info btn-user text-lg text-white">
                                             Intentar de nuevo
                                         </a>
                                         </div>

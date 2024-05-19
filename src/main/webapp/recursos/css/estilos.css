@@ -60,10 +60,12 @@
       color: white; /* Color de texto blanco para contrastar */
       /* Otros estilos según necesites */
     }
-.images-card{
-        width: 300px;
-        height: 300px;
+
+
+    .desplegable-personalizada{
+        background: rgb(205,163,62);
+background: linear-gradient(0deg, rgba(205,163,62,1) 36%, rgba(196,165,69,1) 58%, rgba(232,139,75,1) 84%, rgba(120,101,61,1) 100%, rgba(34,193,195,1) 100%);
+        color:white
     }
-*{
-        box-sizing: border-box;
- }
+
+   

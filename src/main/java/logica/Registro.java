@@ -3,6 +3,7 @@ package logica;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,7 @@ public class Registro implements Serializable {
     private String observaciones;
     @Temporal(TemporalType.DATE)
     private Date fechaRegistro;
-    @OneToOne
+    @OneToOne( cascade = CascadeType.ALL, orphanRemoval = true)
     private Causa causa;
     @OneToOne
     private Usuario usuario;

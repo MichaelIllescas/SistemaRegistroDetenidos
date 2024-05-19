@@ -3,6 +3,8 @@ package logica;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -11,20 +13,27 @@ import javax.persistence.TemporalType;
  * @author jonii
  */
 @Entity
-public class Detenido extends Persona implements Serializable{
-     
+public class Detenido extends Persona implements Serializable {
+
     @Temporal(TemporalType.DATE)
     private Date fechaIngreso;
     @Temporal(TemporalType.DATE)
     private Date fechaEgreso;
 
+    private String calidad;
+    @ManyToOne
+    @JoinColumn(name = "causa_id")
+    private Causa causa;
+
     public Detenido() {
     }
 
-    public Detenido(Date fechaIngreso, Date fechaEgreso, int id, String nombre, String apellido, String dni, String direccion, String apodo, String telefono, String ocupacion, Date fechaNacimiento, String sexo, String instuccion, EstadoCivil estadoCivil, Nacionalidad nacionalidad) {
-        super(id, nombre, apellido, dni, direccion, apodo, telefono, ocupacion, fechaNacimiento, sexo, instuccion, estadoCivil, nacionalidad);
-        this.fechaIngreso = fechaIngreso;
-        this.fechaEgreso = fechaEgreso;
+    public Causa getCausa() {
+        return causa;
+    }
+
+    public void setCausa(Causa causa) {
+        this.causa = causa;
     }
 
     public Date getFechaIngreso() {
@@ -42,7 +51,13 @@ public class Detenido extends Persona implements Serializable{
     public void setFechaEgreso(Date fechaEgreso) {
         this.fechaEgreso = fechaEgreso;
     }
-    
-    
-    
+
+    public String getCalidad() {
+        return calidad;
+    }
+
+    public void setCalidad(String calidad) {
+        this.calidad = calidad;
+    }
+
 }

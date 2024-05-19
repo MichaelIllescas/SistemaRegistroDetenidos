@@ -7,7 +7,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
 
+   <%HttpSession miSession= request.getSession();
+      miSession.removeAttribute("usuario");
 
+    
+    %>
 <body class="bg-gradient-dark mb-5">
     <div class="container border-bottom-secondary h-auto mb-4 b" 
          data-aos="flip-left"
@@ -29,7 +33,7 @@
                                     <div class="text-center" >
                                         <h1 class="h4 text-white mb-4">Ingreso a S.R.D.P.</h1>
                                     </div>
-                                   <form class="user text-center" action="index.jsp" method="POST" >
+                                   <form class="user text-center" action="SvLogin" method="POST" >
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user shadow"
                                                        id="usuario" name="usuario" placeholder="Usuario">

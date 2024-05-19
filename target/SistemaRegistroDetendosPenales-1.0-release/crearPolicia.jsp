@@ -11,8 +11,8 @@
 
 
             <div class="p-5" data-aos="zoom-in">
-                <div class="text-center">
-                    <h1>Alta Efectivo Policial</h1>
+                <div class="text-center titulo-color ">
+                    <h1 class="titulo-color">Alta Efectivo Policial</h1>
 
                     <p>Este es un apartado para ingresar a un nuevo funcionario policial en el sistema.</p>
                 </div>
@@ -27,9 +27,34 @@
                         <div class="col-sm-6 mx-auto mb-3">
                             <input name="legajo" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Legajo">
                         </div>
-                        <div class="col-sm-6 mx-auto mb-3">
-                            <input name="jerarquia" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Jerarquia">
+                        <div class="col-sm-6 mx-auto mb-3" >
+                            
+                           
+                              <select id="miListaDesplegable" name="jerarquia" class="form-control   form-select form-control-lg" >
+                                    <option value="OFICIAL">Oficial</option>
+                                    <option value="SARGENTO">Sargento</option>
+                                    <option value="SUBTENIENTE">Subteniente</option>
+                                    <option value="TENIENTE">Teniente</option>
+                                    <option value="TENIENTE 1º">Teniente 1º</option>
+                                    <option value="CAPITAN">Captitan</option>
+                                    <option value="MAYOR">Mayor</option>
+                                    <option value="OFICIAL SUB AYUDANTE">Oficial Sub Ayudante</option>
+                                    <option value="OFICIAL AYUDANTE">Oficial Ayudante</option>
+                                    <option value="OFICIAL SUBINSPECTOR">Oficial Sub Inspector</option>
+                                    <option value="OFICIAL INSPECTOR">Oficial Inspector</option>
+                                    <option value="OFICIAL PRINCIPAL">Oficial Principal</option>
+                                    <option value="SUB COMISARIO">Sub Comisario</option>
+                                    <option value="COMISARIO">Comisario</option>
+                                    <option value="COMISARIO INSPECTOR">Comisario Inpsector</option>
+                                    <option value="COMISARIO MAYOR">Comisario Mayor</option>
+                                    <option value="COMISARIO GENERAL">Comisario General</option>
+
+                                </select>
+                            
+                            
                         </div>
+                        
+                         
                         <div class="col-sm-6 mx-auto mb-3">
                             <input name="dni" type="text" class="form-control form-control-lg" id="nomusu" placeholder="DNI">
                         </div>
@@ -38,7 +63,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-user" type="submit">
+                    <button class="btn-facebook btn shadow border-dark btn-user" type="submit">
                         Crear Efectivo
                     </button>
 

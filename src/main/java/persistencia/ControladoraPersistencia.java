@@ -5,8 +5,12 @@
 package persistencia;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import logica.Policia;
+import logica.Registro;
 import logica.Usuario;
+import persistencia.exceptions.NonexistentEntityException;
 
 /**
  *
@@ -72,6 +76,40 @@ public class ControladoraPersistencia {
     public Policia getPolicia(int policiaId) {
         
        return policiaJPA.findPolicia(policiaId);
+    }
+
+    public Usuario getUsuario(int id) {
+        return usuarioJPA.findUsuario(id);
+    }
+
+    public void eliminarUsuario(int id) {
+   
+        try {
+            usuarioJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarUsuario(Usuario usu) {
+        try {
+            usuarioJPA.edit(usu);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void eliminarPolicia(int id) {
+        try {
+            policiaJPA.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void crearRegistro(Registro registro) {
+    
+        registroJPA.create(registro);
     }
     
 }

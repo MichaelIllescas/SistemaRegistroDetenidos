@@ -119,5 +119,9 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public List<Registro> getRegistros() {
+        return registroJPA.findRegistroEntities();
+    }
     
 }

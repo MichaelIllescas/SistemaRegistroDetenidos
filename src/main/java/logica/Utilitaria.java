@@ -20,4 +20,19 @@ public class Utilitaria {
         return date;
     }
 
+      public static String dateToString(Date date) {
+        if (date != null) {
+            // Define el formato deseado para la fecha
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            // Aplica el formato y convierte la fecha a String
+            String formattedDate = sdf.format(date);
+            // Retorna la fecha formateada como String
+            return formattedDate;
+        } else {
+            return "----";
+        }
+    }
+     
+     
+     
 }

@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="col-sm-12 mx-auto mb-3">
                                     <label for="fechaEgreso">Fecha de Egreso </label>
-                                    <input name="fechaEgreso" id="fechaEgreso" type="date" class="form-control form-control-lg" >
+                                    <input name="fechaEgerso" id="fechaEgreso" type="date" class="form-control form-control-lg" >
                                 </div>
                             </div>
                         </div>
@@ -201,6 +201,25 @@
                             </div>
                         </div>
                     </div>
+                    
+                        <div class="accordion-item gradiente-azul-oscuro">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObs" aria-expanded="false" aria-controls="collapseObs">
+                                Observaciones
+                            </button>
+                        </h2>
+                        <div id="collapseObs" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="col-sm-12 mx-auto mb-3">
+                                    <label for="observaciones">Observaciones:</label>
+                                    <textarea id="" class="w-100" maxlength="255" name="observaciones" rows="5" ></textarea>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
 
 

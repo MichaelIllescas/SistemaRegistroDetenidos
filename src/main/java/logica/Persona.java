@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -30,7 +32,10 @@ public class Persona implements Serializable {
     private String apodo;
     private String telefono;
     private String ocupacion;
+    
+    @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
+    
     private String sexo;
     private String instuccion;
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)

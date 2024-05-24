@@ -69,12 +69,12 @@ public class SVRegistrarDetenido extends HttpServlet {
         estadoCivil.setDescipcion(request.getParameter("estadoCivil"));
         Nacionalidad nacionalidad = new Nacionalidad();
         nacionalidad.setDescipcion(request.getParameter("nacionalidad"));
-     //  Date fechaNac=Utilitaria.convertStringToDate(request.getParameter("fechaNac"), "yyyy-MM-dd");
+        Date fechaNac=Utilitaria.convertStringToDate(request.getParameter("fechaNac"), "yyyy-MM-dd");
 
         
         detenido.setEstadoCivil(estadoCivil);
         detenido.setNacionalidad(nacionalidad);
-  //     detenido.setFechaNacimiento(fechaNac);
+       detenido.setFechaNacimiento(fechaNac);
         
         Causa causa= new Causa();
         causa.setNumeroCausa(request.getParameter("nroCausa"));
@@ -98,8 +98,8 @@ public class SVRegistrarDetenido extends HttpServlet {
         detenidos.add(detenido);
         causa.setDetenidos(detenidos);
         
-     //   detenido.setFechaIngreso(Utilitaria.convertStringToDate(request.getParameter("fechaIngreso"), "yyyy-MM-dd"));
-       // detenido.setFechaEgreso(Utilitaria.convertStringToDate(request.getParameter("fechaEgerso"), "yyyy-MM-dd"));
+       detenido.setFechaIngreso(Utilitaria.convertStringToDate(request.getParameter("fechaIngreso"), "yyyy-MM-dd"));
+       detenido.setFechaEgreso(Utilitaria.convertStringToDate(request.getParameter("fechaEgerso"), "yyyy-MM-dd"));
        
        
        Denunciante denunciante =new Denunciante();
@@ -108,7 +108,9 @@ public class SVRegistrarDetenido extends HttpServlet {
        denunciante.setDni(request.getParameter("dniDte"));
        denunciante.setDireccion(request.getParameter("direccionDte"));
        denunciante.setTelefono(request.getParameter("telefonoDte"));
-    //   denunciante.setFechaNacimiento(request.getParameter("fechaNacDte"));
+       
+       
+       denunciante.setFechaNacimiento(Utilitaria.convertStringToDate(request.getParameter("fechaNacDte"), "yyyy-MM-dd"));
       
         List<Denunciante> denunciantes=new ArrayList<>();
     
@@ -117,15 +119,17 @@ public class SVRegistrarDetenido extends HttpServlet {
                 
         Registro registro = new Registro();
         HttpSession session=request.getSession();
-        //String fechaActual = LocalDate.now().toString();
+        String fechaActual = LocalDate.now().toString();
         
         registro.setCausa(causa);
         registro.setUsuario((Usuario) session.getAttribute("user"));
-      //  registro.setFechaRegistro(Utilitaria.convertStringToDate(fechaActual, "yyyy-MM-dd"));
+       registro.setFechaRegistro(Utilitaria.convertStringToDate(fechaActual, "yyyy-MM-dd"));
+       String observaciones= (String) request.getParameter("observaciones");
+       registro.setObservaciones(observaciones);
         
         controladora.crearRegistro(registro);
         
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("SVVerDetenidos");
         
         
     }

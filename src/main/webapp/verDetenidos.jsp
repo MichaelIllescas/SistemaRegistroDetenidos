@@ -3,8 +3,18 @@
     Created on : 17 may. 2024, 14:32:01
     Author     : jonii
 --%>
+<%@page import="logica.Utilitaria"%>
+<%@page import="logica.Detenido"%>
+<%@page import="logica.Registro"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
+<%
+    HttpSession ses= request.getSession();
+    List<Registro> registros= (List)ses.getAttribute("registros");
+%>
+
+
 <body id="page-top" class=" " >
 
 
@@ -45,21 +55,25 @@
           
 
                             <tbody>
-                               
+                                <%for(Registro reg: registros){
+                                    for(Detenido dete:reg.getCausa().getDetenidos() ){
+                                
+                                    %>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><%=dete.getNombre()%></td>
+                                    <td><%=dete.getApellido()%></td>
+                                    <td><%=dete.getDni()%></td>
+                                    <td><%=dete.getCalidad()%></td>
+                                    <td><%=reg.getCausa().getDescripcion()%></td>
+                                    <td><%=reg.getCausa().getNumeroCausa()%></td>
+                                    <td><%=Utilitaria.dateToString(dete.getFechaIngreso() )%></td>
+                                    <td><%=Utilitaria.dateToString(dete.getFechaEgreso() )%></td>
                                  
-                                    <td></td>
+                            
                                     <td style="display:flex; " class="justify-content-center">
 
 
-                                        <form class="mr-2" name="eliminar" action="SvUsuarios" method="GET">
+                                        <form class="" name="eliminar" action="SvUsuarios" method="GET">
 
                                             <button type="submit" class="btn btn-user btn-circle btn-danger"/>
                                             <i class="fas fa-trash-alt"></i> 
@@ -68,24 +82,29 @@
 
                                         </form>
 
-                                        <form class="mr-2" name="editar" action="SvUsuarios" method="GET">
+                                        <form class="" name="editar" action="SvUsuarios" method="GET">
 
                                             <button type="submit" class="btn btn-primary  btn-user btn-circle " />
                                             <i class="fas fa-pencil-alt"></i>   
                                             </button>
 
-                                            <input type="hidden"name="id" class="btn btn-primary  btn-user " value="" />
+                                            <input type="hidden" name="id" class="btn btn-primary  btn-user " value="" />
 
                                         </form>
 
-                                         <form class="mr-2" name="verDatos" action="SvUsuarios" method="GET">
+                                         <form class="" name="verDatos" action="SvUsuarios" method="GET">
 
-                                            <button type="submit" class="btn btn-primary  btn-user btn-circle btn-info" />
+                                            <button type="submit" class="btn  btn-user btn-circle btn-info" />
                                             <i class="fas fa-eye"></i>   
                                             </button>
 
-                                            <input type="hidden"name="id" class="btn btn-primary  btn-user " value="" />
+                                            <input type="hidden" name="id" class="" value="" />
 
+                                            
+                                            <%
+                                                };
+
+                                                }%>
                                         </form>
                                 </tr>
                                

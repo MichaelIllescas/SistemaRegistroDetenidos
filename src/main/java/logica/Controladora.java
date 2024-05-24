@@ -132,6 +132,10 @@ public class Controladora {
     public void editarPolicia(Policia policia) {
         controlPersistencia.editPolicia(policia);
     }
+
+    public List <Registro> getRegistros() {
+       return controlPersistencia.getRegistros();
+    }
    
 
 }

@@ -4,6 +4,8 @@ package logica;
 import com.google.protobuf.TextFormat.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 
 
@@ -33,6 +35,39 @@ public class Utilitaria {
         }
     }
      
+      public static Detenido buscarDetenidoPorId(List<Detenido>listaDeDetenidos, int id){
+          for(Detenido detenido: listaDeDetenidos){
+              if (detenido.getId() ==id){
+                  return detenido;
+              }
+          }
+        return null;
+      }
+          public static Denunciante buscarDenunciantePorId(List<Denunciante>listaDeDenunciantes, int id){
+          for(Denunciante denunciante : listaDeDenunciantes){
+              if (denunciante.getId() ==id){
+                  return denunciante;
+              }
+          }
+        return null;
+      }
      
-     
+      public static String convertirDateAinputDate(Date fecha){
+          if (fecha == null){
+              return "";
+          }else{
+          SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd");
+          return dateFormat.format(fecha);
+      }
+
+      }
+      
+         public  static String dateToStringReturn(Date date) {
+        // Define el formato deseado para la fecha
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        // Aplica el formato y convierte la fecha a String
+        String formattedDate = sdf.format(date);
+        // Retorna la fecha formateada como String
+        return formattedDate;
+    }
 }

@@ -136,6 +136,14 @@ public class Controladora {
     public List <Registro> getRegistros() {
        return controlPersistencia.getRegistros();
     }
+
+    public void eliminarRegistro(int idRegistro) {
+       controlPersistencia.eliminarRegistro(idRegistro);
+    }
+
+    public Registro getRegistro(int id) {
+        return controlPersistencia.getRegistro(id);
+    }
    
 
 }

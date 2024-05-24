@@ -10,7 +10,7 @@ import logica.Detenido;
 import logica.Fiscalia;
 import logica.Juzgado;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-05-23T21:05:53")
+@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-05-24T19:22:39")
 @StaticMetamodel(Causa.class)
 public class Causa_ { 
 
@@ -19,6 +19,7 @@ public class Causa_ {
     public static volatile SingularAttribute<Causa, String> numeroCausa;
     public static volatile ListAttribute<Causa, Detenido> detenidos;
     public static volatile SingularAttribute<Causa, Juzgado> juzgado;
+    public static volatile SingularAttribute<Causa, String> departamentoJudicial;
     public static volatile SingularAttribute<Causa, Integer> id;
     public static volatile SingularAttribute<Causa, Defensoria> defensoria;
     public static volatile ListAttribute<Causa, Denunciante> denunciantes;

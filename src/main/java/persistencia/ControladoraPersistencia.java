@@ -123,5 +123,17 @@ public class ControladoraPersistencia {
     public List<Registro> getRegistros() {
         return registroJPA.findRegistroEntities();
     }
+
+    public void eliminarRegistro(int idRegistro) {
+        try {
+            registroJPA.destroy(idRegistro);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Registro getRegistro(int id) {
+        return registroJPA.findRegistro(id);
+    }
     
 }

@@ -97,6 +97,7 @@ public class SVRegistrarDetenido extends HttpServlet {
         List<Detenido> detenidos=new ArrayList<>();
         detenidos.add(detenido);
         causa.setDetenidos(detenidos);
+        causa.setDepartamentoJudicial(request.getParameter("deptoJudicial"));
         
        detenido.setFechaIngreso(Utilitaria.convertStringToDate(request.getParameter("fechaIngreso"), "yyyy-MM-dd"));
        detenido.setFechaEgreso(Utilitaria.convertStringToDate(request.getParameter("fechaEgerso"), "yyyy-MM-dd"));

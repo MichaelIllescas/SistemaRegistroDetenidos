@@ -1,10 +1,12 @@
 logica\Policia_.class
 persistencia\EstadoCivilJpaController.class
 servlets\SVEliminarUsuarios.class
+servlets\SVEditarRegistro.class
 logica\Usuario.class
 persistencia\DefensoriaJpaController.class
 logica\Nacionalidad.class
 servlets\SVCrearUsuario.class
+servlets\SVVerDetenidos.class
 logica\Reporte_.class
 logica\EstadoCivil.class
 logica\Denunciante.class
@@ -29,6 +31,7 @@ logica\Detenido_.class
 logica\EstadoUsuario_.class
 persistencia\DetenidoJpaController.class
 logica\Juzgado.class
+servlets\SVEliminarRegistro.class
 servlets\SVEditarUsuarios.class
 logica\Fiscalia_.class
 logica\EstadoUsuario.class

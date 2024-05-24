@@ -22,6 +22,9 @@ public class Causa implements Serializable {
     private int id;
     private String numeroCausa;
     private String descripcion;
+    private String departamentoJudicial;
+
+    
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Defensoria defensoria;
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -116,6 +119,12 @@ public class Causa implements Serializable {
     }
     
 
- 
+ public String getDepartamentoJudicial() {
+        return departamentoJudicial;
+    }
+
+    public void setDepartamentoJudicial(String departamentoJudicial) {
+        this.departamentoJudicial = departamentoJudicial;
+    }
 
 }

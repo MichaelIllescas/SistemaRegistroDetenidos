@@ -73,23 +73,23 @@
                                     <td style="display:flex; " class="justify-content-center">
 
 
-                                        <form class="" name="eliminar" action="SvUsuarios" method="GET">
+                                        <form class="" name="eliminar" action="SVEliminarRegistro" method="POST">
 
                                             <button type="submit" class="btn btn-user btn-circle btn-danger"/>
                                             <i class="fas fa-trash-alt"></i> 
                                             </button>
-                                            <input type="hidden" name="id" value=" "> 
+                                            <input type="hidden" name="id" value="<%=reg.getId()%>"> 
 
                                         </form>
 
-                                        <form class="" name="editar" action="SvUsuarios" method="GET">
+                                        <form class="" name="editar" action="SVEditarRegistro" method="GET">
 
                                             <button type="submit" class="btn btn-primary  btn-user btn-circle " />
                                             <i class="fas fa-pencil-alt"></i>   
                                             </button>
 
-                                            <input type="hidden" name="id" class="btn btn-primary  btn-user " value="" />
-
+                                            <input type="hidden" name="id" class="btn btn-primary  btn-user " value="<%=reg.getId()%>" />
+                                            <input type="hidden" name="idDetenido" class="btn btn-primary  btn-user " value="<%=dete.getId()%>" />
                                         </form>
 
                                          <form class="" name="verDatos" action="SvUsuarios" method="GET">

@@ -8,7 +8,7 @@
 <body id="page-top" class=" " >
 
 
-    <div id="wrapper" class="container-fluid pl-0">
+    <div id="wrapper" class="container-fluid p-0">
         <%@include file="recursos/components/navegacion.jsp" %>
 
         <div class="container-fluid">

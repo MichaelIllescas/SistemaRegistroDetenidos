@@ -39,27 +39,36 @@ public class SvLogin extends HttpServlet {
 
         String usuario = request.getParameter("usuario");
         String clave = request.getParameter("password");
-        Usuario user = controladora.traerUsuarioPorUserYPass(usuario, clave);
+        Usuario userObjet= controladora.traerUsuarioPorUserYPass(usuario, clave);
         String visiblidad;
 
-        boolean validacion = false;
+        boolean validacionIngreso = false;
 
-        validacion = controladora.validarUsuario(usuario, clave);
+        validacionIngreso = controladora.validarUsuario(usuario, clave);
+        HttpSession miSession = request.getSession(true);
+        miSession.setAttribute("usuario", usuario);
+        miSession.setAttribute("user", userObjet);
 
-        if (validacion == true) {
-            HttpSession miSession = request.getSession(true);
-            miSession.setAttribute("usuario", usuario);
-            miSession.setAttribute("user", user);
-            if (user.getRol().equalsIgnoreCase("administrador")) {
-                visiblidad = "true";
+        if (validacionIngreso == true) {
+
+            if (userObjet.getContador() == 0) {
+                visiblidad = "hidden";
+                miSession.setAttribute("mensaje", visiblidad);
+                response.sendRedirect("cambioCredenciales.jsp");
             } else {
+                userObjet.setContador(userObjet.getContador() + 1);
+                if (userObjet.getRol().equalsIgnoreCase("administrador")) {
+                    visiblidad = "visible";
+                    miSession.setAttribute("visiblidad", visiblidad);
+                } else {
 
-                visiblidad = "none";
+                    visiblidad = "hidden";
+                    miSession.setAttribute("visiblidad", visiblidad);
+                }
+
+                response.sendRedirect("index.jsp");
+
             }
-            miSession.setAttribute("visiblidad", visiblidad);
-
-            response.sendRedirect("index.jsp");
-
         } else {
 
             response.sendRedirect("loginError.jsp");
@@ -70,7 +79,5 @@ public class SvLogin extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
- 
 
 }

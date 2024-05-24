@@ -111,5 +111,13 @@ public class ControladoraPersistencia {
     
         registroJPA.create(registro);
     }
+
+    public void editPolicia(Policia policia) {
+        try {
+            policiaJPA.edit(policia);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

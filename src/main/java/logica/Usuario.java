@@ -28,6 +28,7 @@ public class Usuario implements Serializable {
     private String nombreUsuario;     
     private String rol;     
     private String clave;
+    private int contador;
     
     @OneToOne
     private EstadoUsuario estado;
@@ -97,6 +98,14 @@ public class Usuario implements Serializable {
 
     public void setClave(String clave) {
         this.clave = clave;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
     }
 
 

@@ -42,7 +42,7 @@ public class SVEliminarPolicia extends HttpServlet {
         
         
         Usuario user= controladora.eliminarPolicia(id);
-        System.out.println(user.getNombreUsuario());
+        
         
         HttpSession miSession= request.getSession();
         miSession.setAttribute("policiaEliminado", user);

@@ -11,6 +11,7 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\PersonaJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Juzgado.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\exceptions\PreexistingEntityException.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVCambioCredenciales.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarUsuarios.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEliminarUsuarios.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Controladora.java
@@ -39,6 +40,7 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\DenuncianteJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Fiscalia.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\CausaJpaController.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarPolicia.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Persona.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\ControladoraPersistencia.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Reporte.java

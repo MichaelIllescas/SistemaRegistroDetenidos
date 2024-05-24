@@ -115,7 +115,7 @@ public class Controladora {
           
         List<Usuario> listaUsuarios= controlPersistencia.getUsuarios();
         for(Usuario usu:listaUsuarios){
-            if(usu.getPolicia().getId()==id){
+            if(  usu.getPolicia()!= null && usu.getPolicia().getId()==id){
             return usu;
             
             }
@@ -127,6 +127,10 @@ public class Controladora {
 
     public void crearRegistro(Registro registro) {
        controlPersistencia.crearRegistro(registro);
+    }
+
+    public void editarPolicia(Policia policia) {
+        controlPersistencia.editPolicia(policia);
     }
    
 

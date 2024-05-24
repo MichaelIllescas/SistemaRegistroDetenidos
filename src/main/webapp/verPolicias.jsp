@@ -20,7 +20,7 @@
 <body id="page-top" class=" " >
 
 
-    <div id="wrapper" class="container-fluid pl-0">
+    <div id="wrapper" class="container-fluid p-0">
         <%@include file="recursos/components/navegacion.jsp" %>
 
         <div class="container-fluid">
@@ -53,7 +53,7 @@
                             </thead>
 
 
-                            <%                                List<Policia> listapolis = (List) request.getSession().getAttribute("listadoPolicias");
+                            <%  List<Policia> listapolis = (List) request.getSession().getAttribute("listadoPolicias");
                             %>
 
 
@@ -80,13 +80,13 @@
 
                                         </form>
 
-                                        <form class="mr-2" name="editar" action="SVEditarUsuarios" method="GET">
+                                        <form class="mr-2" name="editar" action="SVEditarPolicia" method="GET">
 
                                             <button type="submit" class="btn btn-primary  btn-user btn-circle " />
                                             <i class="fas fa-pencil-alt"></i>   
                                             </button>
 
-                                            <input type="hidden"name="id" class="btn btn-primary  btn-user " value="<%=pol.getId()%>" style="margin-right: 5px;" />
+                                            <input type="hidden" name="id" value="<%=pol.getId()%>" style="margin-right: 5px;" />
 
                                         </form>
 
@@ -108,7 +108,7 @@
             </div>
 
 
-            <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario(Primero eliminar Usuario).<p>
+            <p class="mb-4" style="visibility: <%=mensaje %>;">*No es posible eliminar efectivos asociados a un usuario(Primero eliminar Usuario).<p>
         </div>
         <!-- /.container-fluid -->
 

@@ -62,6 +62,9 @@ public class SVEditarUsuarios extends HttpServlet {
         usu.setNombreUsuario(nombreUsuario);
         usu.setRol(rol);
         
+        Policia policia=(Policia)controladora.getPolicia(Integer.parseInt(request.getParameter("policia")) );
+        usu.setPolicia(policia);
+        
         controladora.editarUsuario(usu);
         response.sendRedirect("SvUsuarios");
         

@@ -11,7 +11,7 @@
 <body id="page-top" class=" " >
 
 
-    <div id="wrapper" class="container-fluid pl-0">
+    <div id="wrapper" class="container-fluid p-0">
         <%@include file="recursos/components/navegacion.jsp" %>
 
         <div class="container-fluid">
@@ -30,7 +30,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
+                                    <th>Efectivo Policial</th>
                                     <th>Nombre de Usuario</th>
                                     <th>Rol</th>
                                     <th>Acción</th>
@@ -46,7 +46,7 @@
                             <tbody>
                                 <%for (Usuario usu : listaDeUsuarios) {%>
                                 <tr>
-                                    <td id="id_usu<%= usu.getId()%>"><%= usu.getId()%></td>
+                                    <td><%= usu.getPolicia().getNombre() + " " + usu.getPolicia().getApellido()%></td>
                                     <td><%= usu.getNombreUsuario()%></td>
                                     <td><%= usu.getRol()%></td>
                                     <td style="display:flex; " class="justify-content-center">

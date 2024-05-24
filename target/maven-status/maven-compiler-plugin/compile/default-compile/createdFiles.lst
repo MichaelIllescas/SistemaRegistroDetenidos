@@ -17,6 +17,7 @@ persistencia\DenuncianteJpaController.class
 servlets\SVCargarDatos.class
 servlets\SvLogin.class
 logica\Defensoria.class
+servlets\SVCambioCredenciales.class
 logica\Controladora.class
 logica\Usuario_.class
 logica\Nacionalidad_.class
@@ -56,4 +57,5 @@ persistencia\PersonaJpaController.class
 servlets\SVCerrarSesion.class
 persistencia\RegistroJpaController.class
 logica\Registro.class
+servlets\SVEditarPolicia.class
 logica\Defensoria_.class

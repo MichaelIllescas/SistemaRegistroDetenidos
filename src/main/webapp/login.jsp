@@ -12,7 +12,7 @@
 
     
     %>
-<body class="bg-gradient-dark mb-5">
+<body class="gradiente-azul-oscuro mb-5">
     <div class="container border-bottom-secondary h-auto mb-4 b" 
          data-aos="flip-left"
          data-aos-easing="ease-out-cubic"
@@ -23,13 +23,13 @@
 
             <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 ">
 
-                <div class="card o-hidden border-0 shadow-lg my-5 shadow-lg" style="box-sizing: border-box; ">
+                <div class="card o-hidden border-0 shadow-lg my-5 shadow" style="box-sizing: border-box; ">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
-                        <div class="row rounded-pill bg-gradient-dark text-center shadow-lg">
-                            <div class="col-lg-6  d-lg-block  bg-logo border-left-dark shadow-lg "></div>
-                            <div class="col-lg-6 shadow-lg">
-                                <div class="p-5 shadow-lg">
+                        <div class="row rounded-pill bg-gradient-dark text-center shadow">
+                            <div class="col-lg-6  d-lg-block  bg-logo border-left-dark shadow"></div>
+                            <div class="col-lg-6 shadow">
+                                <div class="p-5 shadow">
                                     <div class="text-center" >
                                         <h1 class="h4 text-white mb-4">Ingreso a S.R.D.P.</h1>
                                     </div>

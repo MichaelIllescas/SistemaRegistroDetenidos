@@ -5,6 +5,12 @@
    
     String visible = (String) session.getAttribute("visiblidad");
     String us = (String)session.getAttribute("usuario");
+     String displ;
+     if (visible.equals("hidden")){
+        displ="none";
+     }else{
+        displ="true";
+     }
 
 %>
 
@@ -72,7 +78,7 @@
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item" style="display: <%=visible%>">
+    <li class="nav-item" style="display: <%=displ%>">
         <a class="nav-link collapsed shadow-lg" href="#" data-toggle="collapse" data-target="#collapseUsers"
            aria-expanded="true" aria-controls="collapseUsers">
 

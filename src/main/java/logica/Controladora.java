@@ -144,6 +144,10 @@ public class Controladora {
     public Registro getRegistro(int id) {
         return controlPersistencia.getRegistro(id);
     }
+
+    public void editarRegistro(Registro registro) {
+       controlPersistencia.editarRegistro(registro); 
+    }
    
 
 }

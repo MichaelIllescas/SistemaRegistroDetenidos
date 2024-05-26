@@ -70,4 +70,20 @@ public class Utilitaria {
         // Retorna la fecha formateada como String
         return formattedDate;
     }
+         
+          // Método para reemplazar un detenido en la lista
+    public static void reemplazarDetenidoPorId(List<Detenido> detenidos, Detenido nuevoDetenido) {
+        if (detenidos == null || nuevoDetenido == null) {
+            return;
+        }
+        
+        for (int i = 0; i < detenidos.size(); i++) {
+            Detenido detenido = detenidos.get(i);
+            if (detenido.getId() == nuevoDetenido.getId()) {
+                detenidos.set(i, nuevoDetenido);
+                break;
+            }
+        }
+    }
+         
 }

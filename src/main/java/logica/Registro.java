@@ -25,7 +25,7 @@ public class Registro implements Serializable {
     private String observaciones;
     @Temporal(TemporalType.DATE)
     private Date fechaRegistro;
-    @OneToOne( cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne( cascade = CascadeType.ALL)
     private Causa causa;
     @OneToOne
     private Usuario usuario;

@@ -135,5 +135,13 @@ public class ControladoraPersistencia {
     public Registro getRegistro(int id) {
         return registroJPA.findRegistro(id);
     }
+
+    public void editarRegistro(Registro registro) {
+        try {
+            registroJPA.edit(registro);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

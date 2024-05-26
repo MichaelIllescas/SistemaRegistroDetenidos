@@ -56,7 +56,8 @@
         <div id="collapse-header" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Detenido</a>
+                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Ingreso</a>
+                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Egreso</a>
                 <a class="collapse-item" href="SVVerDetenidos">Ver Registros</a>
 
             </div>
@@ -71,7 +72,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow-lg">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item" href="crearReporte.jsp">Crear Reporte</a>
+                <a class="collapse-item" href="crearReporte.jsp">Generar Reporte</a>
 
             </div>
         </div>
@@ -89,8 +90,11 @@
              data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary">
                 <h6 class="collapse-header">Acciones: </h6>
-                <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
                 <a class="collapse-item" href="administrarUsuarios.jsp">Administrar Usuarios</a>
+                <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
+                <a class="collapse-item" href="crearPolicia.jsp">Registrar Funcionario</a>
+                <a class="collapse-item" href="SVCargarDatos">Registrar Usuario</a>
+                
 
             </div>
         </div>

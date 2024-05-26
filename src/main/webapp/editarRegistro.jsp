@@ -27,28 +27,27 @@
         HttpSession ses = request.getSession();
         Registro reg = (Registro) ses.getAttribute("registroAeditar");
         int idDetenido = (int) ses.getAttribute("idDetenido");
+        
     %>
-
-
-
-    <div id="wrapper">
+<div id="wrapper" class="container-fluid p-0">
         <%@include file="recursos/components/navegacion.jsp" %>
         <!-- Begin Page Content -->
-        <div class="container-fluid  pb-4">
+        <div class="container-fluid pb-4">
 
             <!-- Page Heading -->
-            <div class="row  mt-3">
+            <div class="row mt-3">
+
+ 
                 <div class="col-sm-12 text-center">
                     <h1 class="h2 titulo-color text-center">Editar Datos de un Detenido</h1>
                     <p class="mb-4 titulo-color">A continuación, podrá modificar datos registrados de un detenido que se enucentre en el sistema.<p>
                 </div>
             </div>
-            <form class="text-center w-50 m-auto shadow-lg rounded-pill mb-5 desplegable-personalizada" action="SVSVEditarRegistro" method="POST">
-
-                <div class="accordion accordion-flush" id="accordionExample">
-                    <div class="accordion-item gradiente-azul-oscuro">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+             <form class="text-center mx-auto  mb-5 p-3 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
+                <div class="accordion accordion-flush rounded" id="accordionExample">
+                    <div class="accordion-item gradiente-azul-oscuro rounded">
+                        <h2 class="accordion-header ">
+                            <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Datos Personales
                             </button>
                         </h2>
@@ -112,9 +111,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item gradiente-azul-oscuro">
+                    <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIPP" aria-expanded="false" aria-controls="collapseIPP">
+                            <button class="accordion-button collapsed shadow desplegable-personalizada rounded titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIPP" aria-expanded="false" aria-controls="collapseIPP">
                                 I.P.P. / Causa
                             </button>
                         </h2>
@@ -156,9 +155,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item gradiente-azul-oscuro shadow-lg">
+                    <div class="accordion-item gradiente-azul-oscuro shadow-lg rounded">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="accordion-button rounded desplegable-personalizada collapsed shadow titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Fecha de Ingreso
                             </button>
                         </h2>
@@ -175,9 +174,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item gradiente-azul-oscuro">
+                    <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDte" aria-expanded="false" aria-controls="collapseDte">
+                            <button class="accordion-button collapsed shadow desplegable-personalizada rounded titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDte" aria-expanded="false" aria-controls="collapseDte">
                                 Denunciante/Victima
                             </button>
                         </h2>
@@ -217,9 +216,9 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item gradiente-azul-oscuro">
+                    <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObs" aria-expanded="false" aria-controls="collapseObs">
+                            <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObs" aria-expanded="false" aria-controls="collapseObs">
                                 Observaciones
                             </button>
                         </h2>
@@ -240,7 +239,7 @@
 
 
                 <button class="gradiente-azul-oscuro btn shadow border-dark mt-3 mb-3" type="submit">
-                    Registrar Detenido
+                    Actualizar Datos
                 </button>
             </form>
 

@@ -87,7 +87,7 @@ public class SVRegistrarDetenido extends HttpServlet {
         Defensoria defensoria =new Defensoria();
         defensoria.setDescripcion(request.getParameter("defensoria"));
         Juzgado juzgado =new Juzgado();
-        juzgado.setDescripcion(request.getParameter("juzgado") + ", " + request.getParameter("deptoJudicial"));
+        juzgado.setDescripcion(request.getParameter("juzgado") );
         juzgado.setTitular(request.getParameter("juez"));
         
         causa.setDefensoria(defensoria);

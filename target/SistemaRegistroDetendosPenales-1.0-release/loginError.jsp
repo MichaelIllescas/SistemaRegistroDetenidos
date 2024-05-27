@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
 
-<body class="bg-gradient-dark mb-5">
+<body class="gradiente-azul-oscuro mb-5">
 
     <div class="container border-bottom-secondary m-auto "
          data-aos="flip-left"
@@ -54,9 +54,9 @@
                                         </div>
                                         <div id="overlay"></div>
 
-                                        <div id="popup">
+                                        <div id="popup" class="gradiente-azul-oscuro">
                                             <span class="close" onclick="cerrarPopup()">&times;</span>
-                                            <p class="text-lg">Póngase en contacto con el administrador Jonathan Illescas<br>
+                                            <p class="text-lg gradiente-azul-oscuro">Póngase en contacto con el administrador Jonathan Illescas<br>
                                                 Teléfono: 2923530179</p>
                                         </div>
 

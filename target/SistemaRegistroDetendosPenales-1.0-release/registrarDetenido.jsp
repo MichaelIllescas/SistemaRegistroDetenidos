@@ -89,11 +89,11 @@
                                     <input name="dni" type="text" class="form-control form-control-lg" id="dni" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="direccion">Direccion:</label>
+                                    <label for="direccion">Direccién:</label>
                                     <input name="direccion" type="text" class="form-control form-control-lg" id="direccion" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="telefono">Telefono:</label>
+                                    <label for="telefono">Teléfono:</label>
                                     <input name="telefono" type="text" class="form-control form-control-lg" id="telefono" required>
                                 </div>
                                 <div class="mb-3">
@@ -101,7 +101,7 @@
                                     <input name="apodo" type="text" class="form-control form-control-lg" id="apodo">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="ocupacion">Ocupacion:</label>
+                                    <label for="ocupacion">Ocupación:</label>
                                     <input name="ocupacion" id="ocupacion" type="text" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">
@@ -147,11 +147,11 @@
                                     <input name="nroCausa" id="nroCausa" type="text" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="caratula">Caratula:</label>
+                                    <label for="caratula">Carátula:</label>
                                     <input name="caratula" id="caratula" type="text" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="fiscalia">N° Fiscalìa Interviniente:</label>
+                                    <label for="fiscalia">N° Fiscalía Interviniente:</label>
                                     <input name="nroFiscalia" id="fiscalia" type="text" class="form-control form-control-lg">
                                 </div>
                                 <div class="mb-3">
@@ -159,7 +159,7 @@
                                     <input name="fiscal" id="fiscal" type="text" class="form-control form-control-lg">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="defensoria">Defensoria Interviniente:</label>
+                                    <label for="defensoria">Defensoría Interviniente:</label>
                                     <input name="defensoria" id="defensoria" type="text" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">
@@ -199,7 +199,7 @@
                     <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDte" aria-expanded="false" aria-controls="collapseDte">
-                                Denunciante/Victima
+                                Denunciante / Víctima
                             </button>
                         </h2>
                         <div id="collapseDte" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
@@ -217,11 +217,11 @@
                                     <input name="dniDte" type="text" class="form-control form-control-lg" id="dniDte">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="direccionDte">Direccion:</label>
+                                    <label for="direccionDte">Dirección:</label>
                                     <input name="direccionDte" type="text" class="form-control form-control-lg" id="direccionDte">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="telefonoDte">Telefono:</label>
+                                    <label for="telefonoDte">Teléfono:</label>
                                     <input name="telefonoDte" type="text" class="form-control form-control-lg" id="telefonoDte">
                                 </div>
                                 <div class="mb-3">
@@ -253,6 +253,12 @@
                     Registrar Detenido
                 </button>
             </form>
+              <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="index.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
+
+            </div>
         </div>
     </div>
 

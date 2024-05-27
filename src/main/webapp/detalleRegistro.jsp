@@ -4,6 +4,10 @@
     Author     : jonii
 --%>
 
+<%@page import="logica.Denunciante"%>
+<%@page import="logica.Utilitaria"%>
+<%@page import="logica.Detenido"%>
+<%@page import="logica.Registro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
 <style>
@@ -50,6 +54,13 @@
         }
     }
 </style>
+
+<%
+    Registro regis = (Registro) request.getSession().getAttribute("registroDetalle");
+    Detenido deteni = (Detenido) request.getSession().getAttribute("detalleDetenido");
+    Denunciante denun = (Denunciante) request.getSession().getAttribute("detalleDenunciante");
+
+%>
 <body id="page-top">
 
     <div id="wrapper" class="container-fluid p-0">
@@ -58,7 +69,7 @@
         <div class="container-fluid pb-4">
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <h1 class="h2 titulo-color"> Detenido</h1>
+                    <h1 class="h2 titulo-color"> Detenido: </h1>
                 </div>
 
                 <div class="col-12 col-md-10 col-lg-8 mx-auto  mb-5 rounded">
@@ -74,54 +85,54 @@
                                 <div class="accordion-body">
                                     <div class="row mb-3">
                                         <div class="col-12">
-                                            <label for="nombre">Nombre:</label>
-                                            <p> nombre </p>
+
+                                            <p >Nombre: <%=deteni.getNombre().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="apellido">Apellido:</label>
-                                            <p> Apellido </p>
+
+                                            <p>Apellido: <%=deteni.getApellido().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="dni">D.N.I. / Documento:</label>
-                                            <p> Dni </p>
+
+                                            <p> D.N.I.: <%=deteni.getDni().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="direccion">Direccion:</label>
-                                            <p> Direccion </p>
+
+                                            <p> Dirección: <%=deteni.getDireccion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="telefono">Telefono:</label>
-                                            <p> telefono </p>
+
+                                            <p> Teléfono: <%=deteni.getTelefono().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="apodo">Apodo:</label>
-                                            <p> Apodo</p>
+
+                                            <p> Apodo: <%=deteni.getApodo().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="ocupacion">Ocupacion:</label>
-                                            <p> Ocupacion </p>
+
+                                            <p> Ocupación: <%=deteni.getOcupacion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="fechaNac">Fecha de Nacimiento:</label>
-                                            <p> fecha de nacimiento </p>
+
+                                            <p> Fecha de nacimiento: <%=Utilitaria.dateToString(deteni.getFechaNacimiento())%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="sexo">Sexo:</label>
-                                            <p> sexo </p>
+
+                                            <p>Sexo: <%=deteni.getSexo().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="instruccion">Instruccion:</label>
-                                            <p> instruccion </p>
+
+                                            <p>Instrucción: <%=deteni.getInstuccion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="estadoCivil">Estado Civil:</label>
-                                            <p> Estado civil </p>
+
+                                            <p> Estado civil: <%=deteni.getEstadoCivil().getDescipcion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="Nacionalidad">Nacionalidad:</label>
+                                            <p>Nacionalidad: <%=deteni.getNacionalidad().getDescipcion().toUpperCase()%><p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="rol">Calidad:</label>
+                                            <p>Calidad: <%=deteni.getCalidad().toUpperCase()%></p>
                                         </div>
                                     </div>
                                 </div>
@@ -139,28 +150,28 @@
                                 <div class="accordion-body">
                                     <div class="row mb-3">
                                         <div class="col-12">
-                                            <label for="nroCausa">Nº I.P.P. / Causa:</label>
+                                            <p>Nº I.P.P. / Causa: <%=regis.getCausa().getNumeroCausa().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="caratula">Caratula:</label>
+                                            <p>Carátula:<%=regis.getCausa().getDescripcion().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="fiscalia">N° Fiscalìa Interviniente:</label>
+                                            <p>Fiscalía Interviniente: <%=regis.getCausa().getFiscalia().getDescripcion().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="fiscal">Agente Fiscal:</label>
+                                            <p>Agente Fiscal: <%=regis.getCausa().getFiscalia().getTitular().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <label for="defensoria">Defensoria Interviniente:</label>
+                                            <p>Defensoría: <%=regis.getCausa().getDefensoria().getDescripcion().toUpperCase()%></p>      
                                         </div>
                                         <div class="col-12">
-                                            <label for="juzgado">Juzgado Interviniente:</label>
+                                            <p>Juzgado: <%=regis.getCausa().getJuzgado().getDescripcion().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="juez">Juez Interviniente:</label>
+                                            <p>Juez: <%=regis.getCausa().getJuzgado().getTitular().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="deptoJudicial">Departamento Judicial:</label>
+                                            <p>Departamento Judicial: <%=regis.getCausa().getDepartamentoJudicial().toUpperCase()%></p>        
                                         </div>
                                     </div>
                                 </div>
@@ -178,10 +189,10 @@
                                 <div class="accordion-body">
                                     <div class="row mb-3">
                                         <div class="col-12">
-                                            <label for="fechaIngreso">Fecha de Ingreso:</label>
+                                            <p>Fecha de Ingreso: <%=Utilitaria.dateToString(deteni.getFechaIngreso())%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="fechaEgreso">Fecha de Egreso:</label>
+                                            <p>Fecha de Ingreso: <%=Utilitaria.dateToString(deteni.getFechaEgreso())%></p>        
                                         </div>
                                     </div>
                                 </div>
@@ -199,22 +210,22 @@
                                 <div class="accordion-body">
                                     <div class="row mb-3">
                                         <div class="col-12">
-                                            <label for="nombreDte">Nombre:</label>
+                                            <p>Nombre: <%=denun.getNombre().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="apellidoDte">Apellido:</label>
+                                            <p>Apellido: <%=denun.getApellido().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="dniDte">D.N.I. / Documento:</label>
+                                            <p>D.N.I.: <%=denun.getDni().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="direccionDte">Direccion:</label>
+                                            <p>Dirección: <%=denun.getDireccion().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="telefonoDte">Telefono:</label>
+                                            <p>Teléfono: <%=denun.getTelefono().toUpperCase()%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <label for="fechaNacDte">Fecha de Nacimiento:</label>
+                                            <p>Fecha de Naciminto: <%=Utilitaria.dateToString(denun.getFechaNacimiento())%></p>        
                                         </div>
                                     </div>
                                 </div>
@@ -230,16 +241,21 @@
                             </h2>
                             <div id="collapseObs" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <div class="row mb-3">
-                                        <div class="col-12">
-                                            <label for="observaciones">Observaciones:</label>
-                                        </div>
-                                    </div>
+
+
+                                    <p>Observaciones: <%=regis.getObservaciones().toLowerCase()%></p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="verDetenidos.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
+
             </div>
         </div>
 

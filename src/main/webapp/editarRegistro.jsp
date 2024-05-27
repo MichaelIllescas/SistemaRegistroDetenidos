@@ -27,9 +27,9 @@
         HttpSession ses = request.getSession();
         Registro reg = (Registro) ses.getAttribute("registroAeditar");
         int idDetenido = (int) ses.getAttribute("idDetenido");
-        
-    %>
-<div id="wrapper" class="container-fluid p-0">
+
+        %>
+    <div id="wrapper" class="container-fluid p-0">
         <%@include file="recursos/components/navegacion.jsp" %>
         <!-- Begin Page Content -->
         <div class="container-fluid pb-4">
@@ -37,13 +37,13 @@
             <!-- Page Heading -->
             <div class="row mt-3">
 
- 
+
                 <div class="col-sm-12 text-center">
                     <h1 class="h2 titulo-color text-center">Editar Datos de un Detenido</h1>
                     <p class="mb-4 titulo-color">A continuación, podrá modificar datos registrados de un detenido que se enucentre en el sistema.<p>
                 </div>
             </div>
-             <form class="text-center mx-auto  mb-5 p-3 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
+            <form class="text-center mx-auto  mb-5 p-3 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
                 <div class="accordion accordion-flush rounded" id="accordionExample">
                     <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header ">
@@ -166,8 +166,8 @@
                                 <div class="col-sm-12 mx-auto mb-3">
                                     <label for="fechaIngreso">Fecha de Ingreso: </label>
                                     <input name="fechaIngreso" id="fechaIngreso" type="date" class="form-control form-control-lg" value="<%=Utilitaria.convertirDateAinputDate(Utilitaria.buscarDetenidoPorId(reg.getCausa().getDetenidos(), idDetenido).getFechaIngreso())%>" required>
-                                           </div>
-                                           <div class="col-sm-12 mx-auto mb-3">
+                                </div>
+                                <div class="col-sm-12 mx-auto mb-3">
                                     <label for="fechaEgreso">Fecha de Egreso </label>
                                     <input name="fechaEgerso" id="fechaEgreso" type="date" class="form-control form-control-lg" value="<%=Utilitaria.convertirDateAinputDate(Utilitaria.buscarDetenidoPorId(reg.getCausa().getDetenidos(), idDetenido).getFechaEgreso())%>">
                                 </div>
@@ -186,7 +186,7 @@
                                 <div class="col-sm-12 mx-auto mb-3">
                                     <label for="nombreDte">Nombre:</label>
                                     <input name="nombreDte" type="text" class="form-control form-control-lg" id="nombre"
-                                         
+
                                            value="<%=Utilitaria.buscarDenunciantePorId(reg.getCausa().getDenunciantes(), idDetenido).getNombre()%>"   
                                            >
                                 </div>
@@ -238,10 +238,16 @@
 
 
 
-                <button class="gradiente-azul-oscuro btn shadow border-dark mt-3 mb-3" type="submit">
+                <button class="gradiente-azul-oscuro btn shadow border-dark mt-3 mb-3 p-2" type="submit">
                     Actualizar Datos
                 </button>
             </form>
+            <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="verDetenidos.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
+
+            </div>
 
         </div>
     </div>

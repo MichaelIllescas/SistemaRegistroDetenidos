@@ -33,7 +33,7 @@
                 <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Usuarios:</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Policias: </h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -107,13 +107,19 @@
                 </div>
             </div>
 
+ <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="administrarUsuarios.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
 
+            </div>
             <p class="mb-4" style="visibility: <%=mensaje %>;">*No es posible eliminar efectivos asociados a un usuario(Primero eliminar Usuario).<p>
         </div>
         <!-- /.container-fluid -->
 
         <hr>
         <hr>
+        
     </div>
 
 

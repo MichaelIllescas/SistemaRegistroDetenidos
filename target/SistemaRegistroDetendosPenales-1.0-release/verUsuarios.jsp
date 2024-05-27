@@ -1,7 +1,7 @@
-    <%-- 
-    Document   : verUsuarios
-    Created on : 10 may. 2024, 21:07:30
-    Author     : jonii
+<%-- 
+Document   : verUsuarios
+Created on : 10 may. 2024, 21:07:30
+Author     : jonii
 --%>
 <%@page import="java.util.List"%>
 <%@page import="logica.Usuario"%>
@@ -80,7 +80,12 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="administrarUsuarios.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
 
+            </div>
         </div>
         <!-- /.container-fluid -->
 

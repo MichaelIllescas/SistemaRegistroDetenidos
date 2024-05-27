@@ -67,10 +67,15 @@
                         Crear Efectivo
                     </button>
 
-            </div>        
+                    
 
+ <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="administrarUsuarios.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
 
-
+            </div>
+</div>
            
         </div>  
 

@@ -13,7 +13,7 @@
 
 
 %>
-<body class="bg-gradient-dark mb-5">
+<body class="gradiente-azul-oscuro mb-5">
     <div class="container border-bottom-secondary h-auto mb-4 b" 
          data-aos="flip-left"
          data-aos-easing="ease-out-cubic"
@@ -58,7 +58,7 @@
                                         </div>
                                         <div id="overlay"></div>
 
-                                        <div id="popup">
+                                        <div id="popup" class="gradiente-azul-oscuro">
                                             <span class="close" onclick="cerrarPopup()">&times;</span>
                                             <p class="text-lg">Póngase en contacto con el administrador Jonathan Illescas<br>
                                                 Teléfono: 2923530179</p>

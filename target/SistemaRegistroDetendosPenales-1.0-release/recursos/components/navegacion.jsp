@@ -2,15 +2,18 @@
 <%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%HttpSession sesion = request.getSession();
-   
-    String visible = (String) session.getAttribute("visiblidad");
-    String us = (String)session.getAttribute("usuario");
-     String displ;
-     if (visible.equals("hidden")){
-        displ="none";
-     }else{
-        displ="true";
-     }
+
+    String visible = "hidden";
+    visible = (String) session.getAttribute("visiblidad");
+    String us = (String) session.getAttribute("usuario");
+    String displ = "none";
+    if (visible != null) {
+        if (visible.equals("hidden")) {
+            displ = "none";
+        } else {
+            displ = "true";
+        }
+    }
 
 %>
 
@@ -91,10 +94,10 @@
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary">
                 <h6 class="collapse-header">Acciones: </h6>
                 <a class="collapse-item" href="administrarUsuarios.jsp">Administrar Usuarios</a>
-                <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
                 <a class="collapse-item" href="crearPolicia.jsp">Registrar Funcionario</a>
+                <a class="collapse-item" href="SVVerPolicias">Ver Funcionarios</a>
                 <a class="collapse-item" href="SVCargarDatos">Registrar Usuario</a>
-                
+                <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
 
             </div>
         </div>

@@ -86,7 +86,7 @@ public class SVEditarRegistro extends HttpServlet {
 
       
         
-        Nacionalidad nacionalidad = new Nacionalidad();
+        Nacionalidad nacionalidad = detenido.getNacionalidad();
         nacionalidad.setDescipcion(request.getParameter("nacionalidad"));
         Date fechaNac = Utilitaria.convertStringToDate(request.getParameter("fechaNac"), "yyyy-MM-dd");
 
@@ -132,7 +132,7 @@ public class SVEditarRegistro extends HttpServlet {
 
         List<Denunciante> denunciantes = causa.getDenunciantes();
 
-        denunciantes.add(denunciante);
+      Utilitaria.reemplazarDenunciantePorId(denunciantes, denunciante);
         causa.setDenunciantes(denunciantes);
 
         

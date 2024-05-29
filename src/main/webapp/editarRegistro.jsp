@@ -43,7 +43,7 @@
                     <p class="mb-4 titulo-color">A continuación, podrá modificar datos registrados de un detenido que se enucentre en el sistema.<p>
                 </div>
             </div>
-            <form class="text-center mx-auto  mb-5 p-3 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
+            <form class="text-center mx-auto  mb-5 p-3 " style="max-width: 600px;" action="SVEditarRegistro" method="POST">
                 <div class="accordion accordion-flush rounded" id="accordionExample">
                     <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header ">

@@ -85,5 +85,21 @@ public class Utilitaria {
             }
         }
     }
+    
+        
+          // Método para reemplazar un detenido en la lista
+    public static void reemplazarDenunciantePorId(List<Denunciante> denunciantes, Denunciante nuevoDenunciante) {
+        if (denunciantes == null || nuevoDenunciante == null) {
+            return;
+        }
+        
+        for (int i = 0; i < denunciantes.size(); i++) {
+            Denunciante denunciante = denunciantes.get(i);
+            if (denunciante.getId() == nuevoDenunciante.getId()) {
+                denunciantes.set(i, nuevoDenunciante);
+                break;
+            }
+        }
+    }
          
 }

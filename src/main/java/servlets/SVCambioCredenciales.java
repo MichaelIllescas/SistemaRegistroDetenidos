@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Usuario;
+import logica.Utilitaria;
 
 /**
  *
@@ -54,6 +55,7 @@ public class SVCambioCredenciales extends HttpServlet {
        
 
         if(clave.equals(claveRepeat)){
+            clave=Utilitaria.MD5(clave);
             usu.setClave(clave);     
             usu.setContador(usu.getContador() + 1);
             controladora.editarUsuario(usu);

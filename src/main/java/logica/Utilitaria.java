@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import org.mindrot.jbcrypt.BCrypt;
 
 
 
@@ -101,5 +102,38 @@ public class Utilitaria {
             }
         }
     }
+    
+    public static String MD5(String md5){
+    
+        try {
+             java.security.MessageDigest md= java.security.MessageDigest.getInstance("MD5");
+             byte [] array=  md.digest(md5.getBytes());
+             StringBuffer sb= new StringBuffer();
+             
+             for ( int i = 0 ;i< array.length;i++){
+                 sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100 ).substring(1,3) );
+             }
+             return sb.toString();
+        } catch (java.security.NoSuchAlgorithmException e) {
+            e.printStackTrace();
+
+        } 
+        
+        
+        return null;
+    }
+     // Método para comparar una clave ingresada con la clave almacenada (hash)
+    public static boolean compareMD5(String originalPassword, String storedHash) {
+        String hashedPassword = MD5(originalPassword);
+        return hashedPassword != null && hashedPassword.equals(storedHash);
+    }
+
+      public static String hashPassword(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
+    }
+
+    public static boolean verifyPassword(String enteredPassword, String storedHash) {
+        return BCrypt.checkpw(enteredPassword, storedHash);
          
+}
 }

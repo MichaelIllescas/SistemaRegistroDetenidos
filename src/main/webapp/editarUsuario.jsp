@@ -18,6 +18,8 @@
 
 <body id="page-top" class=" " >
 
+
+
     <div id="wrapper" class="container-fluid p-0">
 
 
@@ -33,7 +35,7 @@
                     <p>Este es un apartado para editar a un usuario reistrado en el sistema.</p>
                 </div>
             </div>
-            <form class="user text-center" action="SVEditarUsuarios" method="POST">
+            <form class="user text-center confirm-submit" action="SVEditarUsuarios" method="POST">
                 <div class="row ">
                     <div class="col-md-6 offset-md-3 ">
 
@@ -116,6 +118,8 @@
 
 
 
-
+    <script src="recursos/js/demo/funciones.js"></script>
 
 </body>
+</html>
+  

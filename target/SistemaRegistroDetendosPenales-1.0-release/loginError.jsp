@@ -92,3 +92,4 @@
 </body>
 
 <%@include file="recursos/components/footer.jsp" %>
+</html>

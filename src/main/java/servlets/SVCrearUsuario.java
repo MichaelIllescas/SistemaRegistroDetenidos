@@ -16,6 +16,7 @@ import logica.Controladora;
 import logica.EstadoUsuario;
 import logica.Policia;
 import logica.Usuario;
+import logica.Utilitaria;
 
 /**
  *
@@ -49,7 +50,7 @@ public class SVCrearUsuario extends HttpServlet {
 
        
         String nombreUsuario= (String) request.getParameter("nomusu");
-        String clave= (String) request.getParameter("contras");
+        String clave= Utilitaria.MD5((String) request.getParameter("contras"));
         String rol= (String) request.getParameter("rol");
         
        String polnId=(String)request.getParameter("policia");

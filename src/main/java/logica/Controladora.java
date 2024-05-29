@@ -80,13 +80,7 @@ public class Controladora {
         for(Usuario usu: listaUsuarios){
             if (usu.getNombreUsuario().equals(usuario))
             {
-                if(usu.getClave().equals(clave))
-                {
-                     ingreso=true;
-                }else 
-                {
-                    ingreso=false;
-                }
+                ingreso = Utilitaria.compareMD5(clave,usu.getClave());
             }
  
         }

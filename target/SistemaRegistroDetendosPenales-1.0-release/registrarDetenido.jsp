@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <form class="text-center mx-auto  mb-5 p-3 rounded-1" style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
+            <form class="text-center mx-auto  mb-5 p-3 rounded-1 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
 
                 <div class="accordion accordion-flush rounded-1" id="accordionExample">
                     <div class="accordion-item gradiente-azul-oscuro rounded-2">

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Policia;
 import logica.Usuario;
+import logica.Utilitaria;
 
 /**
  *
@@ -53,7 +54,7 @@ public class SVEditarUsuarios extends HttpServlet {
             throws ServletException, IOException {
            
         String nombreUsuario=request.getParameter("nomusu");
-        String clave=request.getParameter("contras");
+        String clave=Utilitaria.MD5(request.getParameter("contras"));
         String rol=request.getParameter("rol");
         
         Usuario usu= (Usuario) request.getSession().getAttribute("usuEditar");

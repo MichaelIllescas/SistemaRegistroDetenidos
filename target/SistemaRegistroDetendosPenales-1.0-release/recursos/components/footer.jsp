@@ -85,6 +85,9 @@
 <script src="recursos/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 
+<script src="recursos/js/demo/funciones.js"></script>
+
+
 
 
 
@@ -92,5 +95,3 @@
 <!-- End of Footer -->
 
 
-
-</html>

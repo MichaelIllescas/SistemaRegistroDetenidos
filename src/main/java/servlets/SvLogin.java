@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Usuario;
+import logica.Utilitaria;
 
 /**
  *
@@ -39,7 +40,7 @@ public class SvLogin extends HttpServlet {
 
         String usuario = request.getParameter("usuario");
         String clave = request.getParameter("password");
-        Usuario userObjet= controladora.traerUsuarioPorUserYPass(usuario, clave);
+        Usuario userObjet= controladora.traerUsuarioPorUserYPass(usuario, Utilitaria.MD5(clave));
         String visiblidad;
 
         boolean validacionIngreso = false;

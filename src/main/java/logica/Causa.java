@@ -32,11 +32,11 @@ public class Causa implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Juzgado juzgado;
     
-     @OneToMany(cascade = CascadeType.ALL)
+     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
     private List<Detenido> detenidos;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
     private List<Denunciante> denunciantes;
 

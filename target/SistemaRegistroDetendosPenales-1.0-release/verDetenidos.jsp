@@ -12,7 +12,6 @@
 <%
     HttpSession ses = request.getSession();
     List<Registro> regs = (List) ses.getAttribute("registros");
-
 %>
 
 <body id="page-top" class=" " >
@@ -50,7 +49,9 @@
                             <tbody>
                                 <% if (regs != null) {
                                         for (Registro reg : regs) {
-                                            for (Detenido dete : reg.getCausa().getDetenidos()) {%>
+                                            for (Detenido dete : reg.getCausa().getDetenidos()) {
+                                                String modalId = "modalDelete" + reg.getId() + dete.getId();
+                                %>
                                 <tr>
                                     <td><%=dete.getNombre()%></td>
                                     <td><%=dete.getApellido()%></td>
@@ -61,12 +62,34 @@
                                     <td><%=Utilitaria.dateToString(dete.getFechaIngreso())%></td>
                                     <td><%=Utilitaria.dateToString(dete.getFechaEgreso())%></td>
                                     <td style="display:flex;" class="justify-content-center">
-                                        <form name="eliminar" action="SVEliminarRegistro" method="POST">
-                                            <button type="submit" class="btn btn-user btn-circle btn-danger">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                            <input type="hidden" name="id" value="<%=reg.getId()%>">
-                                        </form>
+                                        <!-- Botón para abrir el modal de eliminación -->
+                                        <button type="button" class="btn btn-user btn-circle btn-danger" data-bs-toggle="modal" data-bs-target="#<%= modalId %>">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+
+                                        <!-- Modal de eliminación -->
+                                        <div class="modal fade" id="<%= modalId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <form name="eliminar" action="SVEliminarRegistro" method="POST">
+                                                <input type="hidden" name="id" value="<%=reg.getId()%>">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Registro</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ¿Está seguro de que desea eliminar el registro del detenido <%=dete.getNombre() %> <%=dete.getApellido() %>?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- Formulario para editar -->
                                         <form name="editar" action="SVEditarRegistro" method="GET">
                                             <input type="hidden" name="id" value="<%=reg.getId()%>">
                                             <input type="hidden" name="idDetenido" value="<%=dete.getId()%>">
@@ -74,6 +97,8 @@
                                                 <i class="fas fa-pencil-alt"></i>
                                             </button>
                                         </form>
+
+                                        <!-- Formulario para ver detalles -->
                                         <form name="verDatos" action="SVDetalleRegistro" method="GET">
                                             <button type="submit" class="btn btn-user btn-circle btn-info">
                                                 <i class="fas fa-eye"></i>
@@ -85,12 +110,11 @@
                                 </tr>
                                 <%          }
                                         }
-                                    }%>
+                                    }
+                                %>
                             </tbody>
                         </table>
-
                     </div>
-
                 </div>
             </div>
 
@@ -101,11 +125,9 @@
                 <a href="index.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
                     <i class="fa-solid fa-arrows-left-right ">Volver</i>
                 </a>
-
             </div>
         </div>
     </div>
     <%@include file="recursos/components/cerrarSesion.jsp" %>
     <%@include file="recursos/components/footer.jsp" %>
 </body>
-

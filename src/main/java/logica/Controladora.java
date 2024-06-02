@@ -142,6 +142,15 @@ public class Controladora {
     public void editarRegistro(Registro registro) {
        controlPersistencia.editarRegistro(registro); 
     }
+
+    public List<Detenido> getDetenidos() {
+    
+        return controlPersistencia.getDetenidos();
+    }
+
+    public void editarDetenido(Detenido detenido) {
+        controlPersistencia.editarDetenido(detenido);
+    }
    
 
 }

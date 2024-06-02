@@ -60,7 +60,7 @@
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow">
                 <h6 class="collapse-header">Acciones:</h6>
                 <a class="collapse-item " href="registrarDetenido.jsp">Registrar Ingreso</a>
-                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Egreso</a>
+                <a class="collapse-item " href="SVRegistrarEgreso">Registrar Egreso</a>
                 <a class="collapse-item" href="SVVerDetenidos">Ver Registros</a>
 
             </div>

@@ -7,6 +7,7 @@ package persistencia;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import logica.Detenido;
 import logica.Policia;
 import logica.Registro;
 import logica.Usuario;
@@ -142,6 +143,19 @@ public class ControladoraPersistencia {
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public List<Detenido> getDetenidos() {
+       return detenidoJPA.findDetenidoEntities();
+    }
+
+    public void editarDetenido(Detenido detenido) {
+        try {
+            detenidoJPA.edit(detenido);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
     }
     
 }

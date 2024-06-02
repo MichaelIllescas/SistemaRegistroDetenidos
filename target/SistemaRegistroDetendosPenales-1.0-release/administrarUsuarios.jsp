@@ -42,7 +42,7 @@
                 <img src="recursos/img/poliEditar.png" class="card-img-top m-auto img-fluid p-1" alt="..." style="max-width: 100px; max-height: 100px;">
                 <div class="card-body d-flex flex-column">
                     <form action="SVVerPolicias" method="GET" class="d-flex flex-column h-100">
-                        <h5 class="card-title">Editar Funcionarios</h5>
+                        <h5 class="card-title">Ver y Editar Funcionarios</h5>
                         <p class="card-text">Edita los datos de los efectivos policiales registrados en el sistema</p>
                         <button type="submit" class="btn gradiente-azul-oscuro mt-auto">Ingresar</button>
                     </form>
@@ -66,7 +66,7 @@
                 <img src="recursos/img/userEdit.png" class="card-img-top m-auto img-fluid p-1" alt="..." style="max-width: 100px; max-height: 100px;">
                 <div class="card-body d-flex flex-column">
                     <form action="SvUsuarios" method="get" class="d-flex flex-column h-100">
-                        <h5 class="card-title">Editar Usuarios</h5>
+                        <h5 class="card-title">Ver y Editar Usuarios</h5>
                         <p class="card-text">Edita datos de los usuarios en el sistema</p>
                         <button type="submit" class="btn gradiente-azul-oscuro mt-auto">Ingresar</button>
                     </form>

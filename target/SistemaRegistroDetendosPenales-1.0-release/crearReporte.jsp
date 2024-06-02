@@ -26,7 +26,13 @@
                     <h1>SITIO EN CONSTRUCCIÓN</h1>
                 </div>
             </div>
-        </div>
+            <div class="text-center d-flex justify-content-start align-items-center">
+                <a href="index.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
+                    <i class="fa-solid fa-arrows-left-right ">Volver</i>
+                </a>
+
+            </div>
+        
     </div>
 
 

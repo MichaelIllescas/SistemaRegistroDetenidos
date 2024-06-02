@@ -33,7 +33,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Registrar Egreso de Detenido</h5>
                     <p class="card-text">Registrar el egreso de un detenido en el sistema</p>
-                    <a href="registrarDetenido.jsp" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
+                    <a href="SVRegistrarEgreso" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Generar Reporte</h5>
                     <p class="card-text">Generar un reporte de detenidos registrados</p>
-                    <a href="#" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
+                    <a href="crearReporte.jsp" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
                 </div>
             </div>
         </div>

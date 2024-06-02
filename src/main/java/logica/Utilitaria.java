@@ -136,4 +136,21 @@ public class Utilitaria {
         return BCrypt.checkpw(enteredPassword, storedHash);
          
 }
+    
+    
+      public static int buscarRegistroPorIdDetenido(List<Registro> registros, int idDetenido) {
+        for (Registro registro : registros) {
+            if (registro.getCausa().getDetenidos() != null) {
+                for (Detenido detenido : registro.getCausa().getDetenidos()) {
+                    if (detenido.getId() == idDetenido) {
+                        return registro.getId();
+                    }
+                }
+            }
+        }
+        return -1; // Si no se encuentra el detenido
+    }
+    
+    
+    
 }

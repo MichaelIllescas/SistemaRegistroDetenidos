@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Detenido;
+import logica.Registro;
 import logica.Utilitaria;
 
 /**
@@ -49,9 +50,18 @@ public class SVRegistrarEgreso extends HttpServlet {
         
          Date fechaEgreso=Utilitaria.convertStringToDate(request.getParameter("fechaEgreso"), "yyyy-MM-dd");
          int idDetenido= Integer.parseInt(request.getParameter("detenido"));
+         
+         String observaciones= request.getParameter("observaciones");
+
           List<Detenido>detenidos=controladora.getDetenidos();
         Detenido detenido= Utilitaria.buscarDetenidoPorId(detenidos, idDetenido);
         detenido.setFechaEgreso(fechaEgreso);
+        
+       int idRegistro= Utilitaria.buscarRegistroPorIdDetenido(controladora.getRegistros(), idDetenido);
+        Registro registro= controladora.getRegistro(idRegistro);
+        observaciones+=" - observaciones previas: " +registro.getObservaciones();
+        registro.setObservaciones(observaciones);
+        controladora.editarRegistro(registro);
         controladora.editarDetenido(detenido);
         response.sendRedirect("SVVerDetenidos");
         

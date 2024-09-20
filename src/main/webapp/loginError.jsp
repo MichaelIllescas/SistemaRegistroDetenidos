@@ -32,13 +32,15 @@
                                     <form class="user text-center " action="" method="POST">
 
                                         <div class="text-center">
-                                        
-                                            
-
-                                            <p class="text-white ">Usuario o Contraeña Incorrecto   .</p>
-
-
-                                        </div>    
+    <p class="text-white">
+        <% if (session.getAttribute("inhabilitado") != null) { %>
+            <%= session.getAttribute("inhabilitado") %>
+        <% } else { %>
+            Usuario o Contraseña Incorrectos.
+        <% } %>
+    </p>
+</div>
+  
                                         
 
                                         <div>

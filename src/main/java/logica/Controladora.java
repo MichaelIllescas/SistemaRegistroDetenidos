@@ -19,14 +19,16 @@ public class Controladora {
     public Controladora() {
     }
 
+    public EstadoUsuario getEstadoPorId(int id) {
+        return controlPersistencia.getEstadoPorId(id);
+    }
 
     public List<Usuario> getUsuarios() {
-       return controlPersistencia.getUsuarios();
+        return controlPersistencia.getUsuarios();
     }
 
     public void creaUsuario(Usuario name) {
-      
-               
+
         controlPersistencia.crearUsuario(name);
     }
 
@@ -34,105 +36,101 @@ public class Controladora {
         controlPersistencia.crearPolicia(policia);
     }
 
-    public List<Policia>getPolicias(){
+    public List<Policia> getPolicias() {
         return controlPersistencia.getPolicias();
     }
-    public Policia buscarPoliciaLegajo(String legajo){
-    
+
+    public Policia buscarPoliciaLegajo(String legajo) {
+
         return controlPersistencia.buscarPoliciaLegajo(legajo);
-        
+
     }
 
     public Policia getPolicia(int policiaId) {
-       
+
         return controlPersistencia.getPolicia(policiaId);
     }
 
     public Usuario traerUsuarioPorUserYPass(String usuario, String clave) {
-           List<Usuario> listaUsuarios= new ArrayList<>();
-        listaUsuarios= controlPersistencia.getUsuarios();
-        
-        Usuario user=null;
-        
-        for(Usuario usu: listaUsuarios){
-            if (usu.getNombreUsuario().equals(usuario))
-            {
-                if(usu.getClave().equals(clave))
-                {
-                     user=usu;
+        List<Usuario> listaUsuarios = new ArrayList<>();
+        listaUsuarios = controlPersistencia.getUsuarios();
+
+        Usuario user = null;
+
+        for (Usuario usu : listaUsuarios) {
+            if (usu.getNombreUsuario().equals(usuario)) {
+                if (usu.getClave().equals(clave)) {
+                    user = usu;
                 }
             }
- 
+
         }
 
-         return user;
-    
+        return user;
+
     }
-        
-        
-    
-        public boolean validarUsuario(String usuario, String clave) {
-        List<Usuario> listaUsuarios= new ArrayList<>();
-        listaUsuarios= controlPersistencia.getUsuarios();
-        
-        boolean ingreso=false;
-        
-        for(Usuario usu: listaUsuarios){
-            if (usu.getNombreUsuario().equals(usuario))
-            {
-                ingreso = Utilitaria.compareMD5(clave,usu.getClave());
+
+    public boolean validarUsuario(String usuario, String clave) {
+        List<Usuario> listaUsuarios = new ArrayList<>();
+        listaUsuarios = controlPersistencia.getUsuarios();
+
+        boolean ingreso = false;
+
+        for (Usuario usu : listaUsuarios) {
+            if (usu.getNombreUsuario().equals(usuario)) {
+                ingreso = Utilitaria.compareMD5(clave, usu.getClave());
             }
- 
+
         }
 
-         return ingreso;
+        return ingreso;
     }
 
     public Usuario getUsuario(int id) {
-         return controlPersistencia.getUsuario(id);
+        return controlPersistencia.getUsuario(id);
     }
 
     public void eliminarUsuario(int id) {
         try {
-            controlPersistencia.eliminarUsuario(id);
+            Usuario usuario = controlPersistencia.getUsuario(id);
+            EstadoUsuario estado = controlPersistencia.getEstadoPorId(2);
+            usuario.setEstado(estado);
+
+            controlPersistencia.editarUsuario(usuario);
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
- 
+    public void habilitarUsuario(int id) {
+        try {
+            Usuario usuario = controlPersistencia.getUsuario(id);
+            EstadoUsuario estado = controlPersistencia.getEstadoPorId(1);
+            usuario.setEstado(estado);
+            controlPersistencia.editarUsuario(usuario);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void editarUsuario(Usuario usu) {
         controlPersistencia.editarUsuario(usu);
     }
 
-    public Usuario eliminarPolicia(int id) {
-          
-        List<Usuario> listaUsuarios= controlPersistencia.getUsuarios();
-        for(Usuario usu:listaUsuarios){
-            if(  usu.getPolicia()!= null && usu.getPolicia().getId()==id){
-            return usu;
-            
-            }
-        }
-        
-       controlPersistencia.eliminarPolicia(id);
-       return null;
-    }
-
     public void crearRegistro(Registro registro) {
-       controlPersistencia.crearRegistro(registro);
+        controlPersistencia.crearRegistro(registro);
     }
 
     public void editarPolicia(Policia policia) {
         controlPersistencia.editPolicia(policia);
     }
 
-    public List <Registro> getRegistros() {
-       return controlPersistencia.getRegistros();
+    public List<Registro> getRegistros() {
+        return controlPersistencia.getRegistros();
     }
 
     public void eliminarRegistro(int idRegistro) {
-       controlPersistencia.eliminarRegistro(idRegistro);
+        controlPersistencia.eliminarRegistro(idRegistro);
     }
 
     public Registro getRegistro(int id) {
@@ -140,17 +138,38 @@ public class Controladora {
     }
 
     public void editarRegistro(Registro registro) {
-       controlPersistencia.editarRegistro(registro); 
+        controlPersistencia.editarRegistro(registro);
     }
 
     public List<Detenido> getDetenidos() {
-    
+
         return controlPersistencia.getDetenidos();
     }
 
     public void editarDetenido(Detenido detenido) {
         controlPersistencia.editarDetenido(detenido);
     }
-   
+
+    public Usuario resetClaveUsuario(Usuario usuario) {
+        String claveReseteada = usuario.getPolicia().getDni();
+        usuario.setClave(claveReseteada);
+        return usuario;
+    }
+
+    public void habilitarPolicia(int id) {
+        List<Usuario> listaUsuarios = controlPersistencia.getUsuarios();
+        Policia policia = this.getPolicia(id);
+        policia.setEstado(1);
+        editarPolicia(policia); // Asegúrate de que esto guarda correctamente
+        return; // No necesitas devolver el usuario si no es necesario
+
+    }
+
+    public void eliminarPolicia(int idPolicia) {
+        Policia policia = this.getPolicia(idPolicia);
+        policia.setEstado(0);
+        editarPolicia(policia); // Asegúrate de que esto guarda correctamente
+
+    }
 
 }

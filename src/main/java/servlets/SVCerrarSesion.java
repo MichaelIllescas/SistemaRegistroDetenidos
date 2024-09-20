@@ -28,6 +28,14 @@ public class SVCerrarSesion extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         clearSession(request.getSession());
+        
+          // Limpia todos los atributos y la sesión.
+    HttpSession session = request.getSession(false);  // Obtener la sesión actual si existe.
+    
+    if (session != null) {
+        session.invalidate();  // Invalida la sesión actual y elimina todos los atributos.
+    }
+    
         response.sendRedirect("login.jsp");
         
     }

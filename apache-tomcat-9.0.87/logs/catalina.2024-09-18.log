@@ -1,0 +1,1045 @@
+18-Sep-2024 17:44:40.255 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 17:44:40.270 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 17:44:40.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+18-Sep-2024 17:44:40.349 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+18-Sep-2024 17:44:40.349 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+18-Sep-2024 17:44:40.349 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Sep-2024 17:44:40.398 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+18-Sep-2024 17:44:40.782 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+18-Sep-2024 17:44:40.848 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [891] milliseconds
+18-Sep-2024 17:44:41.016 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+18-Sep-2024 17:44:41.016 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+18-Sep-2024 17:44:41.038 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+18-Sep-2024 17:44:41.088 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+18-Sep-2024 17:44:43.773 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+18-Sep-2024 17:44:43.774 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+18-Sep-2024 17:44:43.900 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:44.044 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [3.005] ms
+18-Sep-2024 17:44:44.045 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+18-Sep-2024 17:44:44.046 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+18-Sep-2024 17:44:44.052 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@77476fcf]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+18-Sep-2024 17:44:44.062 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [17] ms
+18-Sep-2024 17:44:44.062 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+18-Sep-2024 17:44:44.062 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+18-Sep-2024 17:44:44.082 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7747cc1b]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+18-Sep-2024 17:44:44.656 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [592] ms
+18-Sep-2024 17:44:44.656 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 17:44:44.658 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 17:44:46.357 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:46.362 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.706] ms
+18-Sep-2024 17:44:46.363 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] de la aplicación web
+18-Sep-2024 17:44:46.874 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:46.878 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] has finished in [515] ms
+18-Sep-2024 17:44:46.879 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] de la aplicación web
+18-Sep-2024 17:44:47.773 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:47.887 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] has finished in [1.008] ms
+18-Sep-2024 17:44:47.888 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] de la aplicación web
+18-Sep-2024 17:44:48.419 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:48.430 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] has finished in [542] ms
+18-Sep-2024 17:44:48.431 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] de la aplicación web
+18-Sep-2024 17:44:48.910 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:44:48.913 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] has finished in [482] ms
+18-Sep-2024 17:44:48.918 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 17:44:48.992 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8148] milliseconds
+18-Sep-2024 17:45:25.663 WARNING [http-nio-8080-exec-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize0(Native Method)
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize(WinNTFileSystem.java:462)
+ java.base@17.0.9/java.io.File.getCanonicalPath(File.java:626)
+ org.apache.catalina.webresources.AbstractFileResourceSet.file(AbstractFileResourceSet.java:94)
+ org.apache.catalina.webresources.DirResourceSet.getResource(DirResourceSet.java:94)
+ org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:272)
+ org.apache.catalina.webresources.CachedResource.validateResource(CachedResource.java:105)
+ org.apache.catalina.webresources.Cache.getResource(Cache.java:96)
+ org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:211)
+ org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:220)
+ org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:885)
+ org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1002)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 17:45:26.201 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 17:45:26.255 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 17:45:26.256 WARNING [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 17:45:27.834 INFO [http-nio-8080-exec-3] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 17:45:27.837 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.583] ms
+18-Sep-2024 17:45:27.842 INFO [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 17:45:30.679 INFO [34] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:00:08.001 WARNING [http-nio-8080-exec-15] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:00:08.001 WARNING [http-nio-8080-exec-15] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:00:08.513 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:00:08.556 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:00:08.556 WARNING [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:00:10.640 INFO [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:00:10.640 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [2.084] ms
+18-Sep-2024 18:00:10.659 INFO [http-nio-8080-exec-19] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:00:12.953 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:04:06.254 WARNING [http-nio-8080-exec-28] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:04:06.254 WARNING [http-nio-8080-exec-28] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:04:06.769 INFO [http-nio-8080-exec-28] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:04:06.824 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:04:06.824 WARNING [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:04:07.494 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:04:08.671 INFO [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:04:08.675 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.851] ms
+18-Sep-2024 18:04:08.691 WARNING [http-nio-8080-exec-21] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.util.concurrent.ConcurrentHashMap.get(ConcurrentHashMap.java:936)
+ java.base@17.0.9/jdk.internal.loader.BuiltinClassLoader.findResource(BuiltinClassLoader.java:275)
+ java.base@17.0.9/jdk.internal.loader.BuiltinClassLoader.findResource(BuiltinClassLoader.java:325)
+ java.base@17.0.9/jdk.internal.loader.BootLoader.findResource(BootLoader.java:182)
+ java.base@17.0.9/java.lang.ClassLoader.getResource(ClassLoader.java:1400)
+ org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1225)
+ org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1141)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:04:09.201 INFO [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:04:09.234 INFO [http-nio-8080-exec-29] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:04:09.236 WARNING [http-nio-8080-exec-29] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:04:10.906 INFO [http-nio-8080-exec-29] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:04:10.911 INFO [http-nio-8080-exec-29] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.676] ms
+18-Sep-2024 18:04:10.915 INFO [http-nio-8080-exec-22] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:04:13.694 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:06:14.154 WARNING [http-nio-8080-exec-41] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:06:14.154 WARNING [http-nio-8080-exec-41] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:06:14.416 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:06:14.666 INFO [http-nio-8080-exec-41] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:06:14.701 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:06:14.702 WARNING [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:06:16.340 INFO [http-nio-8080-exec-35] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:06:16.344 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.644] ms
+18-Sep-2024 18:06:16.345 INFO [http-nio-8080-exec-36] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:18:55.096 WARNING [http-nio-8080-exec-49] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:18:55.097 WARNING [http-nio-8080-exec-49] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:18:55.604 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:18:55.637 INFO [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:18:55.639 WARNING [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:18:57.007 INFO [http-nio-8080-exec-43] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:18:57.015 INFO [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.378] ms
+18-Sep-2024 18:18:57.017 INFO [http-nio-8080-exec-51] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:18:58.858 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:23:32.059 WARNING [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:23:32.060 WARNING [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:23:32.576 INFO [http-nio-8080-exec-55] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:23:32.617 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:23:32.619 WARNING [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:23:34.129 INFO [http-nio-8080-exec-60] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:23:34.132 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.515] ms
+18-Sep-2024 18:23:34.136 INFO [http-nio-8080-exec-58] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:23:35.894 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:30:55.087 WARNING [http-nio-8080-exec-71] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:30:55.087 WARNING [http-nio-8080-exec-71] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:30:55.360 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:30:55.595 INFO [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:30:55.631 INFO [http-nio-8080-exec-67] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:30:55.632 WARNING [http-nio-8080-exec-67] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:30:57.080 INFO [http-nio-8080-exec-67] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:30:57.085 INFO [http-nio-8080-exec-67] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.454] ms
+18-Sep-2024 18:30:57.088 INFO [http-nio-8080-exec-70] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:42:44.961 WARNING [http-nio-8080-exec-80] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:42:44.961 WARNING [http-nio-8080-exec-80] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:42:45.190 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:42:45.472 INFO [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:42:45.516 INFO [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:42:45.517 WARNING [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:42:46.980 INFO [http-nio-8080-exec-81] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:42:46.995 INFO [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.479] ms
+18-Sep-2024 18:42:47.005 INFO [http-nio-8080-exec-74] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:46:31.106 WARNING [http-nio-8080-exec-89] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:46:31.106 WARNING [http-nio-8080-exec-89] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:46:31.618 INFO [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:46:31.661 INFO [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:46:31.662 WARNING [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:46:32.228 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:46:33.268 INFO [http-nio-8080-exec-90] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:46:33.284 INFO [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.623] ms
+18-Sep-2024 18:46:33.287 INFO [http-nio-8080-exec-84] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 18:55:23.169 WARNING [http-nio-8080-exec-96] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 18:55:23.169 WARNING [http-nio-8080-exec-96] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:55:23.314 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 18:55:23.673 INFO [http-nio-8080-exec-96] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 18:55:23.707 INFO [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 18:55:23.710 WARNING [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 18:55:25.153 INFO [http-nio-8080-exec-99] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 18:55:25.157 INFO [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.450] ms
+18-Sep-2024 18:55:25.162 INFO [http-nio-8080-exec-98] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 19:39:25.859 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+18-Sep-2024 19:39:25.860 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 19:39:25.874 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+18-Sep-2024 19:39:25.888 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ConsultorioOdontologico] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:39:25.893 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 19:39:25.893 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:39:25.893 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 19:39:25.913 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 19:39:29.098 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+18-Sep-2024 19:39:29.104 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+18-Sep-2024 19:39:29.104 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+18-Sep-2024 19:39:29.104 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+18-Sep-2024 19:39:29.105 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 19:39:29.106 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+18-Sep-2024 19:39:29.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+18-Sep-2024 19:39:29.163 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+18-Sep-2024 19:39:29.163 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+18-Sep-2024 19:39:29.163 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Sep-2024 19:39:29.173 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+18-Sep-2024 19:39:29.635 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+18-Sep-2024 19:39:29.650 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [858] milliseconds
+18-Sep-2024 19:39:29.740 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+18-Sep-2024 19:39:29.740 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+18-Sep-2024 19:39:29.759 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+18-Sep-2024 19:39:29.770 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+18-Sep-2024 19:39:32.066 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+18-Sep-2024 19:39:32.066 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+18-Sep-2024 19:39:32.163 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:32.278 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [2.517] ms
+18-Sep-2024 19:39:32.279 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+18-Sep-2024 19:39:32.280 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+18-Sep-2024 19:39:32.287 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@c87787d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+18-Sep-2024 19:39:32.313 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [33] ms
+18-Sep-2024 19:39:32.313 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+18-Sep-2024 19:39:32.314 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+18-Sep-2024 19:39:32.320 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@28e91f6d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+18-Sep-2024 19:39:32.428 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [115] ms
+18-Sep-2024 19:39:32.428 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 19:39:32.428 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 19:39:34.268 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:34.304 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.875] ms
+18-Sep-2024 19:39:34.304 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] de la aplicación web
+18-Sep-2024 19:39:34.878 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:34.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] has finished in [577] ms
+18-Sep-2024 19:39:34.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] de la aplicación web
+18-Sep-2024 19:39:35.781 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:35.885 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] has finished in [1.004] ms
+18-Sep-2024 19:39:35.886 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] de la aplicación web
+18-Sep-2024 19:39:36.870 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:36.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] has finished in [995] ms
+18-Sep-2024 19:39:36.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] de la aplicación web
+18-Sep-2024 19:39:37.681 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:39:37.688 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] has finished in [807] ms
+18-Sep-2024 19:39:37.701 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 19:39:37.848 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8183] milliseconds
+18-Sep-2024 19:41:18.467 WARNING [http-nio-8080-exec-6] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 19:41:18.467 WARNING [http-nio-8080-exec-6] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:41:18.980 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 19:41:19.011 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 19:41:19.011 WARNING [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 19:41:20.916 INFO [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:41:20.931 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.920] ms
+18-Sep-2024 19:41:20.940 INFO [http-nio-8080-exec-8] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 19:41:21.726 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:59:27.371 WARNING [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 19:59:27.371 WARNING [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:59:27.883 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 19:59:27.914 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 19:59:27.916 WARNING [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 19:59:28.101 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 19:59:29.707 INFO [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 19:59:29.712 INFO [http-nio-8080-exec-20] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.797] ms
+18-Sep-2024 19:59:29.715 INFO [http-nio-8080-exec-11] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:01:10.791 WARNING [http-nio-8080-exec-24] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:01:10.792 WARNING [http-nio-8080-exec-24] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:01:11.298 INFO [http-nio-8080-exec-24] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:01:11.360 INFO [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:01:11.367 WARNING [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:01:11.869 INFO [48] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:01:14.406 INFO [http-nio-8080-exec-30] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:01:14.410 INFO [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.050] ms
+18-Sep-2024 20:01:14.412 INFO [http-nio-8080-exec-25] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:04:26.342 WARNING [http-nio-8080-exec-38] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:04:26.343 WARNING [http-nio-8080-exec-38] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:04:26.859 INFO [http-nio-8080-exec-38] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:04:26.889 INFO [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:04:26.890 WARNING [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:04:28.395 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:04:28.564 INFO [http-nio-8080-exec-39] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:04:28.573 INFO [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.684] ms
+18-Sep-2024 20:04:28.577 INFO [http-nio-8080-exec-36] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:05:41.248 WARNING [http-nio-8080-exec-47] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:05:41.249 WARNING [http-nio-8080-exec-47] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:05:41.752 INFO [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:05:41.780 INFO [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:05:41.781 WARNING [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:05:43.389 INFO [http-nio-8080-exec-45] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:05:43.393 INFO [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.613] ms
+18-Sep-2024 20:05:43.396 INFO [http-nio-8080-exec-50] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:05:43.781 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:09:34.008 WARNING [http-nio-8080-exec-58] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:09:34.008 WARNING [http-nio-8080-exec-58] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:09:34.514 INFO [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:09:34.565 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:09:34.566 WARNING [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:09:34.750 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:09:36.418 INFO [http-nio-8080-exec-56] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:09:36.422 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.856] ms
+18-Sep-2024 20:09:36.424 INFO [http-nio-8080-exec-52] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:11:22.540 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:11:22.541 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:11:22.699 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:11:23.044 INFO [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:11:23.071 INFO [http-nio-8080-exec-69] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:11:23.072 WARNING [http-nio-8080-exec-69] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:11:24.657 INFO [http-nio-8080-exec-69] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:11:24.660 INFO [http-nio-8080-exec-69] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.589] ms
+18-Sep-2024 20:11:24.663 INFO [http-nio-8080-exec-68] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:13:38.328 WARNING [http-nio-8080-exec-75] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:13:38.329 WARNING [http-nio-8080-exec-75] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:13:38.844 INFO [http-nio-8080-exec-75] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:13:38.873 INFO [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:13:38.874 WARNING [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:13:39.722 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:13:40.390 INFO [http-nio-8080-exec-71] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:13:40.395 INFO [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.521] ms
+18-Sep-2024 20:13:40.398 INFO [http-nio-8080-exec-78] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:18:48.909 WARNING [http-nio-8080-exec-83] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:18:48.909 WARNING [http-nio-8080-exec-83] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:18:49.415 INFO [http-nio-8080-exec-83] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:18:49.443 INFO [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:18:49.444 WARNING [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:18:49.811 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:18:51.129 INFO [http-nio-8080-exec-81] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:18:51.134 INFO [http-nio-8080-exec-81] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.691] ms
+18-Sep-2024 20:18:51.137 INFO [http-nio-8080-exec-85] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:25:34.272 WARNING [http-nio-8080-exec-100] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:25:34.272 WARNING [http-nio-8080-exec-100] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:25:34.778 INFO [http-nio-8080-exec-100] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:25:34.811 INFO [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:25:34.813 WARNING [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:25:36.459 INFO [http-nio-8080-exec-99] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:25:36.465 INFO [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.654] ms
+18-Sep-2024 20:25:36.468 INFO [http-nio-8080-exec-92] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:25:37.544 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:27:56.457 WARNING [http-nio-8080-exec-109] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:27:56.458 WARNING [http-nio-8080-exec-109] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:27:56.965 INFO [http-nio-8080-exec-109] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:27:56.996 INFO [http-nio-8080-exec-110] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:27:56.997 WARNING [http-nio-8080-exec-110] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:27:57.591 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:27:58.564 INFO [http-nio-8080-exec-110] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:27:58.568 INFO [http-nio-8080-exec-110] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.572] ms
+18-Sep-2024 20:27:58.571 INFO [http-nio-8080-exec-103] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:31:31.275 WARNING [http-nio-8080-exec-119] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:31:31.275 WARNING [http-nio-8080-exec-119] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:31:31.791 INFO [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:31:31.819 INFO [http-nio-8080-exec-112] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:31:31.821 WARNING [http-nio-8080-exec-112] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:31:32.913 INFO [147] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:31:33.477 INFO [http-nio-8080-exec-112] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:31:33.482 INFO [http-nio-8080-exec-112] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.663] ms
+18-Sep-2024 20:31:33.485 INFO [http-nio-8080-exec-118] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:35:03.589 WARNING [http-nio-8080-exec-129] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:35:03.590 WARNING [http-nio-8080-exec-129] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:35:04.099 INFO [http-nio-8080-exec-129] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:35:04.136 INFO [http-nio-8080-exec-130] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:35:04.137 WARNING [http-nio-8080-exec-130] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:35:04.270 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:35:05.771 INFO [http-nio-8080-exec-130] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:35:05.776 INFO [http-nio-8080-exec-130] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.641] ms
+18-Sep-2024 20:35:05.780 INFO [http-nio-8080-exec-127] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:48:35.471 WARNING [http-nio-8080-exec-133] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:48:35.472 WARNING [http-nio-8080-exec-133] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:48:35.975 INFO [http-nio-8080-exec-133] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:48:36.004 INFO [http-nio-8080-exec-137] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:48:36.005 WARNING [http-nio-8080-exec-137] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:48:37.011 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:48:37.566 INFO [http-nio-8080-exec-137] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:48:37.570 INFO [http-nio-8080-exec-137] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.566] ms
+18-Sep-2024 20:48:37.580 INFO [http-nio-8080-exec-132] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 20:54:46.141 WARNING [http-nio-8080-exec-146] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 20:54:46.141 WARNING [http-nio-8080-exec-146] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:54:46.658 INFO [http-nio-8080-exec-146] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 20:54:46.689 INFO [http-nio-8080-exec-149] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 20:54:46.690 WARNING [http-nio-8080-exec-149] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 20:54:47.735 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 20:54:48.490 INFO [http-nio-8080-exec-149] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 20:54:48.493 INFO [http-nio-8080-exec-149] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.804] ms
+18-Sep-2024 20:54:48.495 INFO [http-nio-8080-exec-148] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 21:03:54.901 WARNING [http-nio-8080-exec-156] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 21:03:54.901 WARNING [http-nio-8080-exec-156] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 21:03:54.951 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 21:03:55.409 INFO [http-nio-8080-exec-156] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 21:03:55.437 INFO [http-nio-8080-exec-154] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 21:03:55.438 WARNING [http-nio-8080-exec-154] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 21:03:57.029 INFO [http-nio-8080-exec-154] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 21:03:57.032 INFO [http-nio-8080-exec-154] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.595] ms
+18-Sep-2024 21:03:57.034 INFO [http-nio-8080-exec-160] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 21:11:46.600 WARNING [http-nio-8080-exec-168] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 21:11:46.601 WARNING [http-nio-8080-exec-168] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 21:11:47.110 INFO [http-nio-8080-exec-168] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+18-Sep-2024 21:11:47.216 INFO [http-nio-8080-exec-162] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+18-Sep-2024 21:11:47.217 WARNING [http-nio-8080-exec-162] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+18-Sep-2024 21:11:48.597 INFO [http-nio-8080-exec-162] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Sep-2024 21:11:48.602 INFO [http-nio-8080-exec-162] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [1.387] ms
+18-Sep-2024 21:11:48.604 INFO [http-nio-8080-exec-164] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+18-Sep-2024 21:11:51.380 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 23:00:46.712 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+18-Sep-2024 23:00:46.713 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 23:00:46.727 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+18-Sep-2024 23:00:46.764 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ConsultorioOdontologico] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize0(Native Method)
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize(WinNTFileSystem.java:462)
+ java.base@17.0.9/java.io.File.getCanonicalPath(File.java:626)
+ org.apache.catalina.webresources.AbstractFileResourceSet.file(AbstractFileResourceSet.java:94)
+ org.apache.catalina.webresources.DirResourceSet.getResource(DirResourceSet.java:94)
+ org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:272)
+ org.apache.catalina.webresources.CachedResource.validateResource(CachedResource.java:105)
+ org.apache.catalina.webresources.Cache.getResource(Cache.java:96)
+ org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:211)
+ org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:220)
+ org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:885)
+ org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1002)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 23:00:46.778 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Sep-2024 23:00:46.780 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+18-Sep-2024 23:00:46.786 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+18-Sep-2024 23:00:46.808 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

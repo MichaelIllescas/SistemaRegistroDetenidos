@@ -20,7 +20,7 @@
           <section class="administracion container">
     <div class="row mt-3">
         <div class="col-sm-12 text-center">
-            <h1 class="titulo-color text-center">Administracion de Usuarios</h1>
+            <h1 class="titulo-color text-center">Administración de Usuarios</h1>
             <p class="mb-4 titulo-color">A continuación, podrá administrar a los usuarios registrados en el sistema.</p>
         </div>
     </div>
@@ -54,7 +54,7 @@
                 <img src="recursos/img/user.png" class="card-img-top m-auto img-fluid p-1" alt="..." style="max-width: 100px; max-height: 100px;">
                 <div class="card-body d-flex flex-column">
                     <form action="SVCargarDatos" method="GET" class="d-flex flex-column h-100">
-                        <h5 class="card-title">Crear Usuario</h5>
+                        <h5 class="card-title">Registrar Usuario</h5>
                         <p class="card-text">Registra a un nuevo usuario en el sistema</p>
                         <button type="submit" class="btn gradiente-azul-oscuro mt-auto">Ingresar</button>
                     </form>

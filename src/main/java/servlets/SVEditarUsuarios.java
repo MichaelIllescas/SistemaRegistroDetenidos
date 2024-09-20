@@ -49,30 +49,31 @@ public class SVEditarUsuarios extends HttpServlet {
     }
 
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-           
-        String nombreUsuario=request.getParameter("nomusu");
-        String clave=Utilitaria.MD5(request.getParameter("contras"));
-        String rol=request.getParameter("rol");
-        
-        Usuario usu= (Usuario) request.getSession().getAttribute("usuEditar");
-        
-        usu.setClave(clave);
-        usu.setNombreUsuario(nombreUsuario);
-        usu.setRol(rol);
-        
-        Policia policia=(Policia)controladora.getPolicia(Integer.parseInt(request.getParameter("policia")) );
-        usu.setPolicia(policia);
-        
-        controladora.editarUsuario(usu);
-        response.sendRedirect("SvUsuarios");
-        
-        
-        
-        
-    }
+        @Override
+        protected void doPost(HttpServletRequest request, HttpServletResponse response)
+                throws ServletException, IOException {
+
+            String nombreUsuario=request.getParameter("nomusu");
+            String clave=Utilitaria.MD5(request.getParameter("contras"));
+            String rol=request.getParameter("rol");
+
+            Usuario usu= (Usuario) request.getSession().getAttribute("usuEditar");
+
+            usu.setClave(clave);
+            usu.setNombreUsuario(nombreUsuario);
+            usu.setRol(rol);
+
+
+            Policia policia=(Policia)controladora.getPolicia(Integer.parseInt(request.getParameter("policia")) );
+            usu.setPolicia(policia);
+            usu.setContador(0);
+            controladora.editarUsuario(usu);
+            response.sendRedirect("SvUsuarios");
+
+
+
+
+        }
 
    
     @Override

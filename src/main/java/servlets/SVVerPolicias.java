@@ -22,36 +22,32 @@ import logica.Policia;
  */
 @WebServlet(name = "SVVerPolicias", urlPatterns = {"/SVVerPolicias"})
 public class SVVerPolicias extends HttpServlet {
-    Controladora controladora =new Controladora ();
+
+    Controladora controladora = new Controladora();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-      
+
     }
 
-   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
         List<Policia> listadoPolicias = controladora.getPolicias();
-        
-        HttpSession sesion= request.getSession();
+        HttpSession sesion = request.getSession();
         sesion.setAttribute("listadoPolicias", listadoPolicias);
-        
         response.sendRedirect("verPolicias.jsp");
-        
+
     }
 
-  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";

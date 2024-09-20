@@ -1,6 +1,7 @@
 logica\Policia_.class
 persistencia\EstadoCivilJpaController.class
 servlets\SVEliminarUsuarios.class
+servlets\SVRegistrarEgreso.class
 servlets\SVEditarRegistro.class
 logica\Usuario.class
 persistencia\DefensoriaJpaController.class
@@ -40,6 +41,7 @@ logica\Persona.class
 logica\Fiscalia.class
 logica\Detenido.class
 persistencia\UsuarioJpaController.class
+servlets\SVresetearUsuario.class
 logica\Causa.class
 persistencia\FiscaliaJpaController.class
 logica\Juzgado_.class

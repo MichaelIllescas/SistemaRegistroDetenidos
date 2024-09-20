@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package servlets;
 
 import java.io.IOException;
@@ -22,11 +18,13 @@ import logica.Usuario;
 @WebServlet(name = "SVEliminarPolicia", urlPatterns = {"/SVEliminarPolicia"})
 public class SVEliminarPolicia extends HttpServlet {
 
-    Controladora controladora =new Controladora();
+    Controladora controladora = new Controladora();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,22 +35,18 @@ public class SVEliminarPolicia extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        int id=Integer.parseInt((String)request.getParameter("id"));
-        
-        
-        
-        Usuario user= controladora.eliminarPolicia(id);
-        
-        
-        HttpSession miSession= request.getSession();
-        miSession.setAttribute("policiaEliminado", user);
-        
+        int id = Integer.parseInt((String) request.getParameter("id"));
+
+        if (controladora.getPolicia(id).getEstado() == 1) {
+            controladora.eliminarPolicia(id);
+
+        } else {
+            controladora.habilitarPolicia(id);
+        }
         response.sendRedirect("SVVerPolicias");
-        
-        
+
     }
 
- 
     @Override
     public String getServletInfo() {
         return "Short description";

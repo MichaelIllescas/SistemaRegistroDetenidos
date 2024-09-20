@@ -36,39 +36,46 @@ public class SVCambioCredenciales extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
+        HttpSession miSession=request.getSession();
+        miSession.removeAttribute("mensaje"); // O establecer a null
         response.sendRedirect("cambioCredenciales.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
 
-        String usuario = (String) request.getAttribute("usuario");
         String clave = request.getParameter("password");
         String claveRepeat = request.getParameter("passwordRepeat");
-
         HttpSession miSession = request.getSession();
         Usuario usu = (Usuario) miSession.getAttribute("user");
-
-       
-
-        if(clave.equals(claveRepeat)){
-            clave=Utilitaria.MD5(clave);
-            usu.setClave(clave);     
-            usu.setContador(usu.getContador() + 1);
-            controladora.editarUsuario(usu);
-            response.sendRedirect("login.jsp");
-
-        }else{  
-            miSession.setAttribute("mensaje", "visible");
-            response.sendRedirect("SVCambioCredenciales");
+        miSession.removeAttribute("mensaje"); // O establecer a null
+        // Validación de la contraseña
+        String mensajeError = Utilitaria.validarContrasena(clave);
+        if (!mensajeError.isEmpty()) {
+            miSession.setAttribute("mensaje", mensajeError);
+            // Usar RequestDispatcher para redirigir
+            request.getRequestDispatcher("cambioCredenciales.jsp").forward(request, response);
+            return; // Salir después de redirigir
         }
-      
-        
-       
 
+        // Verificación de las contraseñas repetidas
+        String verificarClavesRepeat = Utilitaria.validarClaves(clave, claveRepeat);
+        if (!verificarClavesRepeat.isEmpty()) {
+            miSession.setAttribute("mensaje", verificarClavesRepeat);
+            // Usar RequestDispatcher para redirigir
+            request.getRequestDispatcher("cambioCredenciales.jsp").forward(request, response);
+            return; // Salir después de redirigir
+        }
+
+        // Si todo está bien, actualiza la contraseña
+        clave = Utilitaria.MD5(clave);
+        usu.setClave(clave);
+        usu.setContador(usu.getContador() + 1);
+        controladora.editarUsuario(usu);
+        // Redirigir a la página de inicio de sesión
+        miSession.removeAttribute("mensaje"); // O establecer a null
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     @Override

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import logica.Detenido;
+import logica.EstadoUsuario;
 import logica.Policia;
 import logica.Registro;
 import logica.Usuario;
@@ -56,6 +57,7 @@ public class ControladoraPersistencia {
     
     
     public void crearUsuario(Usuario usu) {
+     
         usuarioJPA.create(usu);
     }
 
@@ -94,6 +96,7 @@ public class ControladoraPersistencia {
 
     public void editarUsuario(Usuario usu) {
         try {
+            
             usuarioJPA.edit(usu);
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
@@ -156,6 +159,10 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
        
+    }
+
+    public EstadoUsuario getEstadoPorId(int id) {
+        return estadoUsuarioJPA.findEstadoUsuario(id);
     }
     
 }

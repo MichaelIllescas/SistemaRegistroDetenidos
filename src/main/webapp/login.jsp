@@ -6,12 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
+<%HttpSession miSession = request.getSession();
+    miSession.removeAttribute("usuario");
 
-   <%HttpSession miSession= request.getSession();
-      miSession.removeAttribute("usuario");
 
-    
-    %>
+%>
 <body class="gradiente-azul-oscuro mb-5">
     <div class="container border-bottom-secondary h-auto mb-4 b" 
          data-aos="flip-left"
@@ -33,23 +32,41 @@
                                     <div class="text-center" >
                                         <h1 class="h4 text-white mb-4">Ingreso a S.R.D.P.</h1>
                                     </div>
-                                   <form class="user text-center" action="SvLogin" method="POST" >
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user shadow"
-                                                       id="usuario" name="usuario" placeholder="Usuario">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control form-control-user shadow"
+                                    <form class="user text-center" action="SvLogin" method="POST" >
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user shadow"
+                                                   id="usuario" name="usuario" placeholder="Usuario">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="password" class="form-control form-control-user shadow" 
                                                        id="password" name="password" placeholder="Contraseña">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" onclick="togglePassword()" style="cursor: pointer;">
+                                                        <i class="fa fa-eye" id="eyeIcon"></i>
+                                                    </span>
+                                                </div>
                                             </div>
-                                          
-
-                                            <button type="submit" class="btn bg-gradient-info btn-user text-lg text-white">
-                                                Ingresar
-                                            </button>
+                                        </div>
 
 
-                                   </form>
+                                        <button type="submit" class="btn bg-gradient-info btn-user text-lg text-white">
+                                            Ingresar
+                                        </button>
+                                        <div class="mt-4 mb-2">
+                                            <a href="#" onclick="mostrarPopup()">¿Olvidó su usuario o clave?</a>
+
+                                        </div>
+                                        <div id="overlay"></div>
+
+                                        <div id="popup" class="gradiente-azul-oscuro border-light shadow-lg ">
+                                            <span class="close text-white" onclick="cerrarPopup()">&times;</span>
+                                            <p class="text-lg gradiente-azul-oscuro">Póngase en contacto con el administrador Jonathan Illescas<br>
+                                                Teléfono: 2923530179</p>
+                                        </div>
+
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -62,28 +79,27 @@
 
     </div>
 
-    
-    
-    
-    
-    
-    
-       
+
+
+
+
+
+
+
 
     <div class="container text-center mt-5 "
          data-aos="flip-left"
-             data-aos-easing="ease-out-cubic"
-             data-aos-duration="1700">
+         data-aos-easing="ease-out-cubic"
+         data-aos-duration="1700">
         <img src="recursos/img/ministerio.png" alt="alt" class="rounded shadow"/>
-                        
+
     </div>
 
 
 
 
+
+
+
+    <%@include file="recursos/components/footer.jsp" %>
 </body>
-
-
-
-
-<%@include file="recursos/components/footer.jsp" %>

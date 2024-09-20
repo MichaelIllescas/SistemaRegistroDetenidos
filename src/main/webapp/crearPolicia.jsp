@@ -73,14 +73,21 @@
                 <a href="administrarUsuarios.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
                     <i class="fa-solid fa-arrows-left-right ">Volver</i>
                 </a>
-
-            </div>
+               <%
+    HttpSession sess = request.getSession();
+    String mensajeError = (String) sess.getAttribute("errorRegistroPolicia"); // Asegúrate de hacer un casting
+%>   
+<p class="m-auto" style="color: red; display: <%= (mensajeError != null && !mensajeError.isEmpty()) ? "block" : "none" %>;">
+    <%= (mensajeError != null && !mensajeError.isEmpty()) ? mensajeError : "" %>
+</p> 
+            </div>           
 </div>
            
         </div>  
 
         <hr>
         </form>
+    
 
 
         <hr>

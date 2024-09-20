@@ -96,7 +96,7 @@
                 <a class="collapse-item" href="administrarUsuarios.jsp">Administrar Usuarios</a>
                 <a class="collapse-item" href="crearPolicia.jsp">Registrar Funcionario</a>
                 <a class="collapse-item" href="SVVerPolicias">Ver Funcionarios</a>
-                <a class="collapse-item" href="SVCargarDatos">Registrar Usuario</a>
+                <a class="collapse-item" href="SVCargarDatos">Asignar Usuario</a>
                 <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
 
             </div>

@@ -33,48 +33,61 @@ public class SvLogin extends HttpServlet {
         processRequest(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+@Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    processRequest(request, response);
 
-        String usuario = request.getParameter("usuario");
-        String clave = request.getParameter("password");
-        Usuario userObjet= controladora.traerUsuarioPorUserYPass(usuario, Utilitaria.MD5(clave));
-        String visiblidad;
+    // Limpiar la sesión
+    HttpSession miSession = request.getSession(true);
+    miSession.invalidate();
+    miSession = request.getSession(true);
 
-        boolean validacionIngreso = false;
+    String usuario = request.getParameter("usuario");
+    String clave = request.getParameter("password");
 
-        validacionIngreso = controladora.validarUsuario(usuario, clave);
-        HttpSession miSession = request.getSession(true);
-        miSession.setAttribute("usuario", usuario);
-        miSession.setAttribute("user", userObjet);
+    // Traer el usuario actualizado desde la base de datos
+    Usuario userObjet = controladora.traerUsuarioPorUserYPass(usuario, Utilitaria.MD5(clave));
 
-        if (validacionIngreso == true) {
-
-            if (userObjet.getContador() == 0) {
-                visiblidad = "hidden";
-                miSession.setAttribute("mensaje", visiblidad);
-                response.sendRedirect("cambioCredenciales.jsp");
-            } else {
-                userObjet.setContador(userObjet.getContador() + 1);
-                if (userObjet.getRol().equalsIgnoreCase("administrador")) {
-                    visiblidad = "visible";
-                    miSession.setAttribute("visiblidad", visiblidad);
-                } else {
-
-                    visiblidad = "hidden";
-                    miSession.setAttribute("visiblidad", visiblidad);
-                }
-
-                response.sendRedirect("index.jsp");
-
-            }
-        } else {
-
-            response.sendRedirect("loginError.jsp");
-        }
+    // Verifica si el usuario existe
+    if (userObjet == null) {
+        response.sendRedirect("loginError.jsp");
+        return;
     }
+
+    miSession.setAttribute("usuario", usuario);
+    miSession.setAttribute("user", userObjet);
+
+    // Verifica el estado del usuario
+    if (userObjet.getEstado().getDescripcion().equalsIgnoreCase("inactivo")) {
+        miSession.setAttribute("inhabilitado", "Usuario Inhabilitado");
+        response.sendRedirect("loginError.jsp");
+        return;
+    }
+
+    String visiblidad = "hidden";
+    // Valida el ingreso
+    boolean validacionIngreso = controladora.validarUsuario(usuario, clave);
+    
+    if (userObjet.getContador() == 0) {
+        miSession.setAttribute("mensaje", visiblidad);
+        response.sendRedirect("cambioCredenciales.jsp");
+    } else {
+        userObjet.setContador(userObjet.getContador() + 1);
+        if (userObjet.getRol().equalsIgnoreCase("administrador")) {
+            visiblidad = "visible";
+            miSession.setAttribute("visiblidad", visiblidad);
+        } else {
+            visiblidad = "hidden";
+            miSession.setAttribute("visiblidad", visiblidad);
+        }
+
+        response.sendRedirect("index.jsp");
+    }
+}
+
+
+ 
 
     @Override
     public String getServletInfo() {

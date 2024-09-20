@@ -11,10 +11,11 @@
 <%
     HttpSession miSession = request.getSession();
 
-    
-    String mensaje = "hidden";
-    mensaje=(String)miSession.getAttribute("mensaje");
-    Usuario usuario= (Usuario)miSession.getAttribute("user");
+   String mensaje = (String) miSession.getAttribute("mensaje");
+if (mensaje == null) {
+    mensaje = "";
+}
+    Usuario usuario = (Usuario) miSession.getAttribute("user");
 
 %>
 <body class="gradiente-azul-oscuro mb-5">
@@ -34,19 +35,40 @@
                 </div>
                 <form class="user text-center" action="SVCambioCredenciales" method="POST" id="formulario" >
                     <div class="form-group ">
-                        <p >Usuario <%=usuario.getNombreUsuario() %>:</p> 
+                        <p >Usuario <%=usuario.getNombreUsuario()%>:</p> 
                     </div>
                     <div class="form-group">
                         <label for="password">Ingrese su nueva contraseña:</label>
-                        <input type="password" class="form-control form-control-user shadow"
-                               id="password" name="password" placeholder="Contraseña" required>
-                        
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="password" class="form-control form-control-user shadow" 
+                                       id="password" name="password" placeholder="Contraseña">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" onclick="togglePassword()" style="cursor: pointer;">
+                                        <i class="fa fa-eye" id="eyeIcon"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="form-group">
                         <label for="passwordRepeat">Repita su contraseña:</label>
+                        <div class="input-group">
                         <input type="password" class="form-control form-control-user shadow"
                                id="passwordRepeat" name="passwordRepeat" placeholder="Contraseña" required>
-                        <p style="visibility:  <%=mensaje%> ;">*Las contraseñas deben ser iguales.</p> 
+                        <div class="input-group-append">
+                                    <span class="input-group-text" onclick="togglePasswordRepeat()" style="cursor: pointer;">
+                                        <i class="fa fa-eye" id="eyeIconRepeat"></i>
+                                    </span>
+                                </div>
+                        </div>
+                        <p class="<%= mensaje.equalsIgnoreCase("hidden")? "d-none":"d-flex" %> text-justify mt-3 bg-gradient-light text-dark p-2 " >
+    <%= mensaje.equalsIgnoreCase("hidden")? "": mensaje %>
+</p>
+
+
                     </div>
 
                     <button type="submit" class="btn bg-gradient-info btn-user text-lg text-white">
@@ -71,7 +93,6 @@
 
 
 
-</body>
 
 
 
@@ -79,3 +100,4 @@
 <%@include file="recursos/components/footer.jsp" %>
 
 
+</body>

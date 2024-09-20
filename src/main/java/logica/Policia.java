@@ -3,6 +3,7 @@ package logica;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
@@ -14,6 +15,9 @@ public class Policia extends Persona implements Serializable{
     
     private String jerarquia;
     private String legajo;
+    
+    private int estado;
+    
 
     public Policia() {
     }
@@ -41,6 +45,14 @@ public class Policia extends Persona implements Serializable{
 
     public void setLegajo(String legajo) {
         this.legajo = legajo;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
     
     

@@ -8,8 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import logica.Policia;
+import logica.Utilitaria;
 
 /**
  *
@@ -38,6 +40,7 @@ public class SVCrearPolicia extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+         HttpSession misession=request.getSession();
         
         Policia policia = new Policia();
         String nombre= (String) request.getParameter("nombrepol");
@@ -52,9 +55,21 @@ public class SVCrearPolicia extends HttpServlet {
         policia.setLegajo(legajo);
         policia.setJerarquia(jerarquia);
         policia.setDni(dni);
+        policia.setEstado(1);
         policia.setTelefono(telefono);
-        controladora.crearPolicia(policia);
-        response.sendRedirect("administrarUsuarios.jsp");
+        String errorCrearPolicia=Utilitaria.verificarPoliciaRegistrado(policia);
+        System.out.println("pl:" + errorCrearPolicia);
+        if(errorCrearPolicia==null){
+         controladora.crearPolicia(policia);
+         misession.removeAttribute("errorRegistroPolicia");
+        response.sendRedirect("SVVerPolicias");
+        
+        }
+        else{
+        
+         misession.setAttribute("errorRegistroPolicia", errorCrearPolicia);
+         response.sendRedirect("crearPolicia.jsp");
+        }
         
         
         

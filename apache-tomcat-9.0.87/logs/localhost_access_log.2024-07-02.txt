@@ -1,0 +1,16 @@
+127.0.0.1 - - [02/Jul/2024:10:02:14 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [02/Jul/2024:10:02:14 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [02/Jul/2024:10:02:14 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [02/Jul/2024:10:02:14 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [02/Jul/2024:10:02:14 -0300] "GET /manager/text/ HTTP/1.1" 401 2562
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/ HTTP/1.1" 200 44
+127.0.0.1 - - [02/Jul/2024:10:02:16 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/ HTTP/1.1" 200 44
+127.0.0.1 - - [02/Jul/2024:10:02:16 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/ HTTP/1.1" 200 44
+127.0.0.1 - - [02/Jul/2024:10:02:16 -0300] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/ HTTP/1.1" 200 44
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/list HTTP/1.1" 200 677
+127.0.0.1 - root [02/Jul/2024:10:02:16 -0300] "GET /manager/text/undeploy?path=/ HTTP/1.1" 200 70
+0:0:0:0:0:0:0:1 - - [02/Jul/2024:10:02:54 -0300] "GET / HTTP/1.1" 404 610
+0:0:0:0:0:0:0:1 - - [02/Jul/2024:10:02:57 -0300] "GET / HTTP/1.1" 404 610

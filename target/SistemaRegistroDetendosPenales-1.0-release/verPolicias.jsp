@@ -7,14 +7,7 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
-<%
-    String mensaje = "hidden";
-    if (request.getSession().getAttribute("policiaEliminado") != null) {
-        mensaje = "visible";
-    } else {
-        mensaje = "hidden";
-    }
-%>
+
 
 
 <body id="page-top" class=" " >
@@ -46,14 +39,16 @@
                                     <th>Legajo</th>
                                     <th>D.N.I.</th>
                                     <th>Telefono</th>
+                                    <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
+
+
                             <tbody>
-                                <% 
-                                List<Policia> listapolis = (List) request.getSession().getAttribute("listadoPolicias");
-                                for (Policia pol : listapolis) {
-                                    String modalId = "modalDelete" + pol.getId();
+                                <%  List<Policia> listapolis = (List) request.getSession().getAttribute("listadoPolicias");
+                                    for (Policia pol : listapolis) {
+                                        String modalId = "modalDelete" + pol.getId();
                                 %>
                                 <tr>
                                     <td><%= pol.getNombre()%></td>
@@ -62,41 +57,48 @@
                                     <td><%= pol.getLegajo()%></td>
                                     <td><%= pol.getDni()%></td>
                                     <td><%= pol.getTelefono()%></td>
+                                    <td><%= pol.getEstado() == 1 ? "Activo" : "Inactivo"%></td>
                                     <td style="display:flex; " class="justify-content-center">
-                                        <button type="button" class="btn btn-user btn-circle btn-danger" data-bs-toggle="modal" data-bs-target="#<%= modalId %>">
-                                            <i class="fas fa-trash-alt"></i> 
+                                        <button type="button" class="btn btn-user btn-circle 
+                                                <%= pol.getEstado() == 1 ? "btn-danger" : "btn-info"%>" data-bs-toggle="modal" data-bs-target="#<%= modalId%>">
+                                            <i class="<%= pol.getEstado() == 1 ? "fas fa-ban" : "fas fa-check"%>"></i>
                                         </button>
 
-                                        <div class="modal fade" id="<%= modalId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="<%= modalId%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <form class="mr-2" name="eliminar" action="SVEliminarPolicia" method="POST"> 
-                                                <input type="hidden" name="id" value="<%= pol.getId() %>"> 
+                                                <input type="hidden" name="id" value="<%= pol.getId()%>"> 
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Policia</h1>
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                <%= (pol.getEstado() == 1) ? "Deshabilitar Policía" : "Habilitar Policía"%>
+                                                            </h1>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            ¿Está seguro de que desea eliminar al policía <%= pol.getNombre() %> <%= pol.getApellido() %>?
+                                                            ¿Está seguro de que desea <%= (pol.getEstado() == 1) ? "deshabilitar" : "habilitar"%> al policía <%= pol.getNombre() + " " + pol.getApellido()%>?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                            <button type="submit" class="btn <% if (pol.getEstado() == 1) { %>btn-danger<% } else { %>btn-success<% }%>">
+                                                                <%= (pol.getEstado() == 1) ? "Deshabilitar" : "Habilitar"%>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
 
+
                                         <form class="mr-2" name="editar" action="SVEditarPolicia" method="GET">
                                             <button type="submit" class="btn btn-primary btn-user btn-circle">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </button>
-                                            <input type="hidden" name="id" value="<%= pol.getId() %>" style="margin-right: 5px;" />
+                                            <input type="hidden" name="id" value="<%= pol.getId()%>" style="margin-right: 5px;" />
                                         </form>
                                     </td>
                                 </tr>
-                                <% } %>
+                                <% }%>
                             </tbody>
                         </table>
                     </div>
@@ -108,7 +110,7 @@
                     <i class="fa-solid fa-arrows-left-right">Volver</i>
                 </a>
             </div>
-            <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).<p>
+
         </div>
     </div>
 

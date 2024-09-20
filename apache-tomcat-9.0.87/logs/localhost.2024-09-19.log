@@ -1,0 +1,1452 @@
+19-Sep-2024 20:15:26.044 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 20:15:26.044 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 20:15:26.048 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3b89bf47')
+19-Sep-2024 21:07:43.127 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 21:07:43.128 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 21:07:58.317 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 21:07:58.317 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 21:07:58.320 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@59e5ecab')
+19-Sep-2024 21:10:17.121 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SvLogin] lanzó excepción
+	javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+Error Code: 1054
+Call: SELECT ID, APELLIDO, APODO, DIRECCION, DNI, ESTADO, FECHANACIMIENTO, INSTUCCION, JERARQUIA, LEGAJO, NOMBRE, OCUPACION, SEXO, TELEFONO, ESTADOCIVIL_ID, NACIONALIDAD_ID FROM POLICIA WHERE (ID = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="policia" referenceClass=Policia )
+		at org.eclipse.persistence.internal.jpa.QueryImpl.getDetailedException(QueryImpl.java:391)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.executeReadQuery(QueryImpl.java:264)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.getResultList(QueryImpl.java:482)
+		at persistencia.UsuarioJpaController.findUsuarioEntities(UsuarioJpaController.java:114)
+		at persistencia.UsuarioJpaController.findUsuarioEntities(UsuarioJpaController.java:97)
+		at persistencia.ControladoraPersistencia.getUsuarios(ControladoraPersistencia.java:65)
+		at logica.Controladora.traerUsuarioPorUserYPass(Controladora.java:56)
+		at servlets.SvLogin.doPost(SvLogin.java:50)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+	Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+Error Code: 1054
+Call: SELECT ID, APELLIDO, APODO, DIRECCION, DNI, ESTADO, FECHANACIMIENTO, INSTUCCION, JERARQUIA, LEGAJO, NOMBRE, OCUPACION, SEXO, TELEFONO, ESTADOCIVIL_ID, NACIONALIDAD_ID FROM POLICIA WHERE (ID = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="policia" referenceClass=Policia )
+		at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2105)
+		at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:766)
+		at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2839)
+		at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2792)
+		at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1232)
+		at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1191)
+		at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.internalExecuteQuery(AbstractSession.java:3367)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+		at org.eclipse.persistence.internal.indirection.NoIndirectionPolicy.valueFromQuery(NoIndirectionPolicy.java:328)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.valueFromRowInternal(ForeignReferenceMapping.java:2344)
+		at org.eclipse.persistence.mappings.OneToOneMapping.valueFromRowInternal(OneToOneMapping.java:1854)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.valueFromRow(ForeignReferenceMapping.java:2185)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.readFromRowIntoObject(ForeignReferenceMapping.java:1511)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildAttributesIntoObject(ObjectBuilder.java:478)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:1042)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildWorkingCopyCloneNormally(ObjectBuilder.java:936)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObjectInUnitOfWork(ObjectBuilder.java:889)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObjectInternal(ObjectBuilder.java:772)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:727)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:705)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.buildObject(ObjectLevelReadQuery.java:861)
+		at org.eclipse.persistence.queries.ReadAllQuery.registerResultInUnitOfWork(ReadAllQuery.java:987)
+		at org.eclipse.persistence.queries.ReadAllQuery.executeObjectLevelReadQuery(ReadAllQuery.java:598)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1232)
+		at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1191)
+		at org.eclipse.persistence.queries.ReadAllQuery.execute(ReadAllQuery.java:485)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1279)
+		at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:3004)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1845)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.executeReadQuery(QueryImpl.java:262)
+		... 30 more
+	Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+		at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651)
+		... 71 more
+19-Sep-2024 21:16:01.133 SEVERE [http-nio-8080-exec-26] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SvLogin] lanzó excepción
+	javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+Error Code: 1054
+Call: SELECT ID, APELLIDO, APODO, DIRECCION, DNI, ESTADO, FECHANACIMIENTO, INSTUCCION, JERARQUIA, LEGAJO, NOMBRE, OCUPACION, SEXO, TELEFONO, ESTADOCIVIL_ID, NACIONALIDAD_ID FROM POLICIA WHERE (ID = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="policia" referenceClass=Policia )
+		at org.eclipse.persistence.internal.jpa.QueryImpl.getDetailedException(QueryImpl.java:391)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.executeReadQuery(QueryImpl.java:264)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.getResultList(QueryImpl.java:482)
+		at persistencia.UsuarioJpaController.findUsuarioEntities(UsuarioJpaController.java:114)
+		at persistencia.UsuarioJpaController.findUsuarioEntities(UsuarioJpaController.java:97)
+		at persistencia.ControladoraPersistencia.getUsuarios(ControladoraPersistencia.java:65)
+		at logica.Controladora.traerUsuarioPorUserYPass(Controladora.java:56)
+		at servlets.SvLogin.doPost(SvLogin.java:50)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+	Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+Error Code: 1054
+Call: SELECT ID, APELLIDO, APODO, DIRECCION, DNI, ESTADO, FECHANACIMIENTO, INSTUCCION, JERARQUIA, LEGAJO, NOMBRE, OCUPACION, SEXO, TELEFONO, ESTADOCIVIL_ID, NACIONALIDAD_ID FROM POLICIA WHERE (ID = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="policia" referenceClass=Policia )
+		at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2105)
+		at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:277)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:263)
+		at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:766)
+		at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2839)
+		at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2792)
+		at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1232)
+		at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1191)
+		at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.internalExecuteQuery(AbstractSession.java:3367)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+		at org.eclipse.persistence.internal.indirection.NoIndirectionPolicy.valueFromQuery(NoIndirectionPolicy.java:328)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.valueFromRowInternal(ForeignReferenceMapping.java:2344)
+		at org.eclipse.persistence.mappings.OneToOneMapping.valueFromRowInternal(OneToOneMapping.java:1854)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.valueFromRow(ForeignReferenceMapping.java:2185)
+		at org.eclipse.persistence.mappings.ForeignReferenceMapping.readFromRowIntoObject(ForeignReferenceMapping.java:1511)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildAttributesIntoObject(ObjectBuilder.java:478)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:1042)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildWorkingCopyCloneNormally(ObjectBuilder.java:936)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObjectInUnitOfWork(ObjectBuilder.java:889)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObjectInternal(ObjectBuilder.java:772)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:727)
+		at org.eclipse.persistence.internal.descriptors.ObjectBuilder.buildObject(ObjectBuilder.java:705)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.buildObject(ObjectLevelReadQuery.java:861)
+		at org.eclipse.persistence.queries.ReadAllQuery.registerResultInUnitOfWork(ReadAllQuery.java:987)
+		at org.eclipse.persistence.queries.ReadAllQuery.executeObjectLevelReadQuery(ReadAllQuery.java:598)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1232)
+		at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:911)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1191)
+		at org.eclipse.persistence.queries.ReadAllQuery.execute(ReadAllQuery.java:485)
+		at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1279)
+		at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:3004)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1898)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1880)
+		at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1845)
+		at org.eclipse.persistence.internal.jpa.QueryImpl.executeReadQuery(QueryImpl.java:262)
+		... 30 more
+	Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'ESTADO' in 'field list'
+		at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+		at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+		at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+		at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651)
+		... 71 more
+19-Sep-2024 21:36:16.176 SEVERE [http-nio-8080-exec-53] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:36:25.136 SEVERE [http-nio-8080-exec-57] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:36:35.041 SEVERE [http-nio-8080-exec-56] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:36:39.222 SEVERE [http-nio-8080-exec-53] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:36:46.638 SEVERE [http-nio-8080-exec-57] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:36:53.092 SEVERE [http-nio-8080-exec-55] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:37:35.727 SEVERE [http-nio-8080-exec-52] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:37:40.747 SEVERE [http-nio-8080-exec-54] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:37:56.290 SEVERE [http-nio-8080-exec-50] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 21:38:19.577 SEVERE [http-nio-8080-exec-50] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verPolicias.jsp]
+mensaje cannot be resolved to a variable
+118:                     <i class="fa-solid fa-arrows-left-right">Volver</i>
+119:                 </a>
+120:             </div>
+121:             <p class="mb-4" style="visibility: <%= mensaje %>;">*No es posible eliminar efectivos asociados a un usuario (Primero eliminar Usuario).</p>
+122:         </div>
+123:     </div>
+124: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 22:10:42.989 SEVERE [http-nio-8080-exec-74] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [75] en el archivo jsp: [/verPolicias.jsp]
+modalDeleteId cannot be resolved to a variable
+72:                                         </button>
+73: 
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalDeleteId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+
+
+Ha tenido lugar un error en la línea: [77] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalDeleteId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+79:             <div class="modal-content">
+80:                 <div class="modal-header">
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [89] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+
+
+Ha tenido lugar un error en la línea: [90] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+93:             </div>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [75] en el archivo jsp: [/verPolicias.jsp]
+modalDeleteId cannot be resolved to a variable
+72:                                         </button>
+73: 
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalDeleteId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+
+
+Ha tenido lugar un error en la línea: [77] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalDeleteId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+79:             <div class="modal-content">
+80:                 <div class="modal-header">
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [89] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+
+
+Ha tenido lugar un error en la línea: [90] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+93:             </div>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 22:11:09.540 SEVERE [http-nio-8080-exec-70] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [77] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+79:             <div class="modal-content">
+80:                 <div class="modal-header">
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [89] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+
+
+Ha tenido lugar un error en la línea: [90] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+93:             </div>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [77] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+74:                                  <!-- Modal de modificaciÃ³n de estado -->
+75: <div class="modal fade" id="<%= modalId %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+76:     <form name="eliminar" action="SVEliminarUsuarios" method="POST">
+77:         <input type="hidden" name="id" value="<%= usu.getId() %>">
+78:         <div class="modal-dialog">
+79:             <div class="modal-content">
+80:                 <div class="modal-header">
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [85] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+82:                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+83:                 </div>
+84:                 <div class="modal-body">
+85:                     Â¿EstÃ¡ seguro de que desea <%= (usu.getEstado().getId() == 1) ? "deshabilitar" : "habilitar" %> al usuario <%= usu.getNombreUsuario() %>?
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
+Ha tenido lugar un error en la línea: [89] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+86:                 </div>
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+
+
+Ha tenido lugar un error en la línea: [90] en el archivo jsp: [/verPolicias.jsp]
+usu cannot be resolved
+87:                 <div class="modal-footer">
+88:                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+89:                     <button type="submit" class="btn <% if (usu.getEstado().getId() == 1) { %>btn-danger<% } else { %>btn-success<% } %>">
+90:                         <%= (usu.getEstado().getId() == 1) ? "Deshabilitar" : "Habilitar" %>
+91:                     </button>
+92:                 </div>
+93:             </div>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 22:28:21.921 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 22:28:21.922 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 22:28:36.096 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 22:28:36.097 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 22:28:36.100 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7fb57b7c')
+19-Sep-2024 22:30:08.896 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 22:30:08.896 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 22:30:57.100 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 22:30:57.100 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 22:30:57.105 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@e23af91')
+19-Sep-2024 22:56:17.869 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 22:56:17.870 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 22:57:24.097 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 22:57:24.097 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 22:57:24.100 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@59263f7b')
+19-Sep-2024 23:44:48.822 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 23:44:48.822 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 23:45:02.543 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 23:45:02.543 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 23:45:02.547 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@99a8a49')
+19-Sep-2024 23:50:04.394 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:51:03.518 SEVERE [http-nio-8080-exec-21] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:52:38.381 SEVERE [http-nio-8080-exec-21] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:53:14.041 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 23:53:14.041 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 23:53:29.332 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 23:53:29.332 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 23:53:29.338 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@478b5a43')
+19-Sep-2024 23:54:13.994 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:57:03.303 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:57:22.546 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+19-Sep-2024 23:57:22.546 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+19-Sep-2024 23:57:41.139 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+19-Sep-2024 23:57:41.139 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+19-Sep-2024 23:57:41.143 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@503a3c11')
+19-Sep-2024 23:58:05.010 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:59:03.316 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:59:30.533 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:59:31.412 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+19-Sep-2024 23:59:36.373 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVCambioCredenciales] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendRedirect() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.checkCommitted(ResponseFacade.java:511)
+		at org.apache.catalina.connector.ResponseFacade.sendRedirect(ResponseFacade.java:360)
+		at servlets.SVCambioCredenciales.doPost(SVCambioCredenciales.java:72)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)

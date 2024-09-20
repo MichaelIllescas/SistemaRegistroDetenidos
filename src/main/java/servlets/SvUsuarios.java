@@ -46,7 +46,10 @@ public class SvUsuarios extends HttpServlet {
         List <Policia> policias =controladora.getPolicias();
         miSession.setAttribute("policias", policias);
 
-      
+       System.out.println("listado de estados");
+       for(Usuario usus: listaUsuarios){
+           System.out.println(usus.getEstado().getDescripcion());
+       }
         response.sendRedirect("verUsuarios.jsp");
         
         

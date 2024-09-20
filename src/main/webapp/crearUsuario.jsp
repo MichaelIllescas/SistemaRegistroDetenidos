@@ -68,7 +68,7 @@
                                 <label for="miListaDesplegable">Selecciona un Policia:</label>
                                 <select id="miListaDesplegable"  class="form-control form-control-lg form-select" name="policia">
                                     <%for (Policia pol : policias) {%>
-                                    <option  value="<%=pol.getId()%>"><%=pol.getNombre() + " " + pol.getApellido()%></option>
+                                    <option  value="<%=pol.getId()%>"><%=pol.getNombre() + " " + pol.getApellido() + " Leg. " + pol.getLegajo()%></option>
                                     <%}%>
                                 </select>
 
@@ -81,6 +81,7 @@
                             <button class="btn-facebook btn shadow border-dark btn-user" type="submit">
                                 Crear Usuario
                             </button>
+
                         </div>  
 
                         <hr>

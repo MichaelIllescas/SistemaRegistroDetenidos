@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\ConsultorioOdontologico\target\ConsultorioOdontologico-1.0-SNAPSHOT" path="/ConsultorioOdontologico">
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="data" password="" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/clinica_odonto?zeroDateTimeBehavior=CONVERT_TO_NULL" username="root"/>
+</Context>

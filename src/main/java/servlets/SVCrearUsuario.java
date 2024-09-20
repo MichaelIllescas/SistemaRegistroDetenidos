@@ -27,6 +27,7 @@ public class SVCrearUsuario extends HttpServlet {
 
     Controladora controladora =new Controladora();
     
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
@@ -56,8 +57,9 @@ public class SVCrearUsuario extends HttpServlet {
        String polnId=(String)request.getParameter("policia");
        Policia policia= (Policia)controladora.getPolicia(Integer.parseInt(polnId));
        
-       
-        Usuario usuario =new Usuario(0, nombreUsuario, rol, clave, null,policia);
+        EstadoUsuario estado= controladora.getEstadoPorId(1);
+        
+        Usuario usuario =new Usuario(0, nombreUsuario, rol, clave, estado,policia);
  
         
         controladora.creaUsuario(usuario);

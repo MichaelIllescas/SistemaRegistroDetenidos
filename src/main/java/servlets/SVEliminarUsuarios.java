@@ -40,11 +40,14 @@ public class SVEliminarUsuarios extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-                
-        
+        Usuario usuario= controladora.getUsuario(Integer.parseInt((String)request.getParameter("id")));
+        if(usuario.getEstado().getId()==2){
+        controladora.habilitarUsuario(Integer.parseInt((String)request.getParameter("id")));
+        }else{
         controladora.eliminarUsuario(Integer.parseInt((String)request.getParameter("id")));
-        response.sendRedirect("SvUsuarios");
-        
+       
+        }
+         response.sendRedirect("SvUsuarios");
     }
 
     @Override

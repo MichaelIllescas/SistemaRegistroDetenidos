@@ -6,6 +6,7 @@ package logica;
 
 import java.io.Serializable;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,9 +29,10 @@ public class Usuario implements Serializable {
     private String nombreUsuario;     
     private String rol;     
     private String clave;
+
     private int contador;
     
-    @OneToOne
+    @OneToOne()
     private EstadoUsuario estado;
 
     @OneToOne

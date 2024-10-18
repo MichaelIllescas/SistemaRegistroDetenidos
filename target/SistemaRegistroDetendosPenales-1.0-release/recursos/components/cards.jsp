@@ -23,7 +23,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Registrar Ingreso de Detenido</h5>
                     <p class="card-text">Registrar a un detenido en el sistema</p>
-                    <a href="registrarDetenido.jsp" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
+                    <a href="SVRegistrarDetenido" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
                 </div>
             </div>
         </div>

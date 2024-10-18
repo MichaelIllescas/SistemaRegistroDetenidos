@@ -220,7 +220,8 @@ public class Utilitaria {
             return "- Las contraseñas deben ser iguales."; // Mensaje de error
         }
     }
-      public static String verificarPoliciaRegistrado(Policia policia) {
+     
+    public static String verificarPoliciaRegistrado(Policia policia) {
         Controladora controladora=new Controladora();
         List<Policia> listaPolicias = controladora.getPolicias();
 

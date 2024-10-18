@@ -31,22 +31,23 @@ public class Persona implements Serializable {
     private String direccion;
     private String apodo;
     private String telefono;
-    private String ocupacion;
+     @OneToOne
+    private Ocupacion ocupacion;
     
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
-    
-    private String sexo;
+    @OneToOne
+    private Sexo sexo;
     private String instuccion;
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
     private EstadoCivil estadoCivil;
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
     private Nacionalidad nacionalidad;
 
     public Persona() {
     }
 
-    public Persona(int id, String nombre, String apellido, String dni, String direccion, String apodo, String telefono, String ocupacion, Date fechaNacimiento, String sexo, String instuccion, EstadoCivil estadoCivil, Nacionalidad nacionalidad) {
+    public Persona(int id, String nombre, String apellido, String dni, String direccion, String apodo, String telefono, Ocupacion ocupacion, Date fechaNacimiento, Sexo sexo, String instuccion, EstadoCivil estadoCivil, Nacionalidad nacionalidad) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -118,11 +119,11 @@ public class Persona implements Serializable {
         this.telefono = telefono;
     }
 
-    public String getOcupacion() {
+    public Ocupacion getOcupacion() {
         return ocupacion;
     }
 
-    public void setOcupacion(String ocupacion) {
+    public void setOcupacion(Ocupacion ocupacion) {
         this.ocupacion = ocupacion;
     }
 
@@ -134,11 +135,11 @@ public class Persona implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public String getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 

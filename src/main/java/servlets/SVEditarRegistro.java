@@ -26,6 +26,7 @@ import logica.Fiscalia;
 import logica.Juzgado;
 import logica.Nacionalidad;
 import logica.Registro;
+import logica.Sexo;
 import logica.Usuario;
 import logica.Utilitaria;
 
@@ -79,8 +80,11 @@ public class SVEditarRegistro extends HttpServlet {
         detenido.setDireccion(request.getParameter("direccion"));
         detenido.setTelefono(request.getParameter("telefono"));
         detenido.setApodo(request.getParameter("apodo"));
-        detenido.setOcupacion(request.getParameter("ocupacion"));
-        detenido.setSexo(request.getParameter("sexo"));
+        detenido.getOcupacion().setDescripcion(request.getParameter("ocupacion"));
+        
+        int idSexo=Integer.parseInt(request.getParameter("sexo"));
+        Sexo sexoDetenido= controladora.getSexo(idSexo);
+        detenido.setSexo(sexoDetenido);
         detenido.setInstuccion(request.getParameter("instruccion"));
         detenido.setCalidad(request.getParameter("calidad"));
 

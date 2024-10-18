@@ -1,0 +1,1902 @@
+23-Sep-2024 10:16:37.839 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 10:16:37.839 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 10:16:37.844 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@130e2aef')
+23-Sep-2024 10:27:08.157 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 10:27:08.158 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 10:27:22.584 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 10:27:22.584 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 10:27:22.588 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@45a33515')
+23-Sep-2024 10:51:29.074 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 10:51:29.074 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 10:51:55.372 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 10:51:55.372 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 10:51:55.376 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@79e0f00b')
+23-Sep-2024 10:58:31.600 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 10:58:31.600 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 10:58:51.657 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 10:58:51.657 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 10:58:51.660 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4e58f26d')
+23-Sep-2024 11:43:35.833 SEVERE [http-nio-8080-exec-35] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [47] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDelito() is undefined for the type Detenido
+44:                 <tr>
+45:                     <td><%= detenido.getNombre() %></td>
+46:                     <td><%= detenido.getApellido() %></td>
+47:                     <td><%= detenido.getDelito() %></td>
+48:                     <td><%= detenido.getFechaDetencion() %></td>
+49:                 </tr>
+50:                 <%
+
+
+Ha tenido lugar un error en la línea: [48] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getFechaDetencion() is undefined for the type Detenido
+45:                     <td><%= detenido.getNombre() %></td>
+46:                     <td><%= detenido.getApellido() %></td>
+47:                     <td><%= detenido.getDelito() %></td>
+48:                     <td><%= detenido.getFechaDetencion() %></td>
+49:                 </tr>
+50:                 <%
+51:                         }
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [47] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDelito() is undefined for the type Detenido
+44:                 <tr>
+45:                     <td><%= detenido.getNombre() %></td>
+46:                     <td><%= detenido.getApellido() %></td>
+47:                     <td><%= detenido.getDelito() %></td>
+48:                     <td><%= detenido.getFechaDetencion() %></td>
+49:                 </tr>
+50:                 <%
+
+
+Ha tenido lugar un error en la línea: [48] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getFechaDetencion() is undefined for the type Detenido
+45:                     <td><%= detenido.getNombre() %></td>
+46:                     <td><%= detenido.getApellido() %></td>
+47:                     <td><%= detenido.getDelito() %></td>
+48:                     <td><%= detenido.getFechaDetencion() %></td>
+49:                 </tr>
+50:                 <%
+51:                         }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 11:44:45.993 SEVERE [http-nio-8080-exec-36] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [47] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+44:                     <td>FECHA INGRESO</td>
+45:                 </tr>
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+
+
+Ha tenido lugar un error en la línea: [48] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error on token "else", { expected
+45:                 </tr>
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [617] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+Ha tenido lugar un error en la línea: [619] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [619] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [620] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [620] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [622] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+response cannot be resolved
+
+Ha tenido lugar un error en la línea: [623] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [625] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [628] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [628] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved
+
+Ha tenido lugar un error en la línea: [631] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "finally", { expected
+
+Ha tenido lugar un error en la línea: [632] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [47] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+44:                     <td>FECHA INGRESO</td>
+45:                 </tr>
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+
+
+Ha tenido lugar un error en la línea: [48] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error on token "else", { expected
+45:                 </tr>
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [49] en el archivo jsp: [/verReporteRequerimiento.jsp]
+out cannot be resolved
+46:                 <%
+47:                         }
+48:                     } else {
+49:                 %>
+50:                 <tr>
+51:                     <td colspan="4" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+52:                 </tr>
+
+
+Ha tenido lugar un error en la línea: [617] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+Ha tenido lugar un error en la línea: [619] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [619] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [620] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [620] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [622] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+response cannot be resolved
+
+Ha tenido lugar un error en la línea: [623] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [625] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [628] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [628] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved
+
+Ha tenido lugar un error en la línea: [631] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "finally", { expected
+
+Ha tenido lugar un error en la línea: [632] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 12:31:17.796 SEVERE [http-nio-8080-exec-36] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "registros" is null
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:42)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 12:32:59.821 SEVERE [http-nio-8080-exec-42] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "registros" is null
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:42)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 12:34:08.256 SEVERE [http-nio-8080-exec-44] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "registros" is null
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:43)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 12:38:23.023 SEVERE [http-nio-8080-exec-53] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "registros" is null
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:43)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 12:40:21.305 SEVERE [http-nio-8080-exec-51] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "registros" is null
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:43)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 13:15:51.161 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 13:15:51.161 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 13:16:03.946 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 13:16:03.947 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 13:16:03.950 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@47ce44ab')
+23-Sep-2024 13:52:59.944 SEVERE [http-nio-8080-exec-36] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+		at java.base/java.util.Vector.get(Vector.java:750)
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:44)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 13:53:50.468 SEVERE [http-nio-8080-exec-44] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+		at java.base/java.util.Vector.get(Vector.java:750)
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:44)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 13:54:04.907 SEVERE [http-nio-8080-exec-43] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 0
+		at java.base/java.util.Vector.get(Vector.java:750)
+		at servlets.SVReporteDetenidos.doGet(SVReporteDetenidos.java:44)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 14:01:49.993 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 14:01:49.993 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 14:02:17.043 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 14:02:17.044 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 14:02:17.048 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@e76aa')
+23-Sep-2024 21:14:39.368 SEVERE [http-nio-8080-exec-26] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [97] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete Block
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete Block
+
+Ha tenido lugar un error en la línea: [879] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [97] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete Block
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+Ha tenido lugar un error en la línea: [861] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete Block
+
+Ha tenido lugar un error en la línea: [879] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:14:47.772 SEVERE [http-nio-8080-exec-23] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [230] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error, insert "}" to complete Statement
+227:                                             }
+228:                                         
+229:                                     }
+230:                                 } else {
+231:                             %>
+232:                             <tr>
+233:                                 <td colspan="5" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+
+
+Ha tenido lugar un error en la línea: [879] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "}", delete this token
+
+Ha tenido lugar un error en la línea: [880] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [230] en el archivo jsp: [/verReporteRequerimiento.jsp]
+Syntax error, insert "}" to complete Statement
+227:                                             }
+228:                                         
+229:                                     }
+230:                                 } else {
+231:                             %>
+232:                             <tr>
+233:                                 <td colspan="5" class="text-center">No se encontraron detenidos en el rango seleccionado.</td>
+
+
+Ha tenido lugar un error en la línea: [879] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error on token "}", delete this token
+
+Ha tenido lugar un error en la línea: [880] en el fichero java generado: [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\work\Catalina\localhost\SistemaRegistroDetendosPenales\org\apache\jsp\verReporteRequerimiento_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:21:47.316 SEVERE [http-nio-8080-exec-23] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [/verReporteRequerimiento.jsp (línea: [208], columna: [5]) Archivo JSP [recursos/components/scripts.jsp] no encontrado] con causa raíz
+	org.apache.jasper.JasperException: /verReporteRequerimiento.jsp (línea: [208], columna: [5]) Archivo JSP [recursos/components/scripts.jsp] no encontrado
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:299)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:99)
+		at org.apache.jasper.compiler.Parser.processIncludeDirective(Parser.java:349)
+		at org.apache.jasper.compiler.Parser.parseIncludeDirective(Parser.java:384)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:485)
+		at org.apache.jasper.compiler.Parser.parseFileDirectives(Parser.java:1802)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:141)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:128)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:203)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:21:54.690 SEVERE [http-nio-8080-exec-24] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [/verReporteRequerimiento.jsp (línea: [208], columna: [5]) Archivo JSP [recursos/components/scripts.jsp] no encontrado] con causa raíz
+	org.apache.jasper.JasperException: /verReporteRequerimiento.jsp (línea: [208], columna: [5]) Archivo JSP [recursos/components/scripts.jsp] no encontrado
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:299)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:99)
+		at org.apache.jasper.compiler.Parser.processIncludeDirective(Parser.java:349)
+		at org.apache.jasper.compiler.Parser.parseIncludeDirective(Parser.java:384)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:485)
+		at org.apache.jasper.compiler.Parser.parseFileDirectives(Parser.java:1802)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:141)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:128)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:203)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:30:48.813 SEVERE [http-nio-8080-exec-30] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [118] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDelito() is undefined for the type Causa
+115:                                                                             <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+116:                                                                         </div>
+117:                                                                         <div class="col-12">
+118:                                                                             <p>Delito: <%= causa.getDelito().toUpperCase() %></p>
+119:                                                                         </div>
+120:                                                                         <div class="col-12">
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getFechaCausa() is undefined for the type Causa
+118:                                                                             <p>Delito: <%= causa.getDelito().toUpperCase() %></p>
+119:                                                                         </div>
+120:                                                                         <div class="col-12">
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+122:                                                                         </div>
+123:                                                                         <div class="col-12">
+124:                                                                             <p>Juzgado Interviniente: <%= causa.getJuzgado().toUpperCase() %></p>
+
+
+Ha tenido lugar un error en la línea: [124] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Juzgado
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+122:                                                                         </div>
+123:                                                                         <div class="col-12">
+124:                                                                             <p>Juzgado Interviniente: <%= causa.getJuzgado().toUpperCase() %></p>
+125:                                                                         </div>
+126:                                                                     </div>
+127:                                                                 </div>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [118] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDelito() is undefined for the type Causa
+115:                                                                             <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+116:                                                                         </div>
+117:                                                                         <div class="col-12">
+118:                                                                             <p>Delito: <%= causa.getDelito().toUpperCase() %></p>
+119:                                                                         </div>
+120:                                                                         <div class="col-12">
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+
+
+Ha tenido lugar un error en la línea: [121] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getFechaCausa() is undefined for the type Causa
+118:                                                                             <p>Delito: <%= causa.getDelito().toUpperCase() %></p>
+119:                                                                         </div>
+120:                                                                         <div class="col-12">
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+122:                                                                         </div>
+123:                                                                         <div class="col-12">
+124:                                                                             <p>Juzgado Interviniente: <%= causa.getJuzgado().toUpperCase() %></p>
+
+
+Ha tenido lugar un error en la línea: [124] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Juzgado
+121:                                                                             <p>Fecha de la Causa: <%= Utilitaria.dateToString(causa.getFechaCausa()) %></p>
+122:                                                                         </div>
+123:                                                                         <div class="col-12">
+124:                                                                             <p>Juzgado Interviniente: <%= causa.getJuzgado().toUpperCase() %></p>
+125:                                                                         </div>
+126:                                                                     </div>
+127:                                                                 </div>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:33:57.784 SEVERE [http-nio-8080-exec-28] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación] con causa raíz
+	org.apache.jasper.JasperException: La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:54)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:301)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:82)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.generateTldResourcePath(TagLibraryInfoImpl.java:251)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:122)
+		at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:435)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:493)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1450)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:144)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:106)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:207)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:34:56.838 SEVERE [http-nio-8080-exec-30] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación] con causa raíz
+	org.apache.jasper.JasperException: La uri absoluta: [http://java.sun.com/jsp/jstl/core] no puede resolverse o en web.xml o el los archivos jar desplegados con esta aplicación
+		at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:54)
+		at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:301)
+		at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:82)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.generateTldResourcePath(TagLibraryInfoImpl.java:251)
+		at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:122)
+		at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:435)
+		at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:493)
+		at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1450)
+		at org.apache.jasper.compiler.Parser.parse(Parser.java:144)
+		at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245)
+		at org.apache.jasper.compiler.ParserController.parse(ParserController.java:106)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:207)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:36:58.319 SEVERE [http-nio-8080-exec-32] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Defensoria
+94:                                                                 <div class="accordion-body">
+95:                                                                     <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Fiscalia
+95:                                                                     <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+101:                                                                 </div>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Juzgado
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+101:                                                                 </div>
+102:                                                             </div>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Defensoria
+94:                                                                 <div class="accordion-body">
+95:                                                                     <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Fiscalia
+95:                                                                     <p>NÂº I.P.P. / Causa: <%= causa.getNumeroCausa().toUpperCase() %></p>
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+101:                                                                 </div>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getNombre() is undefined for the type Juzgado
+96:                                                                     <p>DescripciÃ³n: <%= causa.getDescripcion() %></p>
+97:                                                                     <p>Defensoria: <%= causa.getDefensoria().getNombre() %></p>
+98:                                                                     <p>Fiscalia: <%= causa.getFiscalia().getNombre() %></p>
+99:                                                                     <p>Juzgado: <%= causa.getJuzgado().getNombre() %></p>
+100:                                                                     <p>Departamento Judicial: <%= causa.getDepartamentoJudicial() %></p>
+101:                                                                 </div>
+102:                                                             </div>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:36:58.999 SEVERE [http-nio-8080-exec-33] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.verReporteRequerimiento_jsp] con causa raíz
+	java.lang.ClassNotFoundException: org.apache.jsp.verReporteRequerimiento_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:37:02.023 SEVERE [http-nio-8080-exec-35] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.verReporteRequerimiento_jsp] con causa raíz
+	java.lang.ClassNotFoundException: org.apache.jsp.verReporteRequerimiento_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 21:56:24.872 SEVERE [http-nio-8080-exec-43] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:05:30.091 SEVERE [http-nio-8080-exec-59] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [Ha sucedido una excepción al procesar la página JSP [/verReporteRequerimiento.jsp] en línea [23]
+
+20:             <div class="row mt-3">
+21:                 <div class="col-12 text-center">
+22:                     <h1 class="h2 titulo-color">Reporte a Requerimiento:</h1>
+23: <p class="mb-4 titulo-color">desde ${Utilitaria.dateToString(sessionScope.fechaDesde)} hasta ${sessionScope.fechaHasta}</p>
+24:                 </div>
+25: 
+26:                 <div class="container mt-5">
+
+
+Stacktrace:] con causa raíz
+	javax.el.MethodNotFoundException: No se ha encontrado el método: class logica.Utilitaria.dateToString(java.lang.String)
+		at javax.el.Util.findWrapper(Util.java:388)
+		at javax.el.Util.findMethod(Util.java:232)
+		at javax.el.StaticFieldELResolver.invoke(StaticFieldELResolver.java:109)
+		at org.apache.jasper.el.JasperELResolver.invoke(JasperELResolver.java:151)
+		at org.apache.el.parser.AstValue.getValue(AstValue.java:158)
+		at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:189)
+		at org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate(PageContextImpl.java:690)
+		at org.apache.jsp.verReporteRequerimiento_jsp._jspService(verReporteRequerimiento_jsp.java:425)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:18:36.151 SEVERE [http-nio-8080-exec-73] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "date" is null
+		at java.base/java.util.Date.getMillisOf(Date.java:957)
+		at java.base/java.util.Date.compareTo(Date.java:980)
+		at logica.ExcelExporter.exportarRegistros(ExcelExporter.java:42)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:92)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:19:14.545 SEVERE [http-nio-8080-exec-80] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "date" is null
+		at java.base/java.util.Date.getMillisOf(Date.java:957)
+		at java.base/java.util.Date.compareTo(Date.java:980)
+		at logica.ExcelExporter.exportarRegistros(ExcelExporter.java:42)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:92)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:19:51.979 SEVERE [http-nio-8080-exec-73] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "date" is null
+		at java.base/java.util.Date.getMillisOf(Date.java:957)
+		at java.base/java.util.Date.compareTo(Date.java:980)
+		at logica.ExcelExporter.exportarRegistros(ExcelExporter.java:42)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:92)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:21:41.551 SEVERE [http-nio-8080-exec-75] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "date" is null
+		at java.base/java.util.Date.getMillisOf(Date.java:957)
+		at java.base/java.util.Date.compareTo(Date.java:980)
+		at logica.ExcelExporter.exportarRegistros(ExcelExporter.java:42)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:92)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:33:13.344 SEVERE [http-nio-8080-exec-95] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: SistemaRegistroDetendosPenales\reportes\reporte.xlsx (El sistema no puede encontrar la ruta especificada)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:79)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:35:39.510 SEVERE [http-nio-8080-exec-102] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\reportes (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:37:14.375 SEVERE [http-nio-8080-exec-103] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\reportes (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:37:28.878 SEVERE [http-nio-8080-exec-107] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\reportes (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:50:39.426 SEVERE [http-nio-8080-exec-122] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\reportes (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:53:00.086 SEVERE [http-nio-8080-exec-123] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\reportes (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:56:57.858 SEVERE [http-nio-8080-exec-135] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\Downloads (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 22:58:16.787 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+23-Sep-2024 22:58:16.787 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+23-Sep-2024 23:00:27.021 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+23-Sep-2024 23:00:27.022 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+23-Sep-2024 23:00:27.025 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@9b64076')
+23-Sep-2024 23:01:00.515 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\Downloads (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:07:22.019 SEVERE [http-nio-8080-exec-27] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\Downloads (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:09:57.037 SEVERE [http-nio-8080-exec-32] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteDetenidos] lanzó excepción
+	java.io.FileNotFoundException: C:\Users\jonii\Downloads (Acceso denegado)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at logica.ExcelExporter.exportToExcel(ExcelExporter.java:56)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:36:41.356 SEVERE [http-nio-8080-exec-72] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [SVReporteDetenidos] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La ejecución del Servlet lanzó una excepción] con causa raíz
+	java.lang.NoSuchMethodError: 'void org.apache.xmlbeans.XmlCursor.close()'
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.preserveSpaces(XSSFRichTextString.java:495)
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.<init>(XSSFRichTextString.java:91)
+		at org.apache.poi.xssf.usermodel.XSSFCell.setCellValueImpl(XSSFCell.java:344)
+		at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:275)
+		at logica.ExcelExporter.exportarRegistrosAExcel(ExcelExporter.java:51)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:37:24.865 SEVERE [http-nio-8080-exec-74] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [SVReporteDetenidos] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La ejecución del Servlet lanzó una excepción] con causa raíz
+	java.lang.NoSuchMethodError: 'void org.apache.xmlbeans.XmlCursor.close()'
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.preserveSpaces(XSSFRichTextString.java:495)
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.<init>(XSSFRichTextString.java:91)
+		at org.apache.poi.xssf.usermodel.XSSFCell.setCellValueImpl(XSSFCell.java:344)
+		at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:275)
+		at logica.ExcelExporter.exportarRegistrosAExcel(ExcelExporter.java:51)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:38:11.532 SEVERE [http-nio-8080-exec-81] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [SVReporteDetenidos] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La ejecución del Servlet lanzó una excepción] con causa raíz
+	java.lang.NoSuchMethodError: 'void org.apache.xmlbeans.XmlCursor.close()'
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.preserveSpaces(XSSFRichTextString.java:495)
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.<init>(XSSFRichTextString.java:91)
+		at org.apache.poi.xssf.usermodel.XSSFCell.setCellValueImpl(XSSFCell.java:344)
+		at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:275)
+		at logica.ExcelExporter.exportarRegistrosAExcel(ExcelExporter.java:51)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:41:31.873 SEVERE [http-nio-8080-exec-92] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [SVReporteDetenidos] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La ejecución del Servlet lanzó una excepción] con causa raíz
+	java.lang.NoSuchMethodError: 'void org.apache.xmlbeans.XmlCursor.close()'
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.preserveSpaces(XSSFRichTextString.java:495)
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.<init>(XSSFRichTextString.java:91)
+		at org.apache.poi.xssf.usermodel.XSSFCell.setCellValueImpl(XSSFCell.java:344)
+		at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:275)
+		at logica.ExcelExporter.exportarRegistrosAExcel(ExcelExporter.java:51)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+23-Sep-2024 23:46:01.850 SEVERE [http-nio-8080-exec-109] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [SVReporteDetenidos] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [La ejecución del Servlet lanzó una excepción] con causa raíz
+	java.lang.NoSuchMethodError: 'void org.apache.xmlbeans.XmlCursor.close()'
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.preserveSpaces(XSSFRichTextString.java:495)
+		at org.apache.poi.xssf.usermodel.XSSFRichTextString.<init>(XSSFRichTextString.java:91)
+		at org.apache.poi.xssf.usermodel.XSSFCell.setCellValueImpl(XSSFCell.java:344)
+		at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:275)
+		at logica.ExcelExporter.exportarRegistrosAExcel(ExcelExporter.java:53)
+		at servlets.SVReporteDetenidos.doPost(SVReporteDetenidos.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)

@@ -29,6 +29,8 @@ public class Registro implements Serializable {
     private Causa causa;
     @OneToOne
     private Usuario usuario;
+    
+    private boolean estado;
 
     public Registro() {
     }
@@ -80,4 +82,13 @@ public class Registro implements Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
 }

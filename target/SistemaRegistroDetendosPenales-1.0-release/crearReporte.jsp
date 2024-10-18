@@ -20,11 +20,30 @@
                     <h1 class="h2 titulo-color">Generar Reporte</h1>
                     <p class="mb-4 titulo-color">A continuación, podrá generar un reporte de detenidos registrados en el sistema.</p>
                 </div>
-                
-                
-                <div class="text-center mt-5">
-                    <h1>SITIO EN CONSTRUCCIÓN</h1>
+
+
+                <div class="col-sm-10 col-lg-4  m-auto mt-5">
+
+                    <form method="GET" action="SVReporteDetenidos">
+                        <div class="form-group">
+                            <label for="fechaDesde">Fecha Desde:</label>
+                            <input type="date" class="form-control" id="fechaDesde" name="fechaDesde" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaHasta">Fecha Hasta:</label>
+                            <input type="date" class="form-control" id="fechaHasta" name="fechaHasta" required>
+                        </div>
+                        <div class="text-center pt-3">
+                             <button type="submit" class="m-auto btn btn-primary">Generar Reporte</button>
+                        </div>
+                    </form>
                 </div>
+
+
+
+
+
+
             </div>
             <div class="text-center d-flex justify-content-start align-items-center">
                 <a href="index.jsp" class="btn rounded-2 p-2 border-0 gradiente-azul-oscuro mb-5">
@@ -32,11 +51,11 @@
                 </a>
 
             </div>
-        
-    </div>
+
+        </div>
 
 
-    <%@include file="recursos/components/cerrarSesion.jsp" %>
-    <%@include file="recursos/components/footer.jsp" %>
+        <%@include file="recursos/components/cerrarSesion.jsp" %>
+        <%@include file="recursos/components/footer.jsp" %>
 </body>
 

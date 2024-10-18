@@ -25,6 +25,9 @@ public class Detenido extends Persona implements Serializable {
     @JoinColumn(name = "causa_id")
     private Causa causa;
 
+
+    private boolean estado;
+    
     public Detenido() {
     }
 
@@ -60,4 +63,12 @@ public class Detenido extends Persona implements Serializable {
         this.calidad = calidad;
     }
 
+    public boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
 }

@@ -35,7 +35,7 @@ public class Usuario implements Serializable {
     @OneToOne()
     private EstadoUsuario estado;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Policia policia;
     
     

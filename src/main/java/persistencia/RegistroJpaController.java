@@ -4,13 +4,18 @@
  */
 package persistencia;
 
+import com.google.protobuf.TextFormat.ParseException;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Registro;
@@ -138,5 +143,23 @@ public class RegistroJpaController implements Serializable {
             em.close();
         }
     }
-    
+   public List<Registro> getRegistros(String fechaInicioStr, String fechaFinStr) {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    try {
+        Date fechaInicio = sdf.parse(fechaInicioStr);
+        Date fechaFin = sdf.parse(fechaFinStr);
+
+        String jpql = "SELECT r FROM Registro r WHERE r.fechaRegistro BETWEEN :fechaInicio AND :fechaFin";
+        TypedQuery<Registro> query = this.getEntityManager().createQuery(jpql, Registro.class);
+        query.setParameter("fechaInicio", fechaInicio);
+        query.setParameter("fechaFin", fechaFin);
+
+        return query.getResultList();
+    } catch (Exception e) {
+        System.err.println("Error en la consulta: " + e.getMessage());
+        e.printStackTrace();
+    }
+    return null;
+}
+
 }

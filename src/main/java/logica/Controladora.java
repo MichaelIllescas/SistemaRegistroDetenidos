@@ -4,7 +4,9 @@
  */
 package logica;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import persistencia.ControladoraPersistencia;
 
@@ -128,9 +130,25 @@ public class Controladora {
     public List<Registro> getRegistros() {
         return controlPersistencia.getRegistros();
     }
+     public List<Registro> getRegistrosActivos() {
+        List<Registro> registrosTotales=controlPersistencia.getRegistros();
+        List<Registro> registrosActivos=new ArrayList<>();
+        
+        for(Registro registro: registrosTotales){
+            if(registro.getEstado()==true)
+                registrosActivos.add(registro);
+           
+        
+        }
+          return registrosActivos;  
+     }    
+
+     
 
     public void eliminarRegistro(int idRegistro) {
-        controlPersistencia.eliminarRegistro(idRegistro);
+        Registro registro = controlPersistencia.getRegistro(idRegistro);
+        registro.setEstado(false);
+        controlPersistencia.editarRegistro(registro);
     }
 
     public Registro getRegistro(int id) {
@@ -171,5 +189,66 @@ public class Controladora {
         editarPolicia(policia); // Asegúrate de que esto guarda correctamente
 
     }
+    
+     
+public List<Registro> filtrarRegistrosPorFecha(List<Registro> registros, String fechaDesdeStr, String fechaHastaStr) {
+    List<Registro> registrosFiltrados = new ArrayList<>();
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+    try {
+        // Convertir las fechas de String a Date
+        Date fechaDesde = sdf.parse(fechaDesdeStr);
+        Date fechaHasta = sdf.parse(fechaHastaStr);
+
+        for (Registro registro : registros) {
+            Date fechaRegistro = registro.getFechaRegistro();
+            if (fechaRegistro != null && !fechaRegistro.before(fechaDesde) && !fechaRegistro.after(fechaHasta)) {
+                registrosFiltrados.add(registro);
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace(); // Manejo de error
+    }
+
+    return registrosFiltrados;
+}
+     
+
+    public List<Ocupacion> getOcupaciones(){
+        return controlPersistencia.getOcupaciones();
+    }
+
+    public Ocupacion getOcupacion(int id){
+        
+        return controlPersistencia.getOcupacion(id);
+    }
+    
+    
+    public List<Sexo> getSexos(){
+        return controlPersistencia.getSexos();
+    }
+
+    public Sexo getSexo(int idSexo) {
+       return controlPersistencia.getSexo(idSexo);
+    }
+
+    public List<EstadoCivil> getEstadosCiviles() {
+        return controlPersistencia.getEstadosCiviles();
+    }
+
+    public EstadoCivil getEstadocivil(int idEstadoCivil) {
+        return controlPersistencia.getEstadoCivil(idEstadoCivil);
+    }
+
+    public List<Nacionalidad> getNacionalidades() {
+        return controlPersistencia.getNacionalidades();
+    }
+
+   
+
+    public Nacionalidad getNacionalidad(int idNacionalidad) {
+        return controlPersistencia.getNacionalidad(idNacionalidad);
+    }
+    
 
 }

@@ -37,7 +37,7 @@ public class SVVerDetenidos extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        List<Registro> registros= controladora.getRegistros();
+        List<Registro> registros= controladora.getRegistrosActivos();
         HttpSession sesion= request.getSession();
         sesion.setAttribute("registros", registros);
         

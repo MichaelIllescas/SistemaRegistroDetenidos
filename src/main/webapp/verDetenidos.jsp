@@ -130,4 +130,5 @@
     </div>
     <%@include file="recursos/components/cerrarSesion.jsp" %>
     <%@include file="recursos/components/footer.jsp" %>
+    
 </body>

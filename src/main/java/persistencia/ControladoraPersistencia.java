@@ -8,9 +8,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import logica.Detenido;
+import logica.EstadoCivil;
 import logica.EstadoUsuario;
+import logica.Nacionalidad;
+import logica.Ocupacion;
 import logica.Policia;
 import logica.Registro;
+import logica.Sexo;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -52,7 +56,9 @@ public class ControladoraPersistencia {
     
     UsuarioJpaController usuarioJPA = new UsuarioJpaController();
     
+    OcupacionJpaController ocupacionJPA = new OcupacionJpaController();
     
+    SexoJpaController sexoJPA = new SexoJpaController();
     
     
     
@@ -164,5 +170,45 @@ public class ControladoraPersistencia {
     public EstadoUsuario getEstadoPorId(int id) {
         return estadoUsuarioJPA.findEstadoUsuario(id);
     }
+    
+    public List<Registro> getRegistrosFiltrados(String fechaDesde, String fechaHasta){
+            return registroJPA.getRegistros(fechaHasta, fechaHasta);
+    }
+    
+    
+    public List<Ocupacion> getOcupaciones(){
+    
+        return ocupacionJPA.findOcupacionEntities();
+    }
+
+    public Ocupacion getOcupacion(int id) {
+        return  ocupacionJPA.findOcupacion(id);
+    }
+    
+    public List<Sexo> getSexos(){
+        return sexoJPA.findSexoEntities();
+    }
+
+    public Sexo getSexo(int idSexo) {
+       return sexoJPA.findSexo(idSexo);
+    }
+
+    public List<EstadoCivil> getEstadosCiviles() {
+       return estadoCivilJPA.findEstadoCivilEntities();
+    }
+
+    public EstadoCivil getEstadoCivil(int idEstadoCivil) {
+       return estadoCivilJPA.findEstadoCivil(idEstadoCivil);
+    }
+
+    public List<Nacionalidad> getNacionalidades() {
+        return nacionalidadJPA.findNacionalidadEntities();
+    }
+
+    public Nacionalidad getNacionalidad(int idNacionalidad) {
+        return nacionalidadJPA.findNacionalidad(idNacionalidad);
+    }
+    
+    
     
 }

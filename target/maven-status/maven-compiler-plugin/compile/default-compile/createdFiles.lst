@@ -5,7 +5,10 @@ servlets\SVRegistrarEgreso.class
 servlets\SVEditarRegistro.class
 logica\Usuario.class
 persistencia\DefensoriaJpaController.class
+logica\Sexo_.class
 logica\Nacionalidad.class
+servlets\SVReporteDetenidos.class
+persistencia\OcupacionJpaController.class
 servlets\SVCrearUsuario.class
 servlets\SVVerDetenidos.class
 logica\Reporte_.class
@@ -24,6 +27,7 @@ servlets\SVCambioCredenciales.class
 logica\Controladora.class
 logica\Usuario_.class
 logica\Nacionalidad_.class
+logica\Ocupacion_.class
 logica\Persona_.class
 servlets\SVRegistrarDetenido.class
 logica\Reporte.class
@@ -32,8 +36,10 @@ logica\Detenido_.class
 logica\EstadoUsuario_.class
 persistencia\DetenidoJpaController.class
 servlets\SVDetalleRegistro.class
+servlets\SVEditarPerfil.class
 logica\Juzgado.class
 servlets\SVEliminarRegistro.class
+logica\Sexo.class
 servlets\SVEditarUsuarios.class
 logica\Fiscalia_.class
 logica\EstadoUsuario.class
@@ -51,12 +57,15 @@ logica\Policia.class
 persistencia\ControladoraPersistencia.class
 logica\Registro_.class
 servlets\SVEliminarPolicia.class
+logica\ExcelExporter.class
 persistencia\NacionalidadJpaController.class
 persistencia\CausaJpaController.class
 persistencia\JuzgadoJpaController.class
 persistencia\ReporteJpaController.class
+logica\Ocupacion.class
 logica\Utilitaria.class
 persistencia\PoliciaJpaController.class
+persistencia\SexoJpaController.class
 servlets\SvUsuarios.class
 servlets\SVCrearPolicia.class
 persistencia\PersonaJpaController.class

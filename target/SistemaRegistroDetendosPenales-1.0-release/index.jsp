@@ -13,43 +13,38 @@
 
     <!-- validacion de session
     
-    <%HttpSession miSession= request.getSession();
-     String usuario = (String)miSession.getAttribute("usuario");
-     Usuario user = (Usuario)miSession.getAttribute("user");
-     String visiblidad = (String)miSession.getAttribute("visiblidad");
-     
-     
-     
-     
-      if (usuario==null)
-      {
-           response.sendRedirect("sinLogin.jsp");
-      }
-   
-   
-    %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
     -->
     <div id="wrapper">
-<%@include file="recursos/components/navegacion.jsp" %>
-<!-- Begin Page Content -->
-<div class="container-fluid ">
-   
-    <!-- Page Heading -->
-    <div class="row  mt-2">
-        <div class="col-sm-12">
-            <h1 class="h2 titulo-color text-center">Sistema de Registro de Detenidos Penales</h1>
-        </div>
-    </div>
+        <%@include file="recursos/components/navegacion.jsp" %>
+        <!-- Begin Page Content -->
+        <div class="container-fluid ">
 
-    <div class="container justify-content-center mt-2">
-        <div class="col-sm-12">
-            <%@include file="recursos/components/cards.jsp" %>
-        </div>
-    </div>
+            <!-- Page Heading -->
+            <div class="row  mt-2">
+                <div class="col-sm-12">
+                    <h1 class="h2 titulo-color text-center">Sistema de Registro de Detenidos Penales</h1>
+                </div>
+            </div>
 
- </div>  
+            <div class="container justify-content-center mt-2">
+                <div class="col-sm-12">
+                    <%@include file="recursos/components/cards.jsp" %>
+                </div>
+            </div>
+
+        </div>  
     </div>
-<%@include file="recursos/components/cerrarSesion.jsp" %>
-<%@include file="recursos/components/footer.jsp" %>
-    
+    <%@include file="recursos/components/cerrarSesion.jsp" %>
+    <%@include file="recursos/components/footer.jsp" %>
+
 </body>

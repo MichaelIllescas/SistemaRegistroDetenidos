@@ -59,7 +59,7 @@
         <div id="collapse-header" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Ingreso</a>
+                <a class="collapse-item " href="SVRegistrarDetenido">Registrar Ingreso</a>
                 <a class="collapse-item " href="SVRegistrarEgreso">Registrar Egreso</a>
                 <a class="collapse-item" href="SVVerDetenidos">Ver Registros</a>
 
@@ -76,6 +76,7 @@
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow-lg">
                 <h6 class="collapse-header">Acciones:</h6>
                 <a class="collapse-item" href="crearReporte.jsp">Generar Reporte</a>
+                <a class="collapse-item" href="crearReporte.jsp">Reporte Mensual</a>
 
             </div>
         </div>
@@ -172,7 +173,7 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                      aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="verPerfil.jsp">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Perfil
                     </a>

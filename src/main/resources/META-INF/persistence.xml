@@ -16,6 +16,8 @@
     <class>logica.Registro</class>
     <class>logica.Reporte</class>
     <class>logica.Usuario</class>
+    <class>logica.Ocupacion</class>
+    <class>logica.Sexo</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/registro_detenidos?zeroDateTimeBehavior=CONVERT_TO_NULL"/>

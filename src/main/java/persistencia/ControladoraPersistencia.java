@@ -7,9 +7,13 @@ package persistencia;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import logica.Defensoria;
+import logica.Delito;
 import logica.Detenido;
 import logica.EstadoCivil;
 import logica.EstadoUsuario;
+import logica.Fiscalia;
+import logica.Juzgado;
 import logica.Nacionalidad;
 import logica.Ocupacion;
 import logica.Policia;
@@ -23,6 +27,9 @@ import persistencia.exceptions.NonexistentEntityException;
  * @author jonii
  */
 public class ControladoraPersistencia {
+
+   
+
 
 
     public ControladoraPersistencia() {
@@ -59,6 +66,8 @@ public class ControladoraPersistencia {
     OcupacionJpaController ocupacionJPA = new OcupacionJpaController();
     
     SexoJpaController sexoJPA = new SexoJpaController();
+    
+    DelitoJpaController delitoJPA = new DelitoJpaController();
     
     
     
@@ -208,7 +217,38 @@ public class ControladoraPersistencia {
     public Nacionalidad getNacionalidad(int idNacionalidad) {
         return nacionalidadJPA.findNacionalidad(idNacionalidad);
     }
+
+    public List<Juzgado> getJuzgados() {
+        return juzgadoJPA.findJuzgadoEntities();
+    }
+
+    public List<Fiscalia> getFiscalias() {
+        return fiscaliaJPA.findFiscaliaEntities();
+    }
+
+    public List<Defensoria> getDefensorias() {
+        return defensoriaJPA.findDefensoriaEntities();
+    }
+
+    public Fiscalia getFiscalia(int idFiscalia) {
+        return fiscaliaJPA.findFiscalia(idFiscalia);
+    }
+
+    public Defensoria getDefensoria(int idDefensoria) {
+        return defensoriaJPA.findDefensoria(idDefensoria);
+    }
+
+    public Juzgado getJuzgado(int idJuzgado) {
+        return juzgadoJPA.findJuzgado(idJuzgado);
+    }
     
+    public List<Delito> getDelitos(){
+        return delitoJPA.findDelitoEntities();
+    }
+
+    public Delito getDelitoPorId(int idDelito) {
+        return  delitoJPA.findDelito(idDelito);
+    }
     
     
 }

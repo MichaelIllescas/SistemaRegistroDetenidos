@@ -9,7 +9,7 @@ import logica.Nacionalidad;
 import logica.Ocupacion;
 import logica.Sexo;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-10-17T22:31:05")
+@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-10-25T18:47:28")
 @StaticMetamodel(Persona.class)
 public class Persona_ { 
 

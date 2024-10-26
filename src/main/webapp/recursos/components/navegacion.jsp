@@ -75,8 +75,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow-lg">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item" href="crearReporte.jsp">Generar Reporte</a>
-                <a class="collapse-item" href="crearReporte.jsp">Reporte Mensual</a>
+                <a class="collapse-item" href="crearReporte.jsp">Listado de Detenidos</a>
+                <a class="collapse-item" href="crearReporte.jsp">Reporte Estadísico</a>
 
             </div>
         </div>

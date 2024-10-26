@@ -3,6 +3,10 @@
     Created on : 17 may. 2024, 12:20:15
     Author     : jonii
 --%>
+<%@page import="logica.Delito"%>
+<%@page import="logica.Fiscalia"%>
+<%@page import="logica.Defensoria"%>
+<%@page import="logica.Juzgado"%>
 <%@page import="logica.Nacionalidad"%>
 <%@page import="logica.EstadoCivil"%>
 <%@page import="logica.Sexo"%>
@@ -17,6 +21,10 @@
     List<Sexo> sexos = (List<Sexo>) request.getSession().getAttribute("sexos");
     List<EstadoCivil> estadosCiviles = (List<EstadoCivil>) request.getSession().getAttribute("estadosCiviles");
     List<Nacionalidad> nacionalidades = (List<Nacionalidad>) request.getSession().getAttribute("nacionalidades");
+    List<Juzgado> juzgados = (List<Juzgado>) request.getSession().getAttribute("juzgados");
+    List<Defensoria> defensorias = (List<Defensoria>) request.getSession().getAttribute("defensorias");
+    List<Fiscalia> fiscalias = (List<Fiscalia>) request.getSession().getAttribute("fiscalias");
+    List<Delito> delitos = (List<Delito>) request.getSession().getAttribute("delitos");
 
 %>
 
@@ -84,6 +92,7 @@
             </div>
             <form class="text-center mx-auto  mb-5 p-3 rounded-1 " style="max-width: 600px;" action="SVRegistrarDetenido" method="POST">
 
+                <!-- SECCION DE DATOS DEL DETENIDO -->
                 <div class="accordion accordion-flush rounded-1" id="accordionExample">
                     <div class="accordion-item gradiente-azul-oscuro rounded-2">
                         <h2 class="accordion-header ">
@@ -106,7 +115,7 @@
                                     <input name="dni" type="text" class="form-control form-control-lg" id="dni" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="direccion">* Direccién:</label>
+                                    <label for="direccion">* Dirección:</label>
                                     <input name="direccion" type="text" class="form-control form-control-lg " id="direccion" required>
                                 </div>
                                 <div class="mb-3">
@@ -139,7 +148,7 @@
                                 <div class="mb-3">
                                     <label for="sexo">* Sexo:</label>
                                     <select name="sexo" id="sexo" class="form-control form-control-lg form-select" required>
-                                        <option value="" disabled selected>Seleccione su sexo</option>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
                                             if (sexos != null) {
                                                 for (Sexo sex : sexos) {
@@ -154,17 +163,17 @@
                                 <div class="mb-3">
                                     <label for="instruccion">* Instruccion:</label>
 
-                                    <select name="instruccion" id="instruccion" class="form-control form-control-lg form-select">
-                                        <option value="" disabled selected>Seleccione su Instrucción</option>
-                                        <option value="SI"> SI</option>>
-                                        <option value="NO"> no</option>>
+                                    <select name="instruccion" id="instruccion" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
+                                        <option value="SI">SI</option>>
+                                        <option value="NO">No</option>>
                                     </select>
 
                                 </div>
                                 <div class="mb-3">
                                     <label for="estadoCivil">* Estado Civil:</label>
-                                   <select name="estadoCivil" id="estadoCivil" class="form-control form-control-lg form-select" required>
-                                        <option value="" disabled selected>Seleccione su sexo</option>
+                                    <select name="estadoCivil" id="estadoCivil" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
                                             if (estadosCiviles != null) {
                                                 for (EstadoCivil estadoCivil : estadosCiviles) {
@@ -179,8 +188,8 @@
 
                                 <div class="mb-3">
                                     <label for="nacionalidad">* Nacionalidad:</label>
-                                     <select name="nacionalidad" id="nacionalidad" class="form-control form-control-lg form-select" required>
-                                        <option value="" disabled selected>Seleccione su Nacionalidad</option>
+                                    <select name="nacionalidad" id="nacionalidad" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
                                             if (nacionalidades != null) {
                                                 for (Nacionalidad nacionalidad : nacionalidades) {
@@ -196,6 +205,7 @@
                                 <div class="mb-3">
                                     <label for="rol">* Calidad:</label>
                                     <select id="miListaDesplegable" name="calidad" class="form-control form-control-lg form-select">
+                                        <option value="" disabled selected>Seleccione una Opción</option>
                                         <option value="APREHENDIDO">Aprehendido</option>
                                         <option value="DETENIDO">Detenido</option>
                                     </select>
@@ -203,6 +213,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- SECCION DE CAUSA / IPP-->
                     <div class="accordion-item gradiente-azul-oscuro rounded">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIPP" aria-expanded="false" aria-controls="collapseIPP">
@@ -212,37 +224,73 @@
                         <div id="collapseIPP" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="mb-3">
-                                    <label for="nroCausa">* Nº I.P.P. / Causa:</label>
-                                    <input name="nroCausa" id="nroCausa" type="text" class="form-control form-control-lg" required>
+                                    <label for="nroCausa">* Número de I.P.P. / Causa:</label>
+                                    <input name="nroCausa" id="nroCausa" type="text" class="form-control form-control-lg " required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="caratula">* Carátula:</label>
-                                    <input name="caratula" id="caratula" type="text" class="form-control form-control-lg" required>
+                                    <label for="delito">* Carátula/Hecho:</label>
+                                    <select name="delito" id="delito" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione un Delito</option>
+                                        <%
+                                            if (delitos != null && !delitos.isEmpty()) {
+                                                for (Delito delito : delitos) {
+                                        %>
+                                        <option value="<%= delito.getId()%>"><%= delito.getDescripcion()%></option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="fiscalia">* N° Fiscalía Interviniente:</label>
-                                    <input name="nroFiscalia" id="fiscalia" type="text" class="form-control form-control-lg">
+                                    <label for="fiscalia">* Fiscalía Interviniente:</label>
+                                    <select name="ficalia" id="fiscalia" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción </option>
+                                        <%
+                                            if (fiscalias != null) {
+                                                for (Fiscalia fis : fiscalias) {
+                                        %>
+                                        <option value="<%= fis.getId()%>"><%= fis.getDescripcion()%></option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select> 
                                 </div>
-                                <div class="mb-3">
-                                    <label for="fiscal">* Agente Fiscal:</label>
-                                    <input name="fiscal" id="fiscal" type="text" class="form-control form-control-lg">
-                                </div>
+
                                 <div class="mb-3">
                                     <label for="defensoria">* Defensoría Interviniente:</label>
-                                    <input name="defensoria" id="defensoria" type="text" class="form-control form-control-lg" required>
+                                    <select name="defensoria" id="defensoria" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
+                                        <%
+                                            if (defensorias != null) {
+                                                for (Defensoria def : defensorias) {
+                                        %>
+                                        <option value="<%= def.getId()%>"><%= def.getDescripcion()%></option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select> 
                                 </div>
                                 <div class="mb-3">
                                     <label for="juzgado">* Juzgado Interviniente:</label>
-                                    <input name="juzgado" id="juzgado" type="text" class="form-control form-control-lg" required>
+                                    <select name="juez" id="juez" class="form-control form-control-lg form-select" required>
+                                        <option value="" disabled selected>Seleccione una Opción</option>
+                                        <%
+                                            if (juzgados != null) {
+                                                for (Juzgado juz : juzgados) {
+                                        %>
+                                        <option value="<%= juz.getId()%>"><%= juz.getDescripcion()%></option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select>             
                                 </div>
-                                <div class="mb-3">
-                                    <label for="juez">* Juez Interviniente:</label>
-                                    <input name="juez" id="juez" type="text" class="form-control form-control-lg" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="deptoJudicial">* Departamento Judicial:</label>
-                                    <input name="deptoJudicial" id="deptoJudicial" type="text" class="form-control form-control-lg">
-                                </div>
+
+
                             </div>
                         </div>
                     </div>

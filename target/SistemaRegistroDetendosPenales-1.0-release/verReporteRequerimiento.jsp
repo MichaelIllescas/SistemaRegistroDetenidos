@@ -19,7 +19,7 @@
         <div class="container-fluid pb-4">
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <h1 class="h2 titulo-color">Reporte a Requerimiento:</h1>
+                    <h1 class="h2 titulo-color">Reporte Listado de Detenidos a Requerimiento:</h1>
                     <p class="mb-4 titulo-color">desde ${Utilitaria.dateToString(sessionScope.fechaDesdeDate)} hasta ${Utilitaria.dateToString(sessionScope.fechaHastaDate)}</p>
                 </div>
 
@@ -89,13 +89,13 @@
                                                                             <p>Fecha de Nacimiento: <%= Utilitaria.dateToString(detenido.getFechaNacimiento())%></p>
                                                                         </div>
                                                                         <div class="col-12">
-                                                                            <p>Ocupación: <%= detenido.getOcupacion().toUpperCase()%></p>
+                                                                            <p>Ocupación: <%= detenido.getOcupacion().getDescripcion().toUpperCase()%></p>
                                                                         </div>
                                                                         <div class="col-12">
                                                                             <p>Ocupación: <%= detenido.getTelefono().toUpperCase()%></p>
                                                                         </div>
                                                                         <div class="col-12">
-                                                                            <p>Sexo: <%= detenido.getSexo().toUpperCase()%></p>
+                                                                            <p>Sexo: <%= detenido.getSexo().getDescripcion().toUpperCase()%></p>
                                                                         </div>
                                                                         <div class="col-12">
                                                                             <p>Estado Civil: <%= detenido.getEstadoCivil().getDescipcion().toUpperCase()%></p>
@@ -125,7 +125,7 @@
                                                                             <p>Nº I.P.P. / Causa: <%= registro.getCausa().getNumeroCausa().toUpperCase()%></p>
                                                                         </div>
                                                                         <div class="col-12">
-                                                                            <p>Carátula: <%= registro.getCausa().getDescripcion().toUpperCase()%></p>
+                                                                            <p>Carátula: <%= registro.getCausa().getDelito().getDescripcion().toUpperCase()%></p>
                                                                         </div>
                                                                         <div class="col-12">
                                                                             <p>Defensoría: <%= registro.getCausa().getDefensoria().getDescripcion().toUpperCase()%></p>

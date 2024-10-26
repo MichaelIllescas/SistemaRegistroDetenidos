@@ -21,23 +21,24 @@ public class Causa implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String numeroCausa;
-    private String descripcion;
+    @OneToOne
+    private Delito delito;
     private String departamentoJudicial;
 
     
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Defensoria defensoria;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Fiscalia fiscalia;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Juzgado juzgado;
     
      @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
     private List<Detenido> detenidos;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "causa_id") // Esto crea la clave foránea en Detenido y Denunciante
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true )
+    @JoinColumn(name = "causa_id", nullable=true) // Esto crea la clave foránea en Detenido y Denunciante
     private List<Denunciante> denunciantes;
 
 
@@ -60,13 +61,16 @@ public class Causa implements Serializable {
         this.numeroCausa = numeroCausa;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+   
+
+    public Delito getDelito() {
+        return delito;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDelito(Delito delito) {
+        this.delito = delito;
     }
+ 
 
     public Defensoria getDefensoria() {
         return defensoria;
@@ -92,15 +96,19 @@ public class Causa implements Serializable {
         this.juzgado = juzgado;
     }
 
-    public Causa(int id, String numeroCausa, String descripcion, Defensoria defensoria, Fiscalia fiscalia, Juzgado juzgado, Detenido detenido, Denunciante denunciante ) {
+    public Causa(int id, String numeroCausa, Delito delito, String departamentoJudicial, Defensoria defensoria, Fiscalia fiscalia, Juzgado juzgado, List<Detenido> detenidos, List<Denunciante> denunciantes) {
         this.id = id;
         this.numeroCausa = numeroCausa;
-        this.descripcion = descripcion;
+        this.delito = delito;
+        this.departamentoJudicial = departamentoJudicial;
         this.defensoria = defensoria;
         this.fiscalia = fiscalia;
         this.juzgado = juzgado;
-     
+        this.detenidos = detenidos;
+        this.denunciantes = denunciantes;
     }
+
+   
 
     public List<Detenido> getDetenidos() {
         return detenidos;

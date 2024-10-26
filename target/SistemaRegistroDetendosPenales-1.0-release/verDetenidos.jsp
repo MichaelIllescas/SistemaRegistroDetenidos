@@ -57,7 +57,7 @@
                                     <td><%=dete.getApellido()%></td>
                                     <td><%=dete.getDni()%></td>
                                     <td><%=dete.getCalidad()%></td>
-                                    <td><%=reg.getCausa().getDescripcion()%></td>
+                                    <td><%=reg.getCausa().getDelito().getDescripcion()%></td>
                                     <td><%=reg.getCausa().getNumeroCausa()%></td>
                                     <td><%=Utilitaria.dateToString(dete.getFechaIngreso())%></td>
                                     <td><%=Utilitaria.dateToString(dete.getFechaEgreso())%></td>

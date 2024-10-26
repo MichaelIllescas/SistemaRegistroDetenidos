@@ -4,6 +4,7 @@
     Author     : jonii
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="logica.Denunciante"%>
 <%@page import="logica.Utilitaria"%>
 <%@page import="logica.Detenido"%>
@@ -58,7 +59,7 @@
 <%
     Registro regis = (Registro) request.getSession().getAttribute("registroDetalle");
     Detenido deteni = (Detenido) request.getSession().getAttribute("detalleDetenido");
-    Denunciante denun = (Denunciante) request.getSession().getAttribute("detalleDenunciante");
+    List<Denunciante> denun = (List<Denunciante>) request.getSession().getAttribute("detalleDenunciante");
 
 %>
 <body id="page-top">
@@ -110,7 +111,7 @@
                                         </div>
                                         <div class="col-12">
 
-                                            <p> Ocupación: <%=deteni.getOcupacion().toUpperCase()%> </p>
+                                            <p> Ocupación: <%=deteni.getOcupacion().getDescripcion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
 
@@ -118,7 +119,7 @@
                                         </div>
                                         <div class="col-12">
 
-                                            <p>Sexo: <%=deteni.getSexo().toUpperCase()%> </p>
+                                            <p>Sexo: <%=deteni.getSexo().getDescripcion().toUpperCase()%> </p>
                                         </div>
                                         <div class="col-12">
 
@@ -153,23 +154,19 @@
                                             <p>Nº I.P.P. / Causa: <%=regis.getCausa().getNumeroCausa().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
-                                            <p>Carátula:<%=regis.getCausa().getDescripcion().toUpperCase()%></p>
+                                            <p>Carátula:<%=regis.getCausa().getDelito().getDescripcion().toUpperCase()%></p>
                                         </div>
                                         <div class="col-12">
                                             <p>Fiscalía Interviniente: <%=regis.getCausa().getFiscalia().getDescripcion().toUpperCase()%></p>
                                         </div>
-                                        <div class="col-12">
-                                            <p>Agente Fiscal: <%=regis.getCausa().getFiscalia().getTitular().toUpperCase()%></p>
-                                        </div>
+                                      
                                         <div class="col-12">
                                             <p>Defensoría: <%=regis.getCausa().getDefensoria().getDescripcion().toUpperCase()%></p>      
                                         </div>
                                         <div class="col-12">
                                             <p>Juzgado: <%=regis.getCausa().getJuzgado().getDescripcion().toUpperCase()%></p>        
                                         </div>
-                                        <div class="col-12">
-                                            <p>Juez: <%=regis.getCausa().getJuzgado().getTitular().toUpperCase()%></p>        
-                                        </div>
+                                        
                                         <div class="col-12">
                                             <p>Departamento Judicial: <%=regis.getCausa().getDepartamentoJudicial().toUpperCase()%></p>        
                                         </div>
@@ -192,7 +189,7 @@
                                             <p>Fecha de Ingreso: <%=Utilitaria.dateToString(deteni.getFechaIngreso())%></p>        
                                         </div>
                                         <div class="col-12">
-                                            <p>Fecha de Ingreso: <%=Utilitaria.dateToString(deteni.getFechaEgreso())%></p>        
+                                            <p>Fecha de Egreso: <%=Utilitaria.dateToString(deteni.getFechaEgreso())%></p>        
                                         </div>
                                     </div>
                                 </div>
@@ -200,37 +197,51 @@
                         </div>
 
                         <!-- Denunciante/Victima -->
-                        <div class="accordion-item gradiente-azul-oscuro rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDte" aria-expanded="false" aria-controls="collapseDte">
-                                    Denunciante/Victima
-                                </button>
-                            </h2>
-                            <div id="collapseDte" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="row mb-3">
-                                        <div class="col-12">
-                                            <p>Nombre: <%=denun.getNombre().toUpperCase()%></p>        
-                                        </div>
-                                        <div class="col-12">
-                                            <p>Apellido: <%=denun.getApellido().toUpperCase()%></p>        
-                                        </div>
-                                        <div class="col-12">
-                                            <p>D.N.I.: <%=denun.getDni().toUpperCase()%></p>        
-                                        </div>
-                                        <div class="col-12">
-                                            <p>Dirección: <%=denun.getDireccion().toUpperCase()%></p>        
-                                        </div>
-                                        <div class="col-12">
-                                            <p>Teléfono: <%=denun.getTelefono().toUpperCase()%></p>        
-                                        </div>
-                                        <div class="col-12">
-                                            <p>Fecha de Naciminto: <%=Utilitaria.dateToString(denun.getFechaNacimiento())%></p>        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                       <div class="accordion-item gradiente-azul-oscuro rounded">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed shadow rounded desplegable-personalizada titulo-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDte" aria-expanded="false" aria-controls="collapseDte">
+            Denunciante/Victima
+        </button>
+    </h2>
+    <div id="collapseDte" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <% if (denun != null && !denun.isEmpty()) { %> <!-- Verificar si 'denun' no es null y no está vacío -->
+                <div class="row mb-3">
+                    <%
+                        // Recorrer la lista de denunciantes
+                        for (Denunciante d : denun) {
+                    %>
+                        <div class="col-12">
+                            <p>Nombre: <%= d.getNombre().toUpperCase() %></p>
                         </div>
+                        <div class="col-12">
+                            <p>Apellido: <%= d.getApellido().toUpperCase() %></p>
+                        </div>
+                        <div class="col-12">
+                            <p>D.N.I.: <%= d.getDni().toUpperCase() %></p>
+                        </div>
+                        <div class="col-12">
+                            <p>Dirección: <%= d.getDireccion().toUpperCase() %></p>
+                        </div>
+                        <div class="col-12">
+                            <p>Teléfono: <%= d.getTelefono().toUpperCase() %></p>
+                        </div>
+                        <div class="col-12">
+                            <p>Fecha de Nacimiento: <%= Utilitaria.dateToString(d.getFechaNacimiento()) %></p>
+                        </div>
+                        <hr> <!-- Separador entre denunciantes -->
+                    <%
+                        }
+                    %>
+                </div>
+            <% } else { %> <!-- Si 'denun' es null o está vacío, no mostrar nada -->
+                <p>No hay datos del denunciante disponibles.</p>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
 
                         <!-- Observaciones -->
                         <div class="accordion-item gradiente-azul-oscuro rounded">

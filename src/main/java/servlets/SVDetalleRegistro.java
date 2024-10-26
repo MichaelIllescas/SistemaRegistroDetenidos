@@ -41,7 +41,7 @@ public class SVDetalleRegistro extends HttpServlet {
         HttpSession sesion= request.getSession();
         sesion.setAttribute("registroDetalle", controladora.getRegistro(idRegistro));
         sesion.setAttribute("detalleDetenido", Utilitaria.buscarDetenidoPorId(controladora.getRegistro(idRegistro).getCausa().getDetenidos(), idDetenido));
-        sesion.setAttribute("detalleDenunciante", Utilitaria.buscarDenunciantePorId(controladora.getRegistro(idRegistro).getCausa().getDenunciantes(), idDetenido));
+        sesion.setAttribute("detalleDenunciante", controladora.getRegistro(idRegistro).getCausa().getDenunciantes());
         
         response.sendRedirect("detalleRegistro.jsp");
         

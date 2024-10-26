@@ -15,6 +15,7 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\exceptions\IllegalOrphanException.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\DetenidoJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVCerrarSesion.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\DelitoJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SvLogin.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Nacionalidad.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\SexoJpaController.java
@@ -23,6 +24,7 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\EstadoUsuarioJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\DefensoriaJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\FiscaliaJpaController.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Delito.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\EstadoCivilJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\JuzgadoJpaController.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Sexo.java
@@ -34,8 +36,10 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Ocupacion.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVReporteDetenidos.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\NacionalidadJpaController.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\ReporteEstadistico.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\exceptions\NonexistentEntityException.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Causa.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVReporteEstadistico.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Juzgado.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVCambioCredenciales.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarUsuarios.java

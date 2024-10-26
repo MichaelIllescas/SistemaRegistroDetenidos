@@ -1,0 +1,228 @@
+25-Oct-2024 17:07:37.580 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 17:07:37.580 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 17:07:37.583 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@6066c4ff')
+25-Oct-2024 17:29:50.658 SEVERE [http-nio-8080-exec-29] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [235] en el archivo jsp: [/editarRegistro.jsp]
+The method getDescripcion() is undefined for the type Causa
+232: 
+233:                                 <div class="col-sm-12 mx-auto mb-3">
+234:                                     <label for="caratula">* CarÃ¡tula / Hecho:</label>
+235:                                     <input name="caratula" id="caratula" type="text" class="form-control form-control-lg" value="<%=reg.getCausa().getDescripcion()%>" required>
+236:                                 </div>
+237: 
+238:                                 <div class="col-sm-12 mx-auto mb-3">
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [235] en el archivo jsp: [/editarRegistro.jsp]
+The method getDescripcion() is undefined for the type Causa
+232: 
+233:                                 <div class="col-sm-12 mx-auto mb-3">
+234:                                     <label for="caratula">* CarÃ¡tula / Hecho:</label>
+235:                                     <input name="caratula" id="caratula" type="text" class="form-control form-control-lg" value="<%=reg.getCausa().getDescripcion()%>" required>
+236:                                 </div>
+237: 
+238:                                 <div class="col-sm-12 mx-auto mb-3">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+25-Oct-2024 17:36:47.460 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 17:36:47.460 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 17:37:16.595 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 17:37:16.595 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 17:37:16.599 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4e68c590')
+25-Oct-2024 17:38:02.894 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVEditarRegistro] lanzó excepción
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:630)
+		at java.base/java.lang.Integer.parseInt(Integer.java:786)
+		at servlets.SVEditarRegistro.doPost(SVEditarRegistro.java:124)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+25-Oct-2024 17:39:42.929 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 17:39:42.929 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 17:40:04.610 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 17:40:04.610 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 17:40:04.614 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@65ee756a')
+25-Oct-2024 17:47:59.085 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 17:47:59.085 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 17:49:05.754 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 17:49:05.754 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 17:49:05.757 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5c064de1')
+25-Oct-2024 18:00:38.263 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 18:00:38.263 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 18:01:45.452 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 18:01:45.452 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 18:01:45.456 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@502b9399')
+25-Oct-2024 18:04:29.428 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 18:04:29.428 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 18:05:38.145 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 18:05:38.146 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 18:05:38.149 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@75bd2c82')
+25-Oct-2024 18:09:38.952 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+25-Oct-2024 18:09:38.952 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+25-Oct-2024 18:11:44.791 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+25-Oct-2024 18:11:44.791 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+25-Oct-2024 18:11:44.794 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@75bd2c82')
+25-Oct-2024 18:22:42.240 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [92] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Ocupacion
+89:                                                                             <p>Fecha de Nacimiento: <%= Utilitaria.dateToString(detenido.getFechaNacimiento())%></p>
+90:                                                                         </div>
+91:                                                                         <div class="col-12">
+92:                                                                             <p>OcupaciÃ³n: <%= detenido.getOcupacion().toUpperCase()%></p>
+93:                                                                         </div>
+94:                                                                         <div class="col-12">
+95:                                                                             <p>OcupaciÃ³n: <%= detenido.getTelefono().toUpperCase()%></p>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Sexo
+95:                                                                             <p>OcupaciÃ³n: <%= detenido.getTelefono().toUpperCase()%></p>
+96:                                                                         </div>
+97:                                                                         <div class="col-12">
+98:                                                                             <p>Sexo: <%= detenido.getSexo().toUpperCase()%></p>
+99:                                                                         </div>
+100:                                                                         <div class="col-12">
+101:                                                                             <p>Estado Civil: <%= detenido.getEstadoCivil().getDescipcion().toUpperCase()%></p>
+
+
+Ha tenido lugar un error en la línea: [128] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDescripcion() is undefined for the type Causa
+125:                                                                             <p>NÂº I.P.P. / Causa: <%= registro.getCausa().getNumeroCausa().toUpperCase()%></p>
+126:                                                                         </div>
+127:                                                                         <div class="col-12">
+128:                                                                             <p>CarÃ¡tula: <%= registro.getCausa().getDescripcion().toUpperCase()%></p>
+129:                                                                         </div>
+130:                                                                         <div class="col-12">
+131:                                                                             <p>DefensorÃ­a: <%= registro.getCausa().getDefensoria().getDescripcion().toUpperCase()%></p>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [92] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Ocupacion
+89:                                                                             <p>Fecha de Nacimiento: <%= Utilitaria.dateToString(detenido.getFechaNacimiento())%></p>
+90:                                                                         </div>
+91:                                                                         <div class="col-12">
+92:                                                                             <p>OcupaciÃ³n: <%= detenido.getOcupacion().toUpperCase()%></p>
+93:                                                                         </div>
+94:                                                                         <div class="col-12">
+95:                                                                             <p>OcupaciÃ³n: <%= detenido.getTelefono().toUpperCase()%></p>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method toUpperCase() is undefined for the type Sexo
+95:                                                                             <p>OcupaciÃ³n: <%= detenido.getTelefono().toUpperCase()%></p>
+96:                                                                         </div>
+97:                                                                         <div class="col-12">
+98:                                                                             <p>Sexo: <%= detenido.getSexo().toUpperCase()%></p>
+99:                                                                         </div>
+100:                                                                         <div class="col-12">
+101:                                                                             <p>Estado Civil: <%= detenido.getEstadoCivil().getDescipcion().toUpperCase()%></p>
+
+
+Ha tenido lugar un error en la línea: [128] en el archivo jsp: [/verReporteRequerimiento.jsp]
+The method getDescripcion() is undefined for the type Causa
+125:                                                                             <p>NÂº I.P.P. / Causa: <%= registro.getCausa().getNumeroCausa().toUpperCase()%></p>
+126:                                                                         </div>
+127:                                                                         <div class="col-12">
+128:                                                                             <p>CarÃ¡tula: <%= registro.getCausa().getDescripcion().toUpperCase()%></p>
+129:                                                                         </div>
+130:                                                                         <div class="col-12">
+131:                                                                             <p>DefensorÃ­a: <%= registro.getCausa().getDefensoria().getDescripcion().toUpperCase()%></p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)

@@ -249,6 +249,37 @@ public List<Registro> filtrarRegistrosPorFecha(List<Registro> registros, String 
     public Nacionalidad getNacionalidad(int idNacionalidad) {
         return controlPersistencia.getNacionalidad(idNacionalidad);
     }
-    
+
+    public List<Juzgado> getJuzgados() {
+        return controlPersistencia.getJuzgados();
+    }
+
+    public List<Fiscalia> getFiscalias() {
+
+        return controlPersistencia.getFiscalias();
+    }
+
+    public List<Defensoria> getDefensorias() {
+        return controlPersistencia.getDefensorias();
+    }
+
+    public Fiscalia getFiscalia(int idFiscalia) {
+        return controlPersistencia.getFiscalia(idFiscalia);
+    }
+
+    public Defensoria getDefensoria(int idDefensoria) {
+        return controlPersistencia.getDefensoria(idDefensoria); 
+    }
+
+    public Juzgado getJuzgado(int idJuzgado) {
+        return controlPersistencia.getJuzgado(idJuzgado );
+    }
+    public List<Delito> getDelitos(){
+        return controlPersistencia.getDelitos();
+    }
+
+    public Delito getDelitoPorId(int idDelito) {
+        return controlPersistencia.getDelitoPorId(idDelito);
+    }
 
 }

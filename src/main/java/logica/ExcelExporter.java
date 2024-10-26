@@ -65,7 +65,7 @@ public class ExcelExporter {
             headerRow.createCell(13).setCellValue("Caratula");
             headerRow.getCell(13).setCellStyle(headerStyle); // Aplicar estilo a la celda
 
-            headerRow.createCell(14).setCellValue("Fiscalia");
+            headerRow.createCell(14).setCellValue("Juzgado");
             headerRow.getCell(14).setCellStyle(headerStyle); // Aplicar estilo a la celda
 
             headerRow.createCell(15).setCellValue("Juzgado");
@@ -96,7 +96,7 @@ public class ExcelExporter {
                         row.createCell(10).setCellValue(detenido.getFechaEgreso() != null ? Utilitaria.dateToString(detenido.getFechaEgreso()).toString() : "N/A"); // Fecha de egreso
                         row.createCell(11).setCellValue(detenido.getCalidad());
                         row.createCell(12).setCellValue(causa.getNumeroCausa());
-                        row.createCell(13).setCellValue(causa.getDescripcion());
+                        row.createCell(13).setCellValue(causa.getDelito().getDescripcion());
                         row.createCell(14).setCellValue(causa.getJuzgado() != null ? causa.getJuzgado().getDescripcion() : "");
                         row.createCell(15).setCellValue(causa.getFiscalia() != null ? causa.getFiscalia().getDescripcion() : "");
                         row.createCell(16).setCellValue(causa.getDefensoria() != null ? causa.getDefensoria().getDescripcion() : "");

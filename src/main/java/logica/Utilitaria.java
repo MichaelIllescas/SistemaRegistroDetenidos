@@ -51,6 +51,14 @@ public class Utilitaria {
         }
         return null;
     }
+     public static Denunciante buscarDenunciantePorDni(List<Denunciante> listaDeDenunciantes, String dni) {
+        for (Denunciante denunciante : listaDeDenunciantes) {
+            if (denunciante.getDni().equals(dni)) {
+                return denunciante;
+            }
+        }
+        return null;
+    }
 
     public static String convertirDateAinputDate(Date fecha) {
         if (fecha == null) {

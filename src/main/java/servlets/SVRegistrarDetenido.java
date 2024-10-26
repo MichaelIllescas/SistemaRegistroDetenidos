@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import logica.Causa;
 import logica.Controladora;
 import logica.Defensoria;
+import logica.Delito;
 import logica.Denunciante;
 import logica.Detenido;
 import logica.EstadoCivil;
@@ -50,12 +51,20 @@ public class SVRegistrarDetenido extends HttpServlet {
         List<Sexo> sexos = controladora.getSexos();
         List<EstadoCivil> estadosCiviles = controladora.getEstadosCiviles();
         List<Nacionalidad> nacionalidades = controladora.getNacionalidades();
+        List<Juzgado> juzgados = controladora.getJuzgados();
+        List<Fiscalia> fiscalias = controladora.getFiscalias();
+        List<Defensoria> defensorias = controladora.getDefensorias();
+        List<Delito> delitos = controladora.getDelitos();
 
         HttpSession sesion = request.getSession();
         sesion.setAttribute("ocupaciones", ocupaciones);
         sesion.setAttribute("sexos", sexos);
         sesion.setAttribute("estadosCiviles", estadosCiviles);
         sesion.setAttribute("nacionalidades", nacionalidades);
+        sesion.setAttribute("juzgados", juzgados);
+        sesion.setAttribute("fiscalias", fiscalias);
+        sesion.setAttribute("defensorias", defensorias);
+        sesion.setAttribute("delitos", delitos);
 
         response.sendRedirect("registrarDetenido.jsp");
 
@@ -97,43 +106,57 @@ public class SVRegistrarDetenido extends HttpServlet {
 
         Causa causa = new Causa();
         causa.setNumeroCausa(request.getParameter("nroCausa"));
-        causa.setDescripcion(request.getParameter("caratula"));
+        int idDelito=Integer.parseInt(request.getParameter("delito"));
+        Delito delito = controladora.getDelitoPorId(idDelito);
+        causa.setDelito(delito);
 
-        Fiscalia fiscalia = new Fiscalia();
-        fiscalia.setTitular(request.getParameter("fiscal"));
-        fiscalia.setDescripcion(request.getParameter("nroFiscalia") + " Depto Judicial: " + request.getParameter("deptoJudicial"));
-        Defensoria defensoria = new Defensoria();
-        defensoria.setDescripcion(request.getParameter("defensoria"));
-        Juzgado juzgado = new Juzgado();
-        juzgado.setDescripcion(request.getParameter("juzgado"));
-        juzgado.setTitular(request.getParameter("juez"));
-
-        causa.setDefensoria(defensoria);
+        
+        int idFiscalia =Integer.parseInt(request.getParameter("ficalia"));
+        Fiscalia fiscalia = controladora.getFiscalia(idFiscalia);
         causa.setFiscalia(fiscalia);
+        
+        
+        int idDefensoria= Integer.parseInt(request.getParameter("defensoria"));
+        Defensoria defensoria = controladora.getDefensoria(idDefensoria);
+        causa.setDefensoria(defensoria);
+        
+        int idJuzgado=Integer.parseInt(request.getParameter("juez"));
+        Juzgado juzgado = controladora.getJuzgado(idJuzgado); 
         causa.setJuzgado(juzgado);
 
         List<Detenido> detenidos = new ArrayList<>();
         detenidos.add(detenido);
         causa.setDetenidos(detenidos);
-        causa.setDepartamentoJudicial(request.getParameter("deptoJudicial"));
+        causa.setDepartamentoJudicial("Trenque Lauquen");
 
         detenido.setFechaIngreso(Utilitaria.convertStringToDate(request.getParameter("fechaIngreso"), "yyyy-MM-dd"));
         detenido.setFechaEgreso(Utilitaria.convertStringToDate(request.getParameter("fechaEgerso"), "yyyy-MM-dd"));
 
-        Denunciante denunciante = new Denunciante();
-        denunciante.setNombre(request.getParameter("nombreDte"));
-        denunciante.setApellido(request.getParameter("apellidoDte"));
-        denunciante.setDni(request.getParameter("dniDte"));
-        denunciante.setDireccion(request.getParameter("direccionDte"));
-        denunciante.setTelefono(request.getParameter("telefonoDte"));
+        String nombre = request.getParameter("nombreDte");
+String apellido = request.getParameter("apellidoDte");
+String dni = request.getParameter("dniDte");
 
-        denunciante.setFechaNacimiento(Utilitaria.convertStringToDate(request.getParameter("fechaNacDte"), "yyyy-MM-dd"));
+if (nombre != null && !nombre.isEmpty() &&
+    apellido != null && !apellido.isEmpty() &&
+    dni != null && !dni.isEmpty()) {
 
-        List<Denunciante> denunciantes = new ArrayList<>();
+    Denunciante denunciante = new Denunciante();
+    denunciante.setNombre(nombre);
+    denunciante.setApellido(apellido);
+    denunciante.setDni(dni);
+    denunciante.setDireccion(request.getParameter("direccionDte"));
+    denunciante.setTelefono(request.getParameter("telefonoDte"));
+    denunciante.setFechaNacimiento(Utilitaria.convertStringToDate(request.getParameter("fechaNacDte"), "yyyy-MM-dd"));
 
-        denunciantes.add(denunciante);
-        causa.setDenunciantes(denunciantes);
+    List<Denunciante> denunciantes = new ArrayList<>();
+    denunciantes.add(denunciante);
+    causa.setDenunciantes(denunciantes);
 
+} else {
+    causa.setDenunciantes(null); // O bien, otra lógica en caso de que no se creen denunciantes.
+}
+
+        
         Registro registro = new Registro();
         HttpSession session = request.getSession();
         String fechaActual = LocalDate.now().toString();

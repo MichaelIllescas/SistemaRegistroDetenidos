@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import logica.Causa;
 import logica.Usuario;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-10-17T22:31:05")
+@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-10-25T18:47:28")
 @StaticMetamodel(Registro.class)
 public class Registro_ { 
 

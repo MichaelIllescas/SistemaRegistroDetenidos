@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-09-2024 a las 23:19:53
+-- Tiempo de generación: 26-10-2024 a las 11:01:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `causa` (
   `ID` int(11) NOT NULL,
   `DEPARTAMENTOJUDICIAL` varchar(255) DEFAULT NULL,
-  `DESCRIPCION` varchar(255) DEFAULT NULL,
+  `DELITO_ID` int(11) DEFAULT NULL,
   `NUMEROCAUSA` varchar(255) DEFAULT NULL,
   `DEFENSORIA_ID` int(11) DEFAULT NULL,
   `FISCALIA_ID` int(11) DEFAULT NULL,
@@ -41,11 +41,15 @@ CREATE TABLE `causa` (
 -- Volcado de datos para la tabla `causa`
 --
 
-INSERT INTO `causa` (`ID`, `DEPARTAMENTOJUDICIAL`, `DESCRIPCION`, `NUMEROCAUSA`, `DEFENSORIA_ID`, `FISCALIA_ID`, `JUZGADO_ID`) VALUES
-(11, 'Trenque lauquen', 'leisones graves', 'C-114', 11, 11, 11),
-(12, 'Trenque lauquen', 'leisones graves', 'C-114', 12, 12, 12),
-(13, 'Trenque lauquen', 'Lesiones graves', 'C-114', 13, 13, 13),
-(24, 'trenque Lauquen', 'robo', '17-0-1111/24', 24, 24, 24);
+INSERT INTO `causa` (`ID`, `DEPARTAMENTOJUDICIAL`, `DELITO_ID`, `NUMEROCAUSA`, `DEFENSORIA_ID`, `FISCALIA_ID`, `JUZGADO_ID`) VALUES
+(39, 'Trenque Lauquen', 8, '17-0-111111/24', 36, 36, 36),
+(40, 'Trenque Lauquen', 26, '17-0-111111/24', 36, 37, 37),
+(41, 'Trenque Lauquen', 26, '17-0-111111/24', 36, 36, 36),
+(42, 'Trenque Lauquen', 3, '17-0-111111/24', 36, 36, 36),
+(43, 'Trenque Lauquen', 3, '17-0-111111/24', 36, 36, 36),
+(44, 'Trenque Lauquen', 13, '121212', 36, 36, 36),
+(45, 'Trenque Lauquen', 3, '121212', 36, 36, 36),
+(46, 'Trenque Lauquen', 3, '17-0-111111/24', 36, 36, 36);
 
 -- --------------------------------------------------------
 
@@ -64,10 +68,53 @@ CREATE TABLE `defensoria` (
 --
 
 INSERT INTO `defensoria` (`ID`, `DESCRIPCION`, `TITULAR`) VALUES
-(11, 'en turno', NULL),
-(12, 'en turno', NULL),
-(13, 'en turno', NULL),
-(24, 'en turno', NULL);
+(36, 'DEFENSORIA OFICIAL', 'EN TURNO'),
+(37, 'DEFENSOR PARTICULAR', 'A ASIGNAR');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `delito`
+--
+
+CREATE TABLE `delito` (
+  `ID` int(11) NOT NULL,
+  `DESCRIPCION` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `delito`
+--
+
+INSERT INTO `delito` (`ID`, `DESCRIPCION`) VALUES
+(3, 'HOMICIDIO SIMPLE'),
+(4, 'HOMICIDIO AGRAVADO'),
+(5, 'HURTO'),
+(6, 'ROBO'),
+(7, 'LESIONES CULPOSAS'),
+(8, 'LESIONES LEVES'),
+(9, 'LESIONES GRAVES'),
+(10, 'ATENTADO Y RESISTENCIA A LA AUTORIDAD'),
+(11, 'ABUSO SEXUAL CON ACCESO CARNAL'),
+(12, 'ABUSO SEXUAL SIMPLE'),
+(13, 'NARCOTRÁFICO'),
+(14, 'TRÁFICO DE PERSONAS'),
+(15, 'EXTORSIÓN'),
+(16, 'ESTAFA'),
+(17, 'FRAUDE'),
+(18, 'AMENAZAS'),
+(19, 'DAÑO'),
+(20, 'FALSIFICACIÓN DE DOCUMENTOS'),
+(21, 'USURPACCIÓN'),
+(22, 'CONTRABANDO'),
+(23, 'ABANDONO DE PERSONAS'),
+(24, 'INJURIAS'),
+(25, 'CALUMNIAS'),
+(26, 'CIBERCRIMEN'),
+(27, 'SECUESTRO'),
+(28, 'ACOSO SEXUAL'),
+(29, 'INCUMPLIMIENTO DE DEBERES DE ASISTENCIA'),
+(30, 'INFRACCIÓN A LA LEY DE ARMAS');
 
 -- --------------------------------------------------------
 
@@ -89,18 +136,18 @@ CREATE TABLE `denunciante` (
   `TELEFONO` varchar(255) DEFAULT NULL,
   `causa_id` int(11) DEFAULT NULL,
   `ESTADOCIVIL_ID` int(11) DEFAULT NULL,
-  `NACIONALIDAD_ID` int(11) DEFAULT NULL
+  `NACIONALIDAD_ID` int(11) DEFAULT NULL,
+  `OCUPACION_ID` int(11) DEFAULT NULL,
+  `SEXO_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `denunciante`
 --
 
-INSERT INTO `denunciante` (`ID`, `APELLIDO`, `APODO`, `DIRECCION`, `DNI`, `FECHANACIMIENTO`, `INSTUCCION`, `NOMBRE`, `OCUPACION`, `SEXO`, `TELEFONO`, `causa_id`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`) VALUES
-(11, 'perez', NULL, 'aca al lado', '12465', '1993-08-28', NULL, 'juan ', NULL, NULL, '2923530179', 11, NULL, NULL),
-(12, 'perez', NULL, 'aca al lado', '12465', '1993-08-28', NULL, 'juan ', NULL, NULL, '2923530179', 12, NULL, NULL),
-(13, 'perez', NULL, 'aca al lado', '12465', '1993-08-28', NULL, 'Jose Maria', NULL, NULL, '2923530179', 13, NULL, NULL),
-(24, '', NULL, '', '', NULL, NULL, '', NULL, NULL, '', 24, NULL, NULL);
+INSERT INTO `denunciante` (`ID`, `APELLIDO`, `APODO`, `DIRECCION`, `DNI`, `FECHANACIMIENTO`, `INSTUCCION`, `NOMBRE`, `OCUPACION`, `SEXO`, `TELEFONO`, `causa_id`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`, `OCUPACION_ID`, `SEXO_ID`) VALUES
+(38, 'perez', NULL, 'Pellegrin 123, Casbas', '123456789', '1993-08-28', NULL, 'Juan', NULL, NULL, '2923532333', 39, NULL, NULL, NULL, NULL),
+(41, 'lado', NULL, 'chupito el pame', '12346789', '1994-08-28', NULL, 'elvio', NULL, NULL, '292353633', 46, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -110,31 +157,32 @@ INSERT INTO `denunciante` (`ID`, `APELLIDO`, `APODO`, `DIRECCION`, `DNI`, `FECHA
 
 CREATE TABLE `detenido` (
   `ID` int(11) NOT NULL,
+  `NOMBRE` varchar(255) DEFAULT NULL,
   `APELLIDO` varchar(255) DEFAULT NULL,
+  `DNI` varchar(255) DEFAULT NULL,
   `APODO` varchar(255) DEFAULT NULL,
   `CALIDAD` varchar(255) DEFAULT NULL,
   `DIRECCION` varchar(255) DEFAULT NULL,
-  `DNI` varchar(255) DEFAULT NULL,
   `FECHAEGRESO` date DEFAULT NULL,
   `FECHAINGRESO` date DEFAULT NULL,
   `FECHANACIMIENTO` date DEFAULT NULL,
   `INSTUCCION` varchar(255) DEFAULT NULL,
-  `NOMBRE` varchar(255) DEFAULT NULL,
-  `OCUPACION` varchar(255) DEFAULT NULL,
-  `SEXO` varchar(255) DEFAULT NULL,
+  `OCUPACION_ID` int(11) DEFAULT NULL,
+  `SEXO_ID` int(11) DEFAULT 3,
   `TELEFONO` varchar(255) DEFAULT NULL,
   `causa_id` int(11) DEFAULT NULL,
   `ESTADOCIVIL_ID` int(11) DEFAULT NULL,
-  `NACIONALIDAD_ID` int(11) DEFAULT NULL
+  `NACIONALIDAD_ID` int(11) DEFAULT NULL,
+  `ESTADO` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detenido`
 --
 
-INSERT INTO `detenido` (`ID`, `APELLIDO`, `APODO`, `CALIDAD`, `DIRECCION`, `DNI`, `FECHAEGRESO`, `FECHAINGRESO`, `FECHANACIMIENTO`, `INSTUCCION`, `NOMBRE`, `OCUPACION`, `SEXO`, `TELEFONO`, `causa_id`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`) VALUES
-(13, 'Illescas', 'loco', 'APREHENDIDO', '9 de julio 1031 2b', '37757084', '2024-06-01', '2024-05-25', '1994-08-28', 'si', 'Michael Jonathan', 'empleado', 'masculino            ', '02923530179', 13, 13, 13),
-(24, 'Illescas', 'no posee', 'DETENIDO', '9 de julio 1031 2b', '37757084', '2024-06-21', '2024-06-21', '1994-08-28', 'si', 'Jonathan', 'empleado', 'masculino', '02923530179', 24, 24, 24);
+INSERT INTO `detenido` (`ID`, `NOMBRE`, `APELLIDO`, `DNI`, `APODO`, `CALIDAD`, `DIRECCION`, `FECHAEGRESO`, `FECHAINGRESO`, `FECHANACIMIENTO`, `INSTUCCION`, `OCUPACION_ID`, `SEXO_ID`, `TELEFONO`, `causa_id`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`, `ESTADO`) VALUES
+(37, 'Jonathan', 'Illescas', '37757084', 'no posee', 'APREHENDIDO', '9 de julio 1031 2b, Trenque Lauquen', NULL, '2024-10-25', '1994-08-28', 'SI', 12, 1, '02923530179', 39, 33, 35, 0),
+(40, 'jose', 'Pereyra', '123456', 'negro', 'APREHENDIDO', '9 de julio 1031 2b', NULL, '2024-10-25', '1986-12-12', 'SI', 9, 1, '1245788', 46, 34, 35, 0);
 
 -- --------------------------------------------------------
 
@@ -152,10 +200,12 @@ CREATE TABLE `estadocivil` (
 --
 
 INSERT INTO `estadocivil` (`ID`, `DESCIPCION`) VALUES
-(11, 'soltero'),
-(12, 'soltero'),
-(13, 'soltero'),
-(24, 'soltero');
+(33, 'Soltero/a'),
+(34, 'Casado/a'),
+(35, 'Divorciado/a'),
+(36, 'Viudo/a'),
+(37, 'Separado/a'),
+(38, 'Unión convivencial');
 
 -- --------------------------------------------------------
 
@@ -193,10 +243,8 @@ CREATE TABLE `fiscalia` (
 --
 
 INSERT INTO `fiscalia` (`ID`, `DESCRIPCION`, `TITULAR`) VALUES
-(11, '4 Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen', 'talarico karina'),
-(12, '4 Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen', 'talarico karina'),
-(13, '4 Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen Depto Judicial: Trenque lauquen', 'talarico karina'),
-(24, '5 Depto Judicial: trenque Lauquen', 'manuel iglesias');
+(36, 'UFI N° 1', 'CARINA TALARICO'),
+(37, 'UFI N° 2', 'MANUEL IGLESIAS');
 
 -- --------------------------------------------------------
 
@@ -215,10 +263,8 @@ CREATE TABLE `juzgado` (
 --
 
 INSERT INTO `juzgado` (`ID`, `DESCRIPCION`, `TITULAR`) VALUES
-(11, 'garantias 2', 'martin garriz       '),
-(12, 'garantias 2', 'martin garriz        '),
-(13, 'garantias 2, Trenque lauquen, Trenque lauquen, Trenque lauquen, Trenque lauquen, Trenque lauquen', 'martin garriz            '),
-(24, 'garantias 2', 'martin garriz');
+(36, 'CORRECIONAL N°1', 'MARTIN GARRIZ'),
+(37, 'CORRECIONAL N°2', 'HERNAN CRESPO');
 
 -- --------------------------------------------------------
 
@@ -236,10 +282,46 @@ CREATE TABLE `nacionalidad` (
 --
 
 INSERT INTO `nacionalidad` (`ID`, `DESCIPCION`) VALUES
-(11, '       argentino       '),
-(12, '        argentino        '),
-(13, '            argentino            '),
-(24, 'argentino');
+(35, 'Argentina'),
+(36, 'Brasil'),
+(37, 'Uruguay'),
+(38, 'Paraguay'),
+(39, 'Chile'),
+(40, 'Bolivia'),
+(41, 'Peru'),
+(42, 'Ecuador'),
+(43, 'Colombia'),
+(44, 'Venezuela');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ocupacion`
+--
+
+CREATE TABLE `ocupacion` (
+  `ID` int(11) NOT NULL,
+  `descripcion` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ocupacion`
+--
+
+INSERT INTO `ocupacion` (`ID`, `descripcion`) VALUES
+(1, 'Empleado/a'),
+(2, 'Desempleado/a'),
+(3, 'Estudiante'),
+(4, 'Ama de casa'),
+(5, 'Autónomo/a'),
+(6, 'Jubilado/a'),
+(7, 'Empresario/a'),
+(8, 'Docente'),
+(9, 'Funcionario/a público/a'),
+(10, 'Comerciante'),
+(11, 'Artista'),
+(12, 'Deportista'),
+(13, 'Otro');
 
 -- --------------------------------------------------------
 
@@ -285,25 +367,27 @@ CREATE TABLE `policia` (
   `TELEFONO` varchar(255) DEFAULT NULL,
   `ESTADOCIVIL_ID` int(11) DEFAULT NULL,
   `NACIONALIDAD_ID` int(11) DEFAULT NULL,
-  `ESTADO` int(1) NOT NULL DEFAULT 1
+  `ESTADO` int(1) NOT NULL DEFAULT 1,
+  `OCUPACION_ID` int(11) DEFAULT NULL,
+  `SEXO_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `policia`
 --
 
-INSERT INTO `policia` (`ID`, `APELLIDO`, `APODO`, `DIRECCION`, `DNI`, `FECHANACIMIENTO`, `INSTUCCION`, `JERARQUIA`, `LEGAJO`, `NOMBRE`, `OCUPACION`, `SEXO`, `TELEFONO`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`, `ESTADO`) VALUES
-(1, 'Illescas', NULL, NULL, '37757084', NULL, NULL, 'OFICIAL AYUDANTE', '195826', 'Jonathan', NULL, NULL, '02923530179', NULL, NULL, 0),
-(5, 'Pereyra', NULL, NULL, '123456', NULL, NULL, 'COMISARIO', '132222', 'Jose Luis', NULL, NULL, '12311231', NULL, NULL, 1),
-(6, 'Illescas', NULL, NULL, '12121212', NULL, NULL, 'OFICIAL AYUDANTE', '195826', 'Jonathan', NULL, NULL, '122122', NULL, NULL, 1),
-(8, 'Stangley', NULL, NULL, '124578', NULL, NULL, 'OFICIAL', '1234567', 'termo', NULL, NULL, '29235330179', NULL, NULL, 0),
-(9, 'Arias', NULL, NULL, '37757084', NULL, NULL, 'OFICIAL', '123444', 'Julieta', NULL, NULL, '2923530179', NULL, NULL, 1),
-(10, 'Gadea', NULL, NULL, '37757084', NULL, NULL, 'SARGENTO', '123456', 'juan Carlos', NULL, NULL, '2923530179', NULL, NULL, 0),
-(14, 'perez', NULL, NULL, '3212345', NULL, NULL, 'OFICIAL', '12345678', 'jose', NULL, NULL, '2923530179', NULL, NULL, 0),
-(15, 'botella', NULL, NULL, '1111111', NULL, NULL, 'OFICIAL', '12456', 'tapita', NULL, NULL, '112222', NULL, NULL, 0),
-(16, 'solana', NULL, NULL, '33221144', NULL, NULL, 'SUBTENIENTE', '445566', 'Carlos', NULL, NULL, '12121', NULL, NULL, 0),
-(17, 'acompaÃ±ada', NULL, NULL, '0303456', NULL, NULL, 'SUBTENIENTE', '0303456', 'chichi', NULL, NULL, '22333665', NULL, NULL, 1),
-(18, 'Picapiedras', NULL, NULL, '1244557', NULL, NULL, 'MAYOR', '1245777', 'Pedro', NULL, NULL, '292365301', NULL, NULL, 1);
+INSERT INTO `policia` (`ID`, `APELLIDO`, `APODO`, `DIRECCION`, `DNI`, `FECHANACIMIENTO`, `INSTUCCION`, `JERARQUIA`, `LEGAJO`, `NOMBRE`, `OCUPACION`, `SEXO`, `TELEFONO`, `ESTADOCIVIL_ID`, `NACIONALIDAD_ID`, `ESTADO`, `OCUPACION_ID`, `SEXO_ID`) VALUES
+(1, 'Illescas', NULL, NULL, '37757084', NULL, NULL, 'OFICIAL AYUDANTE', '195826', 'Michael ', NULL, NULL, '02923530179', NULL, NULL, 0, NULL, NULL),
+(5, 'Pereyra', NULL, NULL, '123456', NULL, NULL, 'COMISARIO', '132222', 'Jose Luis', NULL, NULL, '12311231', NULL, NULL, 1, NULL, NULL),
+(6, 'Illescas', NULL, NULL, '12121212', NULL, NULL, 'OFICIAL AYUDANTE', '195826', 'Jonathan', NULL, NULL, '122122', NULL, NULL, 1, NULL, NULL),
+(8, 'Stangley', NULL, NULL, '124578', NULL, NULL, 'OFICIAL', '1234567', 'termo', NULL, NULL, '29235330179', NULL, NULL, 0, NULL, NULL),
+(9, 'Arias', NULL, NULL, '37757084', NULL, NULL, 'OFICIAL', '123444', 'Julieta', NULL, NULL, '2923530179', NULL, NULL, 1, NULL, NULL),
+(10, 'Gadea', NULL, NULL, '37757084', NULL, NULL, 'SARGENTO', '123456', 'juan Carlos', NULL, NULL, '2923530179', NULL, NULL, 0, NULL, NULL),
+(14, 'perez', NULL, NULL, '3212345', NULL, NULL, 'OFICIAL', '12345678', 'jose', NULL, NULL, '2923530179', NULL, NULL, 0, NULL, NULL),
+(15, 'botella', NULL, NULL, '1111111', NULL, NULL, 'OFICIAL', '12456', 'tapita', NULL, NULL, '112222', NULL, NULL, 0, NULL, NULL),
+(16, 'solana', NULL, NULL, '33221144', NULL, NULL, 'SUBTENIENTE', '445566', 'Carlos', NULL, NULL, '12121', NULL, NULL, 0, NULL, NULL),
+(17, 'acompaÃ±ada', NULL, NULL, '0303456', NULL, NULL, 'SUBTENIENTE', '0303456', 'chichi', NULL, NULL, '22333665', NULL, NULL, 1, NULL, NULL),
+(18, 'Picapiedras', NULL, NULL, '1244557', NULL, NULL, 'MAYOR', '1245777', 'Pedro', NULL, NULL, '292365301', NULL, NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -316,16 +400,22 @@ CREATE TABLE `registro` (
   `FECHAREGISTRO` date DEFAULT NULL,
   `OBSERVACIONES` varchar(255) DEFAULT NULL,
   `CAUSA_ID` int(11) DEFAULT NULL,
-  `USUARIO_ID` int(11) DEFAULT NULL
+  `USUARIO_ID` int(11) DEFAULT NULL,
+  `ESTADO` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `registro`
 --
 
-INSERT INTO `registro` (`ID`, `FECHAREGISTRO`, `OBSERVACIONES`, `CAUSA_ID`, `USUARIO_ID`) VALUES
-(13, '2024-06-21', 'libertad - observaciones previas: traslado a cria. pellegrini - observaciones previas:  - sin observaciones', 13, 1),
-(24, '2024-06-21', 'libertad - observaciones previas: sin observaciones', 24, 1);
+INSERT INTO `registro` (`ID`, `FECHAREGISTRO`, `OBSERVACIONES`, `CAUSA_ID`, `USUARIO_ID`, `ESTADO`) VALUES
+(37, '2024-10-25', 'sin observaciones', 39, 1, 1),
+(39, '2024-10-25', 'sin observaciones', 41, 1, 1),
+(40, '2024-10-25', 'sin observaciones', 42, 1, 1),
+(41, '2024-10-25', 'sin observaciones', 43, 1, 1),
+(42, '2024-10-25', '', 44, 1, 1),
+(43, '2024-10-25', '', 45, 1, 1),
+(44, '2024-10-25', 's/o', 46, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -340,6 +430,26 @@ CREATE TABLE `reporte` (
   `FECHAINICIO` date DEFAULT NULL,
   `REGISTRO_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sexo`
+--
+
+CREATE TABLE `sexo` (
+  `id` int(11) NOT NULL,
+  `descripcion` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `sexo`
+--
+
+INSERT INTO `sexo` (`id`, `descripcion`) VALUES
+(1, 'Masculino'),
+(2, 'Femenino'),
+(3, 'otro');
 
 -- --------------------------------------------------------
 
@@ -362,7 +472,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID`, `CLAVE`, `CONTADOR`, `NOMBREUSUARIO`, `ROL`, `ESTADO_ID`, `POLICIA_ID`) VALUES
-(1, '202cb962ac59075b964b07152d234b70', 1, 'jonaIlles', 'ADMINISTRADOR', 1, 1),
+(1, '202cb962ac59075b964b07152d234b70', 5, 'jonaIlles', 'ADMINISTRADOR', 1, 1),
 (10, '202cb962ac59075b964b07152d234b70', 1, 'prueba', 'ADMINISTRADOR', 1, 1),
 (14, '202cb962ac59075b964b07152d234b70', 1, 'prueba1', 'USUARIO', 1, 5),
 (15, '202cb962ac59075b964b07152d234b70', 1, 'illescas', 'ADMINISTRADOR', 1, 6),
@@ -388,6 +498,12 @@ ALTER TABLE `causa`
 -- Indices de la tabla `defensoria`
 --
 ALTER TABLE `defensoria`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indices de la tabla `delito`
+--
+ALTER TABLE `delito`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -439,6 +555,12 @@ ALTER TABLE `nacionalidad`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indices de la tabla `ocupacion`
+--
+ALTER TABLE `ocupacion`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
@@ -470,6 +592,12 @@ ALTER TABLE `reporte`
   ADD KEY `FK_REPORTE_REGISTRO_ID` (`REGISTRO_ID`);
 
 --
+-- Indices de la tabla `sexo`
+--
+ALTER TABLE `sexo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -485,31 +613,37 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `causa`
 --
 ALTER TABLE `causa`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `defensoria`
 --
 ALTER TABLE `defensoria`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT de la tabla `delito`
+--
+ALTER TABLE `delito`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `denunciante`
 --
 ALTER TABLE `denunciante`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `detenido`
 --
 ALTER TABLE `detenido`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `estadocivil`
 --
 ALTER TABLE `estadocivil`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de la tabla `estadousuario`
@@ -521,19 +655,25 @@ ALTER TABLE `estadousuario`
 -- AUTO_INCREMENT de la tabla `fiscalia`
 --
 ALTER TABLE `fiscalia`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `juzgado`
 --
 ALTER TABLE `juzgado`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `nacionalidad`
 --
 ALTER TABLE `nacionalidad`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT de la tabla `ocupacion`
+--
+ALTER TABLE `ocupacion`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
@@ -551,13 +691,19 @@ ALTER TABLE `policia`
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `reporte`
 --
 ALTER TABLE `reporte`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `sexo`
+--
+ALTER TABLE `sexo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

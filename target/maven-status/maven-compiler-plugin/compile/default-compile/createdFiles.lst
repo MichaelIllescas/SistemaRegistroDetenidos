@@ -6,6 +6,7 @@ servlets\SVEditarRegistro.class
 logica\Usuario.class
 persistencia\DefensoriaJpaController.class
 logica\Sexo_.class
+logica\ReporteEstadistico.class
 logica\Nacionalidad.class
 servlets\SVReporteDetenidos.class
 persistencia\OcupacionJpaController.class
@@ -19,10 +20,12 @@ persistencia\exceptions\PreexistingEntityException.class
 logica\EstadoCivil_.class
 persistencia\exceptions\IllegalOrphanException.class
 logica\Causa_.class
+persistencia\DelitoJpaController.class
 persistencia\DenuncianteJpaController.class
 servlets\SVCargarDatos.class
 servlets\SvLogin.class
 logica\Defensoria.class
+logica\Delito_.class
 servlets\SVCambioCredenciales.class
 logica\Controladora.class
 logica\Usuario_.class
@@ -53,6 +56,7 @@ persistencia\FiscaliaJpaController.class
 logica\Juzgado_.class
 servlets\SVVerPolicias.class
 logica\Denunciante_.class
+logica\Delito.class
 logica\Policia.class
 persistencia\ControladoraPersistencia.class
 logica\Registro_.class
@@ -73,4 +77,5 @@ servlets\SVCerrarSesion.class
 persistencia\RegistroJpaController.class
 logica\Registro.class
 servlets\SVEditarPolicia.class
+servlets\SVReporteEstadistico.class
 logica\Defensoria_.class

@@ -17,20 +17,22 @@
             <!-- Page Heading -->
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <h1 class="h2 titulo-color">Generar Reporte</h1>
-                    <p class="mb-4 titulo-color">A continuación, podrá generar un reporte de detenidos registrados en el sistema.</p>
+                    <h1 class="h2 titulo-color">Generar ReporteListado de Detenidos </h1>
+                    <p class="mb-4 titulo-color">A continuación, podrá generar un Listado de detenidos registrados en el sistema y exportarlo.</p>
                 </div>
-
+<div>
+                <p>* Campos Obligatorios</p>
+            </div>
 
                 <div class="col-sm-10 col-lg-4  m-auto mt-5">
 
                     <form method="GET" action="SVReporteDetenidos">
                         <div class="form-group">
-                            <label for="fechaDesde">Fecha Desde:</label>
+                            <label for="fechaDesde">* Fecha Desde:</label>
                             <input type="date" class="form-control" id="fechaDesde" name="fechaDesde" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaHasta">Fecha Hasta:</label>
+                            <label for="fechaHasta">* Fecha Hasta:</label>
                             <input type="date" class="form-control" id="fechaHasta" name="fechaHasta" required>
                         </div>
                         <div class="text-center pt-3">

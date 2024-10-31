@@ -6,7 +6,6 @@ servlets\SVEditarRegistro.class
 logica\Usuario.class
 persistencia\DefensoriaJpaController.class
 logica\Sexo_.class
-logica\ReporteEstadistico.class
 logica\Nacionalidad.class
 servlets\SVReporteDetenidos.class
 persistencia\OcupacionJpaController.class
@@ -63,10 +62,12 @@ logica\Registro_.class
 servlets\SVEliminarPolicia.class
 logica\ExcelExporter.class
 persistencia\NacionalidadJpaController.class
+servlets\BackupDatabaseServlet.class
 persistencia\CausaJpaController.class
 persistencia\JuzgadoJpaController.class
 persistencia\ReporteJpaController.class
 logica\Ocupacion.class
+servlets\SVReporteEstadistico$1.class
 logica\Utilitaria.class
 persistencia\PoliciaJpaController.class
 persistencia\SexoJpaController.class

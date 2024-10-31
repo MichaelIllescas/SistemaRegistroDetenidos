@@ -1,0 +1,1123 @@
+31-Oct-2024 09:41:56.321 WARNING [http-nio-8080-exec-23] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 09:41:56.323 WARNING [http-nio-8080-exec-23] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [pool-1-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 09:41:56.323 WARNING [http-nio-8080-exec-23] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 09:41:56.831 INFO [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 09:41:57.887 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 09:43:08.294 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 09:43:08.295 WARNING [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 09:43:08.632 INFO [Finalizer] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [com.mysql.cj.exceptions.ExceptionFactory].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [com.mysql.cj.exceptions.ExceptionFactory].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1337)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1174)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1141)
+		at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+		at com.mysql.cj.protocol.a.NativeProtocol.quit(NativeProtocol.java:1336)
+		at com.mysql.cj.NativeSession.quit(NativeSession.java:149)
+		at com.mysql.cj.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:1721)
+		at com.mysql.cj.jdbc.ConnectionImpl.close(ConnectionImpl.java:713)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.closeDatasourceConnection(DatabaseAccessor.java:502)
+		at org.eclipse.persistence.internal.databaseaccess.DatasourceAccessor.disconnect(DatasourceAccessor.java:501)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.disconnect(DatabaseAccessor.java:515)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.disconnect(DatabaseSessionImpl.java:470)
+		at org.eclipse.persistence.sessions.server.ServerSession.disconnect(ServerSession.java:538)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.logout(DatabaseSessionImpl.java:1003)
+		at org.eclipse.persistence.sessions.server.ServerSession.logout(ServerSession.java:808)
+		at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.removeSessionFromGlobalSessionManager(EntityManagerSetupImpl.java:597)
+		at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.undeploy(EntityManagerSetupImpl.java:3109)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.close(EntityManagerFactoryDelegate.java:288)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.finalize(EntityManagerFactoryDelegate.java:372)
+		at java.base/java.lang.System$2.invokeFinalize(System.java:2297)
+		at java.base/java.lang.ref.Finalizer.runFinalizer(Finalizer.java:88)
+		at java.base/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+31-Oct-2024 09:43:11.449 INFO [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 09:43:11.528 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.235] ms
+31-Oct-2024 09:43:11.533 INFO [http-nio-8080-exec-33] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 09:43:53.544 INFO [Finalizer] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [com.mysql.cj.exceptions.ExceptionFactory].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [com.mysql.cj.exceptions.ExceptionFactory].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1337)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1174)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1141)
+		at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+		at com.mysql.cj.protocol.a.NativeProtocol.quit(NativeProtocol.java:1336)
+		at com.mysql.cj.NativeSession.quit(NativeSession.java:149)
+		at com.mysql.cj.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:1721)
+		at com.mysql.cj.jdbc.ConnectionImpl.close(ConnectionImpl.java:713)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.closeDatasourceConnection(DatabaseAccessor.java:502)
+		at org.eclipse.persistence.internal.databaseaccess.DatasourceAccessor.disconnect(DatasourceAccessor.java:501)
+		at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.disconnect(DatabaseAccessor.java:515)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.disconnect(DatabaseSessionImpl.java:470)
+		at org.eclipse.persistence.sessions.server.ServerSession.disconnect(ServerSession.java:538)
+		at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.logout(DatabaseSessionImpl.java:1003)
+		at org.eclipse.persistence.sessions.server.ServerSession.logout(ServerSession.java:808)
+		at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.removeSessionFromGlobalSessionManager(EntityManagerSetupImpl.java:597)
+		at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.undeploy(EntityManagerSetupImpl.java:3109)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.close(EntityManagerFactoryDelegate.java:288)
+		at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.finalize(EntityManagerFactoryDelegate.java:372)
+		at java.base/java.lang.System$2.invokeFinalize(System.java:2297)
+		at java.base/java.lang.ref.Finalizer.runFinalizer(Finalizer.java:88)
+		at java.base/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+31-Oct-2024 10:09:28.446 WARNING [http-nio-8080-exec-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 10:09:28.448 WARNING [http-nio-8080-exec-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base@17.0.9/java.util.TimerThread.run(Timer.java:516)
+31-Oct-2024 10:09:28.449 WARNING [http-nio-8080-exec-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 10:09:28.957 INFO [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 10:09:29.242 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 10:10:11.078 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 10:10:11.079 WARNING [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 10:10:14.253 INFO [http-nio-8080-exec-40] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:12:17.601 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+31-Oct-2024 10:12:17.602 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 10:12:17.619 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+31-Oct-2024 10:26:02.700 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+31-Oct-2024 10:26:02.705 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+31-Oct-2024 10:26:02.706 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+31-Oct-2024 10:26:02.707 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-Oct-2024 10:26:02.707 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-Oct-2024 10:26:02.707 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-Oct-2024 10:26:02.708 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+31-Oct-2024 10:26:02.708 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+31-Oct-2024 10:26:02.708 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-Oct-2024 10:26:02.709 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:26:02.709 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:26:02.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 10:26:02.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 10:26:02.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 10:26:02.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 10:26:02.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+31-Oct-2024 10:26:02.768 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:26:02.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:26:02.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+31-Oct-2024 10:26:02.774 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+31-Oct-2024 10:26:02.775 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+31-Oct-2024 10:26:02.775 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+31-Oct-2024 10:26:02.786 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+31-Oct-2024 10:26:03.291 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-Oct-2024 10:26:03.327 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1013] milliseconds
+31-Oct-2024 10:26:03.550 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-Oct-2024 10:26:03.553 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+31-Oct-2024 10:26:03.586 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+31-Oct-2024 10:26:03.612 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+31-Oct-2024 10:26:07.674 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+31-Oct-2024 10:26:07.674 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+31-Oct-2024 10:26:07.823 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:26:07.984 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [4.395] ms
+31-Oct-2024 10:26:07.985 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+31-Oct-2024 10:26:07.987 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+31-Oct-2024 10:26:07.998 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@6d7e2795]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:26:08.003 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [19] ms
+31-Oct-2024 10:26:08.006 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+31-Oct-2024 10:26:08.009 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+31-Oct-2024 10:26:08.042 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@e2c627e]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:26:08.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [658] ms
+31-Oct-2024 10:26:08.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 10:26:08.665 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 10:26:13.026 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:40:14.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+31-Oct-2024 10:40:14.490 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+31-Oct-2024 10:40:14.492 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+31-Oct-2024 10:40:14.492 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-Oct-2024 10:40:14.493 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-Oct-2024 10:40:14.493 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-Oct-2024 10:40:14.495 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+31-Oct-2024 10:40:14.496 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+31-Oct-2024 10:40:14.496 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-Oct-2024 10:40:14.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:40:14.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:40:14.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 10:40:14.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 10:40:14.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 10:40:14.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 10:40:14.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+31-Oct-2024 10:40:14.517 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:40:14.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:40:14.518 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+31-Oct-2024 10:40:14.540 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+31-Oct-2024 10:40:14.540 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+31-Oct-2024 10:40:14.540 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+31-Oct-2024 10:40:14.550 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+31-Oct-2024 10:40:14.947 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-Oct-2024 10:40:15.014 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [830] milliseconds
+31-Oct-2024 10:40:15.120 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-Oct-2024 10:40:15.121 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+31-Oct-2024 10:40:15.139 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+31-Oct-2024 10:40:15.228 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+31-Oct-2024 10:40:17.790 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+31-Oct-2024 10:40:17.791 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+31-Oct-2024 10:40:17.907 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:40:18.060 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [101] milliseconds.
+31-Oct-2024 10:40:18.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [2.967] ms
+31-Oct-2024 10:40:18.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+31-Oct-2024 10:40:18.109 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+31-Oct-2024 10:40:18.117 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@540212be]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:40:18.171 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [63] ms
+31-Oct-2024 10:40:18.172 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+31-Oct-2024 10:40:18.173 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+31-Oct-2024 10:40:18.188 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7a34c1f6]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:40:18.654 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [482] ms
+31-Oct-2024 10:40:18.654 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 10:40:18.655 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 10:40:22.272 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:48:39.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+31-Oct-2024 10:48:39.286 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+31-Oct-2024 10:48:39.298 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+31-Oct-2024 10:48:39.298 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-Oct-2024 10:48:39.299 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-Oct-2024 10:48:39.299 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-Oct-2024 10:48:39.299 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+31-Oct-2024 10:48:39.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+31-Oct-2024 10:48:39.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-Oct-2024 10:48:39.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:48:39.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:48:39.340 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 10:48:39.341 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 10:48:39.341 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 10:48:39.341 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 10:48:39.342 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 10:48:39.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+31-Oct-2024 10:48:39.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 10:48:39.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 10:48:39.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 10:48:39.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+31-Oct-2024 10:48:39.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:48:39.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 10:48:39.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+31-Oct-2024 10:48:39.388 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+31-Oct-2024 10:48:39.389 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+31-Oct-2024 10:48:39.390 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+31-Oct-2024 10:48:39.415 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+31-Oct-2024 10:48:40.062 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-Oct-2024 10:48:40.102 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1387] milliseconds
+31-Oct-2024 10:48:40.377 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-Oct-2024 10:48:40.378 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+31-Oct-2024 10:48:40.422 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+31-Oct-2024 10:48:40.538 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+31-Oct-2024 10:48:45.559 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+31-Oct-2024 10:48:45.559 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+31-Oct-2024 10:48:45.751 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 10:48:45.927 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [102] milliseconds.
+31-Oct-2024 10:48:45.979 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [5.557] ms
+31-Oct-2024 10:48:45.980 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+31-Oct-2024 10:48:45.987 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+31-Oct-2024 10:48:45.995 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@131777e8]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:48:46.010 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [31] ms
+31-Oct-2024 10:48:46.012 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+31-Oct-2024 10:48:46.015 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+31-Oct-2024 10:48:46.043 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@50bb1c1f]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 10:48:46.574 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [563] ms
+31-Oct-2024 10:48:46.574 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 10:48:46.575 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 10:48:51.986 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:07:10.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+31-Oct-2024 11:07:10.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+31-Oct-2024 11:07:10.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+31-Oct-2024 11:07:10.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-Oct-2024 11:07:10.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-Oct-2024 11:07:10.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-Oct-2024 11:07:10.182 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+31-Oct-2024 11:07:10.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+31-Oct-2024 11:07:10.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-Oct-2024 11:07:10.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:07:10.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:07:10.198 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 11:07:10.198 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 11:07:10.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 11:07:10.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 11:07:10.199 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 11:07:10.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+31-Oct-2024 11:07:10.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 11:07:10.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 11:07:10.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 11:07:10.200 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+31-Oct-2024 11:07:10.201 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:07:10.201 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:07:10.201 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+31-Oct-2024 11:07:10.234 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+31-Oct-2024 11:07:10.234 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+31-Oct-2024 11:07:10.234 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+31-Oct-2024 11:07:10.242 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+31-Oct-2024 11:07:10.683 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-Oct-2024 11:07:10.727 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [849] milliseconds
+31-Oct-2024 11:07:10.788 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-Oct-2024 11:07:10.788 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+31-Oct-2024 11:07:10.800 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+31-Oct-2024 11:07:10.823 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+31-Oct-2024 11:07:12.996 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+31-Oct-2024 11:07:12.996 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+31-Oct-2024 11:07:13.107 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:07:13.249 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [2.447] ms
+31-Oct-2024 11:07:13.250 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+31-Oct-2024 11:07:13.251 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+31-Oct-2024 11:07:13.259 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@79144d0e]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 11:07:13.305 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [49] ms
+31-Oct-2024 11:07:13.307 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+31-Oct-2024 11:07:13.309 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+31-Oct-2024 11:07:13.349 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@433ae0b0]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 11:07:13.931 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [625] ms
+31-Oct-2024 11:07:13.931 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 11:07:13.933 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 11:07:17.151 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:07.998 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.87
+31-Oct-2024 11:19:08.006 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 11 2024 10:12:34 UTC
+31-Oct-2024 11:19:08.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.87.0
+31-Oct-2024 11:19:08.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 10
+31-Oct-2024 11:19:08.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+31-Oct-2024 11:19:08.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+31-Oct-2024 11:19:08.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+31-Oct-2024 11:19:08.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.9+11-LTS-201
+31-Oct-2024 11:19:08.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+31-Oct-2024 11:19:08.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:19:08.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:19:08.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\logging.properties
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Oct-2024 11:19:08.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+31-Oct-2024 11:19:08.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+31-Oct-2024 11:19:08.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+31-Oct-2024 11:19:08.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:19:08.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87
+31-Oct-2024 11:19:08.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\temp
+31-Oct-2024 11:19:08.090 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [1.3.0] con la versión APR [1.7.4].
+31-Oct-2024 11:19:08.093 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true], UDS [true].
+31-Oct-2024 11:19:08.093 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+31-Oct-2024 11:19:08.105 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.0.13 30 Jan 2024]
+31-Oct-2024 11:19:08.880 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+31-Oct-2024 11:19:08.947 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1398] milliseconds
+31-Oct-2024 11:19:09.064 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+31-Oct-2024 11:19:09.064 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.87]
+31-Oct-2024 11:19:09.085 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml]
+31-Oct-2024 11:19:09.115 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/ConsultorioOdontologico] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has been ignored
+31-Oct-2024 11:19:11.791 WARNING [main] java.util.ArrayList.forEach Name = data Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+31-Oct-2024 11:19:11.792 WARNING [main] java.util.ArrayList.forEach Name = data Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+31-Oct-2024 11:19:11.916 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:12.063 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ConsultorioOdontologico.xml] has finished in [2.976] ms
+31-Oct-2024 11:19:12.064 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+31-Oct-2024 11:19:12.065 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/PruebasFrontBack] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has been ignored
+31-Oct-2024 11:19:12.074 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@464a3430]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\PruebasFrontBack\target\PruebasFrontBack-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 11:19:12.085 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\PruebasFrontBack.xml] has finished in [21] ms
+31-Oct-2024 11:19:12.085 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+31-Oct-2024 11:19:12.087 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has been ignored
+31-Oct-2024 11:19:12.098 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1844)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1584)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:925)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:735)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@3a1a0bc]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\jonii\Downloads\inventiory\target\inventiory-0.0.1-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 41 more
+31-Oct-2024 11:19:12.604 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\ROOT.xml] has finished in [519] ms
+31-Oct-2024 11:19:12.605 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 11:19:12.606 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 11:19:17.123 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:17.131 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [4.526] ms
+31-Oct-2024 11:19:17.132 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] de la aplicación web
+31-Oct-2024 11:19:17.948 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:17.955 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\docs] has finished in [823] ms
+31-Oct-2024 11:19:17.956 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] de la aplicación web
+31-Oct-2024 11:19:19.312 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:19.425 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\examples] has finished in [1.468] ms
+31-Oct-2024 11:19:19.425 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] de la aplicación web
+31-Oct-2024 11:19:20.221 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:20.246 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\host-manager] has finished in [821] ms
+31-Oct-2024 11:19:20.246 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] de la aplicación web
+31-Oct-2024 11:19:21.096 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:21.107 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\webapps\manager] has finished in [861] ms
+31-Oct-2024 11:19:21.114 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+31-Oct-2024 11:19:21.224 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [12276] milliseconds
+31-Oct-2024 11:19:26.304 WARNING [http-nio-8080-exec-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize0(Native Method)
+ java.base@17.0.9/java.io.WinNTFileSystem.canonicalize(WinNTFileSystem.java:462)
+ java.base@17.0.9/java.io.File.getCanonicalPath(File.java:626)
+ org.apache.catalina.webresources.AbstractFileResourceSet.file(AbstractFileResourceSet.java:94)
+ org.apache.catalina.webresources.DirResourceSet.getResource(DirResourceSet.java:94)
+ org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:272)
+ org.apache.catalina.webresources.CachedResource.validateResource(CachedResource.java:105)
+ org.apache.catalina.webresources.Cache.getResource(Cache.java:96)
+ org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:211)
+ org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:220)
+ org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:885)
+ org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1002)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:19:26.837 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 11:19:26.891 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 11:19:26.894 WARNING [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 11:19:30.778 INFO [http-nio-8080-exec-5] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:19:30.785 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.894] ms
+31-Oct-2024 11:19:30.789 INFO [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 11:19:31.340 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:26:32.386 WARNING [http-nio-8080-exec-14] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 11:26:32.388 WARNING [http-nio-8080-exec-14] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:26:32.896 INFO [http-nio-8080-exec-14] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 11:26:36.517 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:27:51.647 INFO [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 11:27:51.649 WARNING [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 11:27:54.670 INFO [http-nio-8080-exec-12] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:27:54.677 INFO [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.030] ms
+31-Oct-2024 11:27:54.680 INFO [http-nio-8080-exec-19] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 11:48:36.339 INFO [http-nio-8080-exec-29] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+31-Oct-2024 11:48:37.434 INFO [http-nio-8080-exec-29] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+31-Oct-2024 11:48:38.526 INFO [http-nio-8080-exec-29] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+31-Oct-2024 11:48:38.635 WARNING [http-nio-8080-exec-29] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 11:48:38.636 WARNING [http-nio-8080-exec-29] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.base@17.0.9/java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+ java.base@17.0.9/java.lang.ProcessImpl.waitFor(ProcessImpl.java:566)
+ servlets.BackupDatabaseServlet.doGet(BackupDatabaseServlet.java:34)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)]
+31-Oct-2024 11:48:38.637 WARNING [http-nio-8080-exec-29] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:48:39.152 INFO [http-nio-8080-exec-29] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 11:48:42.500 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 11:49:36.170 INFO [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 11:49:36.172 WARNING [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 11:49:39.530 INFO [http-nio-8080-exec-33] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 11:49:39.535 INFO [http-nio-8080-exec-33] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.365] ms
+31-Oct-2024 11:49:39.537 INFO [http-nio-8080-exec-26] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 12:05:27.567 WARNING [http-nio-8080-exec-32] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 12:05:27.568 WARNING [http-nio-8080-exec-32] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:05:28.085 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 12:05:28.353 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:07:00.887 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 12:07:00.889 WARNING [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 12:07:04.345 INFO [http-nio-8080-exec-40] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 12:07:04.351 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.464] ms
+31-Oct-2024 12:07:04.354 INFO [http-nio-8080-exec-35] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 12:14:13.863 WARNING [http-nio-8080-exec-40] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 12:14:13.864 WARNING [http-nio-8080-exec-40] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:14:14.383 INFO [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 12:14:15.705 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:15:24.180 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 12:15:24.182 WARNING [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 12:15:26.855 INFO [http-nio-8080-exec-49] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 12:15:26.859 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [2.679] ms
+31-Oct-2024 12:15:26.862 INFO [http-nio-8080-exec-50] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 12:17:33.539 WARNING [http-nio-8080-exec-54] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 12:17:33.539 WARNING [http-nio-8080-exec-54] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:17:33.603 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:17:34.051 INFO [http-nio-8080-exec-54] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 12:17:34.081 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 12:17:34.082 WARNING [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 12:17:36.897 INFO [http-nio-8080-exec-56] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 12:17:36.901 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [2.820] ms
+31-Oct-2024 12:17:36.904 INFO [http-nio-8080-exec-57] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 12:28:58.834 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 12:28:58.836 WARNING [http-nio-8080-exec-61] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:28:59.108 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:28:59.344 INFO [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 12:28:59.378 INFO [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 12:28:59.379 WARNING [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 12:29:02.572 INFO [http-nio-8080-exec-58] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 12:29:02.577 INFO [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [3.199] ms
+31-Oct-2024 12:29:02.581 INFO [http-nio-8080-exec-64] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.
+31-Oct-2024 12:31:09.289 WARNING [http-nio-8080-exec-70] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [SistemaRegistroDetendosPenales] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+31-Oct-2024 12:31:09.290 WARNING [http-nio-8080-exec-70] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SistemaRegistroDetendosPenales] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.9/java.lang.Object.wait(Native Method)
+ java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:31:09.803 INFO [http-nio-8080-exec-70] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto [/SistemaRegistroDetendosPenales]
+31-Oct-2024 12:31:09.853 INFO [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml]
+31-Oct-2024 12:31:09.854 WARNING [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SistemaRegistroDetendosPenales] in deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has been ignored
+31-Oct-2024 12:31:10.222 INFO [99] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+	java.lang.IllegalStateException: Acceso ilegal: esta instancia de aplicación web ya ha sido parada.  Could not load [].  La eventual traza de pila que sigue ha sido motivada por un error lanzado con motivos de depuración así como para intentar terminar el hilo que motivó el acceso ilegal y no tiene impacto funcional.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+31-Oct-2024 12:31:12.841 INFO [http-nio-8080-exec-71] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Oct-2024 12:31:12.845 INFO [http-nio-8080-exec-71] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\apache-tomcat-9.0.87\conf\Catalina\localhost\SistemaRegistroDetendosPenales.xml] has finished in [2.993] ms
+31-Oct-2024 12:31:12.847 INFO [http-nio-8080-exec-69] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SistemaRegistroDetendosPenales]] after start() had already been called. The second call will be ignored.

@@ -281,5 +281,10 @@ public List<Registro> filtrarRegistrosPorFecha(List<Registro> registros, String 
     public Delito getDelitoPorId(int idDelito) {
         return controlPersistencia.getDelitoPorId(idDelito);
     }
+    
+    public List<Object[]> getDetenidosPorDelito(Date fechaInicio, Date fechaFin){
+    
+        return controlPersistencia.getDetenidosPorDelito(fechaInicio, fechaFin);
+    }
 
 }

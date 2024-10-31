@@ -1,0 +1,1530 @@
+29-Oct-2024 06:15:28.215 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:15:28.215 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:15:28.219 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2c32bf87')
+29-Oct-2024 06:18:14.216 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 06:18:14.217 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 06:19:48.646 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:19:48.646 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:19:48.648 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@52cd1595')
+29-Oct-2024 06:22:26.844 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 06:22:26.844 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 06:22:49.534 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:22:49.534 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:22:49.538 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@30515926')
+29-Oct-2024 06:27:07.714 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 06:27:07.714 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 06:27:46.636 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:27:46.636 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:27:46.641 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@609f3626')
+29-Oct-2024 06:30:23.972 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 06:30:23.972 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 06:32:48.784 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:32:48.784 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:32:48.789 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@45871259')
+29-Oct-2024 06:33:14.701 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteEstadistico] lanzó excepción
+	java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT d.delito, COUNT(d) FROM Detenido d WHERE d.fecha >= :fechaInicio AND d.fecha <= :fechaFin GROUP BY d.delito]. 
+[7, 15] The state field path 'd.delito' cannot be resolved to a valid type.
+[48, 55] The state field path 'd.fecha' cannot be resolved to a valid type.
+[76, 83] The state field path 'd.fecha' cannot be resolved to a valid type.
+[106, 114] The state field path 'd.delito' cannot be resolved to a valid type.
+		at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1751)
+		at persistencia.DelitoJpaController.getDetenidosPorDelito(DelitoJpaController.java:146)
+		at persistencia.ControladoraPersistencia.getDetenidosPorDelito(ControladoraPersistencia.java:256)
+		at logica.Controladora.getDetenidosPorDelito(Controladora.java:287)
+		at servlets.SVReporteEstadistico.doGet(SVReporteEstadistico.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+	Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.JPQLException
+Exception Description: Problem compiling [SELECT d.delito, COUNT(d) FROM Detenido d WHERE d.fecha >= :fechaInicio AND d.fecha <= :fechaFin GROUP BY d.delito]. 
+[7, 15] The state field path 'd.delito' cannot be resolved to a valid type.
+[48, 55] The state field path 'd.fecha' cannot be resolved to a valid type.
+[76, 83] The state field path 'd.fecha' cannot be resolved to a valid type.
+[106, 114] The state field path 'd.delito' cannot be resolved to a valid type.
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:157)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:349)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:280)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:165)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:142)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:118)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+		at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+		... 28 more
+29-Oct-2024 06:36:37.816 SEVERE [http-nio-8080-exec-22] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteEstadistico] lanzó excepción
+	java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT d.delito, COUNT(d) FROM Detenido d WHERE d.fechaIngreso >= :fechaInicio AND d.fechaIngreso <= :fechaFin GROUP BY d.delito]. 
+[7, 15] The state field path 'd.delito' cannot be resolved to a valid type.
+[120, 128] The state field path 'd.delito' cannot be resolved to a valid type.
+		at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1751)
+		at persistencia.DelitoJpaController.getDetenidosPorDelito(DelitoJpaController.java:146)
+		at persistencia.ControladoraPersistencia.getDetenidosPorDelito(ControladoraPersistencia.java:256)
+		at logica.Controladora.getDetenidosPorDelito(Controladora.java:287)
+		at servlets.SVReporteEstadistico.doGet(SVReporteEstadistico.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+	Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.7.10.v20211216-fe64cd39c3): org.eclipse.persistence.exceptions.JPQLException
+Exception Description: Problem compiling [SELECT d.delito, COUNT(d) FROM Detenido d WHERE d.fechaIngreso >= :fechaInicio AND d.fechaIngreso <= :fechaFin GROUP BY d.delito]. 
+[7, 15] The state field path 'd.delito' cannot be resolved to a valid type.
+[120, 128] The state field path 'd.delito' cannot be resolved to a valid type.
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:157)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:349)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:280)
+		at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:165)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:142)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:118)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+		at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+		at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+		... 28 more
+29-Oct-2024 06:48:14.036 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 06:48:14.036 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 06:48:39.650 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 06:48:39.651 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 06:48:39.655 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@1060e784')
+29-Oct-2024 07:12:16.128 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 07:12:16.128 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 07:14:52.073 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 07:14:52.075 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 07:14:52.079 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@6b86fed8')
+29-Oct-2024 07:41:24.721 SEVERE [http-nio-8080-exec-111] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:43:17.116 SEVERE [http-nio-8080-exec-116] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:43:50.836 SEVERE [http-nio-8080-exec-120] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:43:53.731 SEVERE [http-nio-8080-exec-121] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.reporteEstadistico_jsp] con causa raíz
+	java.lang.ClassNotFoundException: org.apache.jsp.reporteEstadistico_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:45:16.434 SEVERE [http-nio-8080-exec-125] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:45:56.824 SEVERE [http-nio-8080-exec-131] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:46:09.002 SEVERE [http-nio-8080-exec-133] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:46:16.591 SEVERE [http-nio-8080-exec-134] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:46:22.289 SEVERE [http-nio-8080-exec-135] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:46:35.931 SEVERE [http-nio-8080-exec-132] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 07:47:21.493 SEVERE [http-nio-8080-exec-133] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [4] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable sesion
+1:    
+2: <%@page import="logica.Usuario"%>
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+
+
+Ha tenido lugar un error en la línea: [6] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable visible
+3: <%@page contentType="text/html" pageEncoding="UTF-8"%>
+4: <%HttpSession sesion = request.getSession();
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+
+
+Ha tenido lugar un error en la línea: [8] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable us
+5: 
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+
+
+Ha tenido lugar un error en la línea: [9] en el archivo jsp: [/recursos/components/navegacion.jsp]
+Duplicate local variable displ
+6:     String visible = "hidden";
+7:     visible = (String) session.getAttribute("visiblidad");
+8:     String us = (String) session.getAttribute("usuario");
+9:     String displ = "none";
+10:     if (visible != null) {
+11:         if (visible.equals("hidden")) {
+12:             displ = "none";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 08:08:19.203 SEVERE [http-nio-8080-exec-172] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [SVReporteEstadistico] lanzó excepción
+	java.lang.ClassCastException: class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
+		at servlets.SVReporteEstadistico.crearDataset(SVReporteEstadistico.java:89)
+		at servlets.SVReporteEstadistico.doGet(SVReporteEstadistico.java:64)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 09:09:17.924 SEVERE [http-nio-8080-exec-303] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/SistemaRegistroDetendosPenales] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [61] en el archivo jsp: [/reporteEstadistico.jsp]
+echaDesde cannot be resolved to a variable
+58: 
+59:             <% if (fechaDesde != null && fechaHasta != null) { %>
+60:                 <div class="alert alert-info w-50 mt-3">
+61:                     <p>Reporte de grÃ¡ficos desde <strong><%= echaDesde %></strong> hasta <strong><%= fechaHasta %></strong>.</p>
+62:                 </div>
+63:             <% } %>
+64: 
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [61] en el archivo jsp: [/reporteEstadistico.jsp]
+echaDesde cannot be resolved to a variable
+58: 
+59:             <% if (fechaDesde != null && fechaHasta != null) { %>
+60:                 <div class="alert alert-info w-50 mt-3">
+61:                     <p>Reporte de grÃ¡ficos desde <strong><%= echaDesde %></strong> hasta <strong><%= fechaHasta %></strong>.</p>
+62:                 </div>
+63:             <% } %>
+64: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+29-Oct-2024 09:58:36.291 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+29-Oct-2024 09:58:36.291 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+29-Oct-2024 23:58:22.376 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+29-Oct-2024 23:58:22.377 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+29-Oct-2024 23:58:22.382 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@8eebc81')

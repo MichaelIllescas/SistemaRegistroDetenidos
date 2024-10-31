@@ -51,8 +51,18 @@
             <div class="card text-center pt-2 shadow h-100">
                 <img src="recursos/img/book.png" class="card-img-top m-auto img-fluid p-1" alt="..." style="max-width: 100px; max-height: 100px;">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Generar Reporte</h5>
-                    <p class="card-text">Generar un reporte de detenidos registrados</p>
+                    <h5 class="card-title">Reporte Estadístico</h5>
+                    <p class="card-text">Generar un reporte estadístico de detenidos registrados</p>
+                    <a href="reporteEstadistico.jsp" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
+                </div>
+            </div>
+        </div>
+          <div class="col-lg-6 col-md-6 col-sm-10 mb-3">
+            <div class="card text-center pt-2 shadow h-100">
+                <img src="recursos/img/book.png" class="card-img-top m-auto img-fluid p-1" alt="..." style="max-width: 100px; max-height: 100px;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Reporte Listado</h5>
+                    <p class="card-text">Generar un reporte listado de detenidos registrados</p>
                     <a href="crearReporte.jsp" class="btn gradiente-azul-oscuro mt-auto">Ingresar</a>
                 </div>
             </div>

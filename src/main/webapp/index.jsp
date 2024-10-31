@@ -35,6 +35,7 @@
                     <h1 class="h2 titulo-color text-center">Sistema de Registro de Detenidos Penales</h1>
                 </div>
             </div>
+   
 
             <div class="container justify-content-center mt-2">
                 <div class="col-sm-12">

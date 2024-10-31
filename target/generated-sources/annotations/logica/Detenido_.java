@@ -1,12 +1,12 @@
 package logica;
 
 import java.util.Date;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import logica.Causa;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-10-25T18:47:28")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2024-10-31T12:31:01", comments="EclipseLink-2.7.10.v20211216-rNA")
 @StaticMetamodel(Detenido.class)
 public class Detenido_ extends Persona_ {
 

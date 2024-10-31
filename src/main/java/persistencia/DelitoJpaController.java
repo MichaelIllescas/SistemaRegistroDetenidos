@@ -5,6 +5,7 @@
 package persistencia;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -139,5 +140,15 @@ public class DelitoJpaController implements Serializable {
             em.close();
         }
     }
-    
+    public List<Object[]> getDetenidosPorDelito(Date fechaInicio, Date fechaFin) {
+        EntityManager em = getEntityManager();
+    String query = "SELECT d.causa.delito.descripcion, COUNT(d) \n" +
+"FROM Detenido d \n" +
+"WHERE d.fechaIngreso >= :fechaInicio AND d.fechaIngreso <= :fechaFin \n" +
+"GROUP BY d.causa.delito.descripcion";
+    return em.createQuery(query)
+        .setParameter("fechaInicio", fechaInicio)
+        .setParameter("fechaFin", fechaFin)
+        .getResultList();
+}
 }

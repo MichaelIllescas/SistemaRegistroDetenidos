@@ -68,7 +68,7 @@ public class ExcelExporter {
             headerRow.createCell(14).setCellValue("Juzgado");
             headerRow.getCell(14).setCellStyle(headerStyle); // Aplicar estilo a la celda
 
-            headerRow.createCell(15).setCellValue("Juzgado");
+            headerRow.createCell(15).setCellValue("Fiscalia");
             headerRow.getCell(15).setCellStyle(headerStyle); // Aplicar estilo a la celda
 
             headerRow.createCell(16).setCellValue("Defensoria");

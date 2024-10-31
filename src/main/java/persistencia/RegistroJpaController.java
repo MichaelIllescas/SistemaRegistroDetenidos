@@ -5,7 +5,6 @@
 package persistencia;
 
 import com.google.protobuf.TextFormat.ParseException;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;

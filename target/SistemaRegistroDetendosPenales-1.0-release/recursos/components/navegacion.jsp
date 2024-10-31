@@ -1,4 +1,4 @@
-   
+  
 <%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%HttpSession sesion = request.getSession();
@@ -14,6 +14,14 @@
             displ = "true";
         }
     }
+    
+    // Obtener el mensaje de la sesión
+    String msj = (String) request.getSession().getAttribute("backupMessage");
+    
+    // Limpiar el mensaje después de usarlo
+    request.getSession().removeAttribute("backupMessage"); 
+
+
 
 %>
 
@@ -59,7 +67,7 @@
         <div id="collapse-header" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item " href="SVRegistrarDetenido">Registrar Ingreso</a>
+                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Ingreso</a>
                 <a class="collapse-item " href="SVRegistrarEgreso">Registrar Egreso</a>
                 <a class="collapse-item" href="SVVerDetenidos">Ver Registros</a>
 
@@ -75,8 +83,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow-lg">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item" href="crearReporte.jsp">Listado de Detenidos</a>
-                <a class="collapse-item" href="crearReporte.jsp">Reporte Estadísico</a>
+                <a class="collapse-item" href="crearReporte.jsp">Generar Reporte</a>
 
             </div>
         </div>
@@ -112,22 +119,62 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider">
-    <form action="registrarDetenido.jsp" method="GET">
-        <div class="container-fluid mt-3">
 
-            <div class="text-center d-flex justify-content-center align-items-center">
-
-                <button id="sidebarToggle" type="button" class="rounded-circle border-0 btn "><i class="fa-solid fa-arrows-left-right "></i></button>
-
+    <div class="container-fluid mt-3">
+        <form action="registrarDetenido.jsp" method="GET" class="text-center mb-4">
+            <div class="d-flex justify-content-center mb-3">
+                <button id="sidebarToggle" type="button" class="rounded-circle border-0 btn btn-light">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
             </div>
+            <div class="d-flex justify-content-center flex-column">
+                <button type="submit" class="btn btn-facebook btn-lg shadow border-dark mb-3 w-100 p-1" style="font-size: calc(0.5rem + 0.5vw);">
+                    Registrar Detenido
+                </button>
+            </div>
+        </form>
+        <form action="backup" method="get" class="text-center" style="display: <%=displ%>">
+            <!-- Botón para abrir el modal de confirmación -->
+            <button class="btn btn-facebook btn-lg shadow border-dark w-100 p-1" style="font-size: calc(0.5rem + 0.5vw);" type="button" data-toggle="modal" data-target="#confirmBackupModal">
+                Hacer Backup de Base de Datos
+            </button>
+        </form>
+        
+           
+<div class="d-flex justify-content-center">
+    <% if (msj != null) { %>
+        <div class="alert alert-success mb-3 mt-3 p-1" style="font-size: calc(0.5rem + 0.5vw); max-width: 100%; overflow-wrap: break-word; word-break: break-all;">
+            <%= msj %>
+        </div>
+    <% } %>
+</div>
+    </div>
 
-            <div class="text-center d-flex justify-content-center align-items-center mt-1 mb-5" id="">
-
-                <button type="submit" class="btn-facebook btn shadow border-dark">Registrar Detenido</button>
-
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="confirmBackupModal" tabindex="-1" role="dialog" aria-labelledby="confirmBackupModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="confirmBackupModalLabel">Confirmación de Backup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-dark">
+                    ¿Está seguro de que desea hacer una copia de seguridad de la base de datos?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <!-- Formulario oculto que se enviará al confirmar -->
+                    <form action="backup" method="get" style="display: inline;">
+                        <input type="hidden" name="confirm" value="true" />
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </form>
+    </div>
+
 
 
 </ul>
@@ -173,7 +220,7 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                      aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="verPerfil.jsp">
+                    <a class="dropdown-item" href="#">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Perfil
                     </a>
@@ -195,9 +242,5 @@
     </nav>
 
     <!-- End of Topbar -->
-
-
-
-
 
 

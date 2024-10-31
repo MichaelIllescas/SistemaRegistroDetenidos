@@ -103,19 +103,19 @@
                         <div id="collapseOne" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="mb-3">
-                                    <label for="nombre">* Nombre:</label>
+                                    <label for="nombre"><strong>*</strong>  Nombre:</label>
                                     <input name="nombre" type="text" class="form-control form-control-lg" id="nombre" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="apellido">*Apellido:</label>
+                                    <label for="apellido"><strong>*</strong>  Apellido:</label>
                                     <input name="apellido" type="text" class="form-control form-control-lg" id="apellido" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="dni">* D.N.I. / Documento:</label>
+                                    <label for="dni"><strong>*</strong>  D.N.I. / Documento:</label>
                                     <input name="dni" type="text" class="form-control form-control-lg" id="dni" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="direccion">* Dirección:</label>
+                                    <label for="direccion"><strong>*</strong>  Dirección:</label>
                                     <input name="direccion" type="text" class="form-control form-control-lg " id="direccion" required>
                                 </div>
                                 <div class="mb-3">
@@ -127,7 +127,7 @@
                                     <input name="apodo" type="text" class="form-control form-control-lg " id="apodo">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="ocupacion">* Ocupación:</label>
+                                    <label for="ocupacion"><strong>*</strong>  Ocupación:</label>
                                     <select name="ocupacion" id="ocupacion" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione su ocupación</option>
                                         <%        if (ocupaciones != null) {
@@ -142,11 +142,11 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="fechaNac">* Fecha de Nacimiento:</label>
+                                    <label for="fechaNac"><strong>*</strong>  Fecha de Nacimiento:</label>
                                     <input name="fechaNac" id="fechaNac" type="date" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="sexo">* Sexo:</label>
+                                    <label for="sexo"><strong>*</strong>  Sexo:</label>
                                     <select name="sexo" id="sexo" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
@@ -161,7 +161,7 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="instruccion">* Instruccion:</label>
+                                    <label for="instruccion"><strong>*</strong>  Instruccion:</label>
 
                                     <select name="instruccion" id="instruccion" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
@@ -171,7 +171,7 @@
 
                                 </div>
                                 <div class="mb-3">
-                                    <label for="estadoCivil">* Estado Civil:</label>
+                                    <label for="estadoCivil"><strong>*</strong>  Estado Civil:</label>
                                     <select name="estadoCivil" id="estadoCivil" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
@@ -187,7 +187,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="nacionalidad">* Nacionalidad:</label>
+                                    <label for="nacionalidad"><strong>*</strong>  Nacionalidad:</label>
                                     <select name="nacionalidad" id="nacionalidad" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
@@ -203,7 +203,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="rol">* Calidad:</label>
+                                    <label for="rol"><strong>*</strong>  Calidad:</label>
                                     <select id="miListaDesplegable" name="calidad" class="form-control form-control-lg form-select">
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <option value="APREHENDIDO">Aprehendido</option>
@@ -224,11 +224,11 @@
                         <div id="collapseIPP" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="mb-3">
-                                    <label for="nroCausa">* Número de I.P.P. / Causa:</label>
+                                    <label for="nroCausa"><strong>*</strong>  Número de I.P.P. / Causa:</label>
                                     <input name="nroCausa" id="nroCausa" type="text" class="form-control form-control-lg " required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="delito">* Carátula/Hecho:</label>
+                                    <label for="delito"><strong>*</strong>  Carátula/Delito</label>
                                     <select name="delito" id="delito" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione un Delito</option>
                                         <%
@@ -244,7 +244,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="fiscalia">* Fiscalía Interviniente:</label>
+                                    <label for="fiscalia"><strong>*</strong>  Fiscalía Interviniente:</label>
                                     <select name="ficalia" id="fiscalia" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción </option>
                                         <%
@@ -260,7 +260,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="defensoria">* Defensoría Interviniente:</label>
+                                    <label for="defensoria"><strong>*</strong>  Defensoría Interviniente:</label>
                                     <select name="defensoria" id="defensoria" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
@@ -275,7 +275,7 @@
                                     </select> 
                                 </div>
                                 <div class="mb-3">
-                                    <label for="juzgado">* Juzgado Interviniente:</label>
+                                    <label for="juzgado"><strong>*</strong>  Juzgado Interviniente:</label>
                                     <select name="juez" id="juez" class="form-control form-control-lg form-select" required>
                                         <option value="" disabled selected>Seleccione una Opción</option>
                                         <%
@@ -303,7 +303,7 @@
                         <div id="collapseThree" class="accordion-collapse collapse fade" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="mb-3">
-                                    <label for="fechaIngreso">* Fecha de Ingreso:</label>
+                                    <label for="fechaIngreso"><strong>*</strong>  Fecha de Ingreso:</label>
                                     <input name="fechaIngreso" id="fechaIngreso" type="date" class="form-control form-control-lg" required>
                                 </div>
                                 <div class="mb-3">

@@ -16,34 +16,37 @@
                 <h1 class="titulo-color">Editar Perfil</h1>
                 <p>Este es un apartado para editar los datos de un perfil de usuario registrado en el sistema.</p>
             </div>
+            <div>
+                <p>* Campos Obligatorios</p>
+            </div>
 
             <div class="container-fluid mt-4">
                 <div class="m-auto titulo-color col-12 col-lg-6 p-4 border rounded shadow">
                     <h3 class="text-center mb-4">Editar Perfil</h3>
                     <form method="POST" action="SVEditarPerfil">
                         <div class="form-group mb-3">
-                            <label for="nombre">NOMBRE:</label>
-                            <input type="text" id="nombre" class="form-control" name="nombre" value="${user.policia.nombre}"/>
+                            <label for="nombre">* NOMBRE:</label>
+                            <input type="text" id="nombre" class="form-control" name="nombre" value="${user.policia.nombre}" required/>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="apellido">APELLIDO:</label>
-                            <input type="text" id="apellido" class="form-control" name="apellido" value="${user.policia.apellido}"/>
+                            <label for="apellido">* APELLIDO:</label>
+                            <input type="text" id="apellido" class="form-control" name="apellido" value="${user.policia.apellido}" required/>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="dni">DNI</label>
-                            <input type="text" id="dni" class="form-control" name="dni" value="${user.policia.dni}"/>
+                            <label for="dni">* D.N.I.</label>
+                            <input type="text" id="dni" class="form-control" name="dni" value="${user.policia.dni}" required/>
                         </div>
 
 
                         <div class="form-group mb-3">
-                            <label for="telefono">TELEFONO:</label>
-                            <input type="text" id="telefono" class="form-control" name="telefono" value="${user.policia.telefono}"/>
+                            <label for="telefono">* TELEFONO:</label>
+                            <input type="text" id="telefono" class="form-control" name="telefono" value="${user.policia.telefono}" required/>
                         </div>
 
                         <div class="form-group mb-3">
-                              <label for="telefono">JERARQUIA:</label>
+                              <label for="telefono">* JERARQUIA:</label>
                                 <select id="miListaDesplegable" name="jerarquia" class="form-control   form-select " >
                                 <option value="OFICIAL"<%= "OFICIAL".equals(user.getPolicia().getJerarquia()) ? "selected" : ""%> >Oficial</option>
                                 <option value="SARGENTO" <%= "SARGENTO".equals(user.getPolicia().getJerarquia()) ? "selected" : ""%>>Sargento</option>
@@ -67,8 +70,8 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="legajo">LEGAJO:</label>
-                            <input type="text" id="legajo" class="form-control" name="legajo" value="${user.policia.legajo}" />
+                            <label for="legajo">* LEGAJO:</label>
+                            <input type="text" id="legajo" class="form-control" name="legajo" value="${user.policia.legajo}" required/>
                         </div>
 
                         <div class="form-group mb-4">

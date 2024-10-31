@@ -4,6 +4,7 @@
  */
 package persistencia;
 
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -250,5 +251,11 @@ public class ControladoraPersistencia {
         return  delitoJPA.findDelito(idDelito);
     }
     
+    public List<Object[]> getDetenidosPorDelito(Date fechaInicio, Date fechaFin){
+    
+        return delitoJPA.getDetenidosPorDelito(fechaInicio, fechaFin);
+    }
+            
+            
     
 }

@@ -36,7 +36,6 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Ocupacion.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVReporteDetenidos.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\NacionalidadJpaController.java
-C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\ReporteEstadistico.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\persistencia\exceptions\NonexistentEntityException.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Causa.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVReporteEstadistico.java
@@ -60,5 +59,6 @@ C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenal
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarPolicia.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarPerfil.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVVerDetenidos.java
+C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\BackupDatabaseServlet.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\logica\Reporte.java
 C:\Users\jonii\OneDrive\Documentos\NetBeansProjects\SistemaRegistroDetendosPenales\src\main\java\servlets\SVEditarRegistro.java

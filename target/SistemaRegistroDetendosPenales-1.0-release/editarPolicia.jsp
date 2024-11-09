@@ -8,6 +8,17 @@
 <%@page import="logica.Policia"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <%
     Policia police = (Policia) request.getSession().getAttribute("policia");
@@ -33,13 +44,13 @@
                 <form class="user text-center" action="SVEditarPolicia" method="POST">
                     <div class="form-group col">
                         <div class="col-sm-6 mx-auto mb-3">
-                            <input name="nombrepol" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Nombre" value="<%=police.getNombre()%>">
+                            <input name="nombrepol" type="text" class="form-control form-control-lg" id="nomusu" placeholder="* Nombre" value="<%=police.getNombre()%>">
                         </div>
                         <div class="col-sm-6 mx-auto mb-3">
-                            <input name="apellidopol" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Apellido" value="<%=police.getApellido()%>">
+                            <input name="apellidopol" type="text" class="form-control form-control-lg" id="nomusu" placeholder="* Apellido" value="<%=police.getApellido()%>">
                         </div>
                         <div class="col-sm-6 mx-auto mb-3">
-                            <input name="legajo" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Legajo" value="<%=police.getLegajo()%>">
+                            <input name="legajo" type="text" class="form-control form-control-lg" id="nomusu" placeholder="* Legajo" value="<%=police.getLegajo()%>">
                         </div>
                         <div class="col-sm-6 mx-auto mb-3" >
 
@@ -70,10 +81,10 @@
 
 
                         <div class="col-sm-6 mx-auto mb-3">
-                            <input name="dni" type="text" class="form-control form-control-lg" id="nomusu" placeholder="DNI" value="<%=police.getDni()%>">
+                            <input name="dni" type="text" class="form-control form-control-lg" id="nomusu" placeholder="* DNI" value="<%=police.getDni()%>">
                         </div>
                         <div class="col-sm-6 mx-auto mb-3">
-                            <input name="telefono" type="text" class="form-control form-control-lg" id="nomusu" placeholder="Telefono" value="<%=police.getTelefono()%>">
+                            <input name="telefono" type="text" class="form-control form-control-lg" id="nomusu" placeholder="* Telefono" value="<%=police.getTelefono()%>">
                         </div>
                     </div>
                     <input type="hidden"name="id" class="btn btn-primary  btn-user " value="<%=police.getId()%>"  />

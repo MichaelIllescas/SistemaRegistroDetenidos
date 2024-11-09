@@ -4,6 +4,7 @@
     Author     : jonii
 --%>
 
+<%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +15,18 @@
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
+
 <body>
     <div class="container">
         <h2 class="text-center">Editar Usuario</h2>

@@ -12,7 +12,19 @@
 <%
     HttpSession ses = request.getSession();
     List<Registro> regs = (List) ses.getAttribute("registros");
+    
 %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <body id="page-top" class=" " >
 

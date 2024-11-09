@@ -29,7 +29,7 @@ public class BackupDatabaseServlet extends HttpServlet {
             String backupFilePath = workingDirectory + "\\" + backupFileName; // Construir la ruta completa
 
             // Comando mysqldump
-            String command = "mysqldump -u root -p registro_detenidos > \"" + backupFilePath + "\""; // Usar la ruta completa
+            String command = "mysqldump -u root registro_detenidos > \"" + backupFilePath + "\""; // Usar la ruta completa
 
             // Usar ProcessBuilder para ejecutar el comando
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", command);

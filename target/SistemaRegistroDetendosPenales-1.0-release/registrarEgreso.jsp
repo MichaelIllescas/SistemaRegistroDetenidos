@@ -8,6 +8,17 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <%
     List<Detenido> detenidos = (List) request.getSession().getAttribute("detenidos");

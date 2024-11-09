@@ -5,6 +5,17 @@
 <%@page import="java.util.List"%>
 <%@page import="javax.servlet.http.HttpSession"%>
 <%@include file="recursos/components/head.jsp" %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <body id="page-top">
     <div id="wrapper" class="container-fluid p-0">

@@ -7,15 +7,24 @@
 <%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
+  <%HttpSession miSession = request.getSession();
+        String usuari = (String) miSession.getAttribute("usuario");
+ Usuario usuario = (Usuario) miSession.getAttribute("user");  
+ String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
 
 <%
-    HttpSession miSession = request.getSession();
 
    String mensaje = (String) miSession.getAttribute("mensaje");
 if (mensaje == null) {
     mensaje = "";
 }
-    Usuario usuario = (Usuario) miSession.getAttribute("user");
+   
 
 %>
 <body class="gradiente-azul-oscuro mb-5">

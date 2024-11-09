@@ -5,6 +5,17 @@
 <%@page import="logica.Registro"%>
 <%@page import="logica.Causa"%>
 <%@page import="logica.Detenido"%>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <%
     List<Registro> registros = (List<Registro>) request.getSession().getAttribute("registros");

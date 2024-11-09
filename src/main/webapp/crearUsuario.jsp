@@ -4,6 +4,17 @@
 <%@include file="recursos/components/head.jsp" %>
 
 <%List<Policia> policias = (List) request.getSession().getAttribute("policias");%>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        Usuario user = (Usuario) miSession.getAttribute("user");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <body id="page-top" class=" " >
 

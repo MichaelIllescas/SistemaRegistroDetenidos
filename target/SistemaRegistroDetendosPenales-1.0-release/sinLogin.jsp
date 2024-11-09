@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="recursos/components/head.jsp" %>
 
@@ -13,6 +14,9 @@
 
 
 %>
+ 
+
+
 <body class="gradiente-azul-oscuro mb-5">
     <div class="container border-bottom-secondary h-auto mb-4 b" 
          data-aos="flip-left"
@@ -39,7 +43,7 @@
 
 
 
-                                            <p class="text-white ">Debe estar registrado para poder ingresar al sistema.</p>
+                                            <p class="text-white ">Debe estar logeado para poder ingresar al sistema.</p>
 
 
                                         </div>    

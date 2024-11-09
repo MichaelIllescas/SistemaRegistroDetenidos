@@ -5,6 +5,16 @@
 <%
     Usuario user = (Usuario) request.getSession().getAttribute("user");
 %>
+    <%HttpSession miSession = request.getSession();
+        String usuario = (String) miSession.getAttribute("usuario");
+        String visiblidad = (String) miSession.getAttribute("visiblidad");
+
+        if (usuario == null) {
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+        %>
+
 
 <body id="page-top" class="">
 

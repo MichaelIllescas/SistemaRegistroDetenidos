@@ -10,6 +10,7 @@
         String usuario = (String) miSession.getAttribute("usuario");
         Usuario user = (Usuario) miSession.getAttribute("user");
         String visiblidad = (String) miSession.getAttribute("visiblidad");
+         String mensajeError = (String) request.getSession().getAttribute("errorFecha");
 
         if (usuario == null) {
             response.sendRedirect("sinLogin.jsp");
@@ -28,7 +29,7 @@
             <!-- Page Heading -->
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <h1 class="h2 titulo-color">Generar ReporteListado de Detenidos </h1>
+                    <h1 class="h2 titulo-color">Generar Reporte Listado de Detenidos </h1>
                     <p class="mb-4 titulo-color">A continuación, podrá generar un Listado de detenidos registrados en el sistema y exportarlo.</p>
                 </div>
 <div>
@@ -49,6 +50,20 @@
                         <div class="text-center pt-3">
                              <button type="submit" class="m-auto btn btn-primary">Generar Reporte</button>
                         </div>
+                          <% if (mensajeError != null) { %>
+                        <div class="alert alert-warning form-group h-25 mt-3">
+                            <br>
+                           
+                            <% if (mensajeError != null) { %>
+                                <p><%= mensajeError %></p>
+                            <% } %>
+                        </div>
+                        <%
+                            // Limpiar el mensaje después de mostrarlo
+                            request.getSession().removeAttribute("mensaje");
+                            request.getSession().removeAttribute("errorFecha");
+                        %>
+                        <% } %>
                     </form>
                 </div>
 

@@ -51,6 +51,13 @@ public class SVReporteEstadistico extends HttpServlet {
                 fechaDesde = sdf.parse(fechaDesdeStr);
                 fechaHasta = sdf.parse(fechaHastaStr);
             }
+                 // Verificar si la fechaDesde es posterior a fechaHasta
+            if (fechaDesde.after(fechaHasta)) {
+                request.getSession().setAttribute("errorFecha", "La fecha 'Desde' debe ser anterior a la fecha 'Hasta'.");
+                // Opcionalmente, redirigir o reenviar la solicitud a la misma página
+                response.sendRedirect("reporteEstadistico.jsp");
+                return; // Salir del método
+                }
         } catch (Exception e) {
             e.printStackTrace();
         }

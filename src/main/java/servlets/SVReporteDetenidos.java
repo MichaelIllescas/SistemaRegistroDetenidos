@@ -12,6 +12,8 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -49,28 +51,59 @@ public class SVReporteDetenidos extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
 
-        String fechaDesde = request.getParameter("fechaDesde");
-        String fechaHasta = request.getParameter("fechaHasta");
+        String fechaDesdeStr = request.getParameter("fechaDesde");
+        String fechaHastaStr = request.getParameter("fechaHasta");
+        
+        
+        
+           SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date fechaDesde = null;
+        Date fechaHasta = null;
+        
+         if (fechaDesdeStr != null && fechaHastaStr != null) {
+            try {
+                fechaDesde = sdf.parse(fechaDesdeStr);
+                fechaHasta = sdf.parse(fechaHastaStr);
+                if (fechaDesde.after(fechaHasta)) {
+                request.getSession().setAttribute("errorFecha", "La fecha 'Desde' debe ser anterior a la fecha 'Hasta'.");
+                // Opcionalmente, redirigir o reenviar la solicitud a la misma página
+                response.sendRedirect("crearReporte.jsp");
+                return; // Salir del método
+                }
+                
+                
+            } catch (java.text.ParseException ex) {
+                Logger.getLogger(SVReporteDetenidos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                
+            }
+        
+        
+        
+        
+        
 
         List<Registro> registros = controladora.getRegistros();
-        registros = controladora.filtrarRegistrosPorFecha(registros, fechaDesde, fechaHasta);
+        registros = controladora.filtrarRegistrosPorFecha(registros, fechaDesdeStr, fechaHastaStr);
         HttpSession sesion = request.getSession();
-        sesion.setAttribute("fechaDesdeDate", Utilitaria.convertStringToDate(fechaDesde, "yyyy-MM-dd"));
-        sesion.setAttribute("fechaHastaDate", Utilitaria.convertStringToDate(fechaHasta, "yyyy-MM-dd"));
+        sesion.setAttribute("fechaDesdeDate", Utilitaria.convertStringToDate(fechaDesdeStr, "yyyy-MM-dd"));
+        sesion.setAttribute("fechaHastaDate", Utilitaria.convertStringToDate(fechaHastaStr, "yyyy-MM-dd"));
 
-        for (Registro reg : registros) {
-            System.out.println(reg.getId());
-        }
+     
 
         sesion.setAttribute("registros", registros);
         response.sendRedirect("verReporteRequerimiento.jsp");
     }
 
+    
+    
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Registro> registros = (List<Registro>) request.getSession().getAttribute("registros");
 
         try {
+            
 
             // Llamar al método que genera y descarga el Excel
             ExcelExporter.exportarRegistrosAExcel(registros, response);

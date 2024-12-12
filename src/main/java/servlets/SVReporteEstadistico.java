@@ -1,12 +1,9 @@
 package servlets;
 
-import com.google.gson.Gson;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.geom.Point2D;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.AttributedString;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.Controladora;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtils;
@@ -26,8 +24,7 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
 /**
- *
- * @author jonii
+ * Servlet para generar reportes estadísticos.
  */
 @WebServlet(name = "SVReporteEstadistico", urlPatterns = {"/SVReporteEstadistico"})
 public class SVReporteEstadistico extends HttpServlet {
@@ -37,6 +34,7 @@ public class SVReporteEstadistico extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession sesion = request.getSession();
         String fechaDesdeStr = request.getParameter("fechaDesde");
         String fechaHastaStr = request.getParameter("fechaHasta");
 
@@ -44,43 +42,56 @@ public class SVReporteEstadistico extends HttpServlet {
         Date fechaDesde = null;
         Date fechaHasta = null;
 
-        request.getSession().removeAttribute("chartImage");
+        sesion.removeAttribute("chartImage");
 
         try {
             if (fechaDesdeStr != null && fechaHastaStr != null) {
                 fechaDesde = sdf.parse(fechaDesdeStr);
                 fechaHasta = sdf.parse(fechaHastaStr);
             }
-                 // Verificar si la fechaDesde es posterior a fechaHasta
-            if (fechaDesde.after(fechaHasta)) {
-                request.getSession().setAttribute("errorFecha", "La fecha 'Desde' debe ser anterior a la fecha 'Hasta'.");
-                // Opcionalmente, redirigir o reenviar la solicitud a la misma página
+            if (fechaDesde != null && fechaHasta != null && fechaDesde.after(fechaHasta)) {
+                sesion.setAttribute("errorFecha", "La fecha 'Desde' debe ser anterior a la fecha 'Hasta'.");
                 response.sendRedirect("reporteEstadistico.jsp");
-                return; // Salir del método
-                }
+                return;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // Guardar las fechas en la sesión
-        request.getSession().setAttribute("fechaDesde", fechaDesde);
-        request.getSession().setAttribute("fechaHasta", fechaHasta);
+        sesion.setAttribute("fechaDesde", fechaDesde);
+        sesion.setAttribute("fechaHasta", fechaHasta);
 
         List<Object[]> datosDelito = controladora.getDetenidosPorDelito(fechaDesde, fechaHasta);
-
-        // Verificar si hay datos para mostrar
+        
+        Integer totalDelitos=0;
+        
+      
+        
         if (datosDelito == null || datosDelito.isEmpty()) {
-            // No hay datos para mostrar, establecer un mensaje en la sesión
-            request.getSession().setAttribute("mensaje", "No hay registros para la fecha seleccionada.");
-            // Redirigir al JSP
+            sesion.setAttribute("mensaje", "No hay registros para la fecha seleccionada.");
             response.sendRedirect("reporteEstadistico.jsp");
-            return; // Salir del método
+            return;
         }
 
-        // Crear el dataset para el gráfico de torta
+        // Calcular total de detenidos y desglose por delito
+        int totalDetenidos = 0;
+        StringBuilder detalleDelitos = new StringBuilder();
+        for (Object[] row : datosDelito) {
+            String delito = (String) row[0];
+            Long cantidadLong = (Long) row[1];
+            int cantidad = cantidadLong != null ? cantidadLong.intValue() : 0;
+            totalDetenidos += cantidad;
+            detalleDelitos.append(delito).append(": ").append(cantidad).append("<br>");
+        }
+
+        // Guardar totales en la sesión
+        sesion.setAttribute("totalDetenidos", totalDetenidos);
+        sesion.setAttribute("detalleDelitos", detalleDelitos.toString());
+
+        // Crear el dataset para el gráfico
         DefaultPieDataset dataset = crearDataset(datosDelito);
 
-        // Crear el gráfico
+        // Crear y personalizar el gráfico
         JFreeChart chart = ChartFactory.createPieChart(
                 "Detenidos por Delito",
                 dataset,
@@ -88,39 +99,27 @@ public class SVReporteEstadistico extends HttpServlet {
                 true,
                 false
         );
-
-        // Establecer el color de fondo del gráfico
         chart.setBackgroundPaint(Color.white);
-
-        // Personalizar las etiquetas del gráfico para mostrar cantidades y porcentajes
         PiePlot plot = (PiePlot) chart.getPlot();
         plot.setLabelGenerator(new PieSectionLabelGenerator() {
             @Override
             public String generateSectionLabel(PieDataset dataset, Comparable key) {
                 Number value = dataset.getValue(key);
-                double total = dataset.getValue(key).doubleValue();
-                double percentage = (total / getTotal(dataset)) * 100; // Calcular porcentaje
-                return key + " (Cantidad: " + value.intValue() + ", Total: " + String.format("%.2f", percentage) + "%)";
+                double total = getTotal(dataset);
+                double percentage = (value.doubleValue() / total) * 100;
+                return key + " (Cantidad de Detenidos: " + value.intValue() + ", Portentaje:" + String.format("%.2f", percentage) + "%)";
             }
 
             @Override
-            public AttributedString generateAttributedSectionLabel(PieDataset pd, Comparable cmprbl) {
-                throw new UnsupportedOperationException("Not supported yet.");
+            public AttributedString generateAttributedSectionLabel(PieDataset dataset, Comparable key) {
+                return null;
             }
         });
 
-        // Agregar texto de fechas al gráfico
-        String fechaTexto = "Reporte desde " + sdf.format(fechaDesde) + " hasta " + sdf.format(fechaHasta);
-        plot.setNoDataMessage(fechaTexto);
-        
-        // Guardar el gráfico en un array de bytes
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ChartUtils.writeChartAsPNG(baos, chart, 600, 400);
-        
-        // Guardar el array de bytes en la sesión
-        request.getSession().setAttribute("chartImage", baos.toByteArray());
 
-        // Redirigir al JSP
+        sesion.setAttribute("chartImage", baos.toByteArray());
         response.sendRedirect("reporteEstadistico.jsp");
     }
 
@@ -129,7 +128,7 @@ public class SVReporteEstadistico extends HttpServlet {
         for (Object[] row : datosDelito) {
             String delito = (String) row[0];
             Long cantidadLong = (Long) row[1];
-            Integer cantidad = cantidadLong != null ? cantidadLong.intValue() : 0;
+            int cantidad = cantidadLong != null ? cantidadLong.intValue() : 0;
             dataset.setValue(delito, cantidad);
         }
         return dataset;

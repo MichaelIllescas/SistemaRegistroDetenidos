@@ -88,11 +88,11 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <form method="get" action="SVEditarPerfil">
-                        <button type="submit" class="btn btn-primary">
+                    
+                    <a href="editarPerfil.jsp" class="btn btn-primary">
                             Editar Perfil
-                        </button>
-                    </form>
+                        </a>
+
                 </div>
 
                 

@@ -1,0 +1,52 @@
+12-Dec-2024 07:01:28.708 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:01:28.708 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:01:28.787 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 07:01:28.792 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 07:01:28.811 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 07:01:29.473 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context17311254999155140444.xml'
+12-Dec-2024 07:01:36.389 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'
+12-Dec-2024 07:08:50.075 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:08:50.075 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:33:24.801 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:33:24.801 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:39:43.972 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:39:43.972 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:44:03.521 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:44:03.521 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:46:26.993 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:46:26.994 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 07:51:59.219 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 07:51:59.219 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 08:33:02.981 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 08:33:02.981 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 08:36:40.427 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+12-Dec-2024 08:36:40.427 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+12-Dec-2024 08:36:40.475 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:36:40.478 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:36:40.488 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:36:41.094 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context7139556543674635726.xml'
+12-Dec-2024 08:36:44.175 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:43:55.819 INFO [http-nio-8080-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:43:55.827 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:47:09.741 INFO [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:47:09.743 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:47:09.787 INFO [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context5258770365095714490.xml'
+12-Dec-2024 08:47:13.417 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:50:38.674 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:50:38.679 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:51:33.882 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:51:33.884 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:51:33.919 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context18324038470249007769.xml'
+12-Dec-2024 08:51:37.009 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:55:32.542 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:55:32.546 INFO [http-nio-8080-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 08:56:10.478 INFO [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:56:10.481 INFO [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 08:56:10.557 INFO [http-nio-8080-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context14143362522842711428.xml'
+12-Dec-2024 08:56:14.773 INFO [http-nio-8080-exec-40] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'
+12-Dec-2024 09:14:28.750 INFO [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 09:14:28.754 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/SistemaRegistroDetendosPenales'
+12-Dec-2024 09:15:21.416 INFO [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 09:15:21.418 INFO [http-nio-8080-exec-41] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+12-Dec-2024 09:15:21.472 INFO [http-nio-8080-exec-48] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/jonii/AppData/Local/Temp/context13551785293515090223.xml'
+12-Dec-2024 09:15:24.755 INFO [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/SistemaRegistroDetendosPenales'

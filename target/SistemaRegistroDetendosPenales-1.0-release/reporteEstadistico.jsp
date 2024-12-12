@@ -1,3 +1,4 @@
+<%@page import="logica.Detenido"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Base64"%>
@@ -11,6 +12,7 @@
     String usuario = (String) miSession.getAttribute("usuario");
     Usuario user = (Usuario) miSession.getAttribute("user");
     String visibilidad = (String) miSession.getAttribute("visibilidad");
+    List<Object[]> registrosDetenidos=(List<Object[]>) request.getSession().getAttribute("registrosDetenidos");
 
     if (usuario == null) {
         response.sendRedirect("sinLogin.jsp");
@@ -90,6 +92,7 @@
 
                         <div>
                             <img class="img-fluid" src="data:image/png;base64,<%= Base64.getEncoder().encodeToString(chartImage) %>" alt="Gráfico de Detenidos" />
+                         
                         </div>
                     </div>
                 <%

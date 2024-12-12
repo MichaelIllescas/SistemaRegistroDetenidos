@@ -14,13 +14,12 @@
             displ = "true";
         }
     }
-    
+
     // Obtener el mensaje de la sesión
     String msj = (String) request.getSession().getAttribute("backupMessage");
-    
-    // Limpiar el mensaje después de usarlo
-    request.getSession().removeAttribute("backupMessage"); 
 
+    // Limpiar el mensaje después de usarlo
+    request.getSession().removeAttribute("backupMessage");
 
 
 %>
@@ -67,7 +66,7 @@
         <div id="collapse-header" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded border-bottom-secondary shadow">
                 <h6 class="collapse-header">Acciones:</h6>
-                <a class="collapse-item " href="registrarDetenido.jsp">Registrar Ingreso</a>
+                <a class="collapse-item " href="SVRegistrarDetenido">Registrar Ingreso</a>
                 <a class="collapse-item " href="SVRegistrarEgreso">Registrar Egreso</a>
                 <a class="collapse-item" href="SVVerDetenidos">Ver Registros</a>
 
@@ -122,7 +121,7 @@
     <hr class="sidebar-divider">
 
     <div class="container-fluid mt-3">
-        <form action="registrarDetenido.jsp" method="GET" class="text-center mb-4">
+        <form action="SVRegistrarDetenido" method="GET" class="text-center mb-4">
             <div class="d-flex justify-content-center mb-3">
                 <button id="sidebarToggle" type="button" class="rounded-circle border-0 btn btn-light">
                     <i class="fa-solid fa-arrows-left-right"></i>
@@ -140,15 +139,15 @@
                 Hacer Backup de Base de Datos
             </button>
         </form>
-        
-           
-<div class="d-flex justify-content-center">
-    <% if (msj != null) { %>
-        <div class="alert alert-success mb-3 mt-3 p-1" style="font-size: calc(0.5rem + 0.5vw); max-width: 100%; overflow-wrap: break-word; word-break: break-all;">
-            <%= msj %>
+
+
+        <div class="d-flex justify-content-center">
+            <% if (msj != null) {%>
+            <div class="alert alert-success mb-3 mt-3 p-1" style="font-size: calc(0.5rem + 0.5vw); max-width: 100%; overflow-wrap: break-word; word-break: break-all;">
+                <%= msj%>
+            </div>
+            <% }%>
         </div>
-    <% } %>
-</div>
     </div>
 
     <!-- Modal de Confirmación -->
@@ -221,7 +220,7 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                      aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="verPerfil.jsp">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Perfil
                     </a>

@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="telefono">Teléfono:</label>
-                                    <input name="telefono" type="text" class="form-control form-control-lg " id="telefono" required>
+                                    <input name="telefono" type="text" class="form-control form-control-lg " id="telefono" >
                                 </div>
                                 <div class="mb-3">
                                     <label for="apodo">Apodo:</label>

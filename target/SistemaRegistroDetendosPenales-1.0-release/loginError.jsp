@@ -23,7 +23,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row rounded-pill bg-gradient-dark text-center ">
-                            
+
                             <div class="col-lg-6">
                                 <div class="p-5" >
                                     <div class="user text-center contendor">
@@ -32,26 +32,26 @@
                                     <form class="user text-center " action="" method="POST">
 
                                         <div class="text-center">
-    <p class="text-white">
-        <% if (session.getAttribute("inhabilitado") != null) { %>
-            <%= session.getAttribute("inhabilitado") %>
-        <% } else { %>
-            Usuario o Contraseña Incorrectos.
-        <% } %>
-    </p>
-</div>
-  
-                                        
+                                            <p class="text-white">
+                                                <% if (session.getAttribute("inhabilitado") != null) {%>
+                                                <%= session.getAttribute("inhabilitado")%>
+                                                <% } else { %>
+                                                Usuario o Contraseña Incorrectos.
+                                                <% }%>
+                                            </p>
+                                        </div>
+
+
 
                                         <div>
-                                        <a href="login.jsp" class=" btn bg-gradient-info btn-user text-lg text-white">
-                                            Intentar de nuevo
-                                        </a>
+                                            <a href="login.jsp" class=" btn bg-gradient-info btn-user text-lg text-white">
+                                                Intentar de nuevo
+                                            </a>
                                         </div>
 
 
                                         <div class="mt-4 mb-2">
-                                        <a href="#" onclick="mostrarPopup()">¿Olvidó su clave?</a>
+                                            <a href="#" onclick="mostrarPopup()">¿Olvidó su clave?</a>
 
                                         </div>
                                         <div id="overlay"></div>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6  d-lg-block  bg-logo border-left-dark "></div>
-                            
+
                         </div>
                     </div>
                 </div>

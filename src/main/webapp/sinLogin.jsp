@@ -43,7 +43,7 @@
 
 
 
-                                            <p class="text-white ">Debe estar logeado para poder ingresar al sistema.</p>
+                                            <p class="text-white ">Sin loggin/sesión expirada.</p>
 
 
                                         </div>    

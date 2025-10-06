@@ -128,6 +128,6 @@ Una vez que la aplicación esté en funcionamiento, puedes acceder a la interfaz
 
  Autor
 Jonathan - GitHub
-📞 Contacto Si tienes preguntas o sugerencias, puedes contactarme en: ✉️ Email: joni.illes@hotmail.com 🐙 GitHub: MichaelIllescas 🚀 ¡Gracias por visitar Ceibo! ⚽💙
+📞 Contacto Si tienes preguntas o sugerencias, puedes contactarme en: ✉️ Email: joni.illes@hotmail.com 🐙 GitHub: MichaelIllescas 🚀 ¡Gracias por visitar! ⚽💙
 
 Nos encontramos en proceso de desarrollo y mejoras de constantemente!
